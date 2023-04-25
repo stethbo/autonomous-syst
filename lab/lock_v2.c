@@ -219,3 +219,6 @@ void check()
             {
                 display(close_msg[i], 1);
             }
+        }
+    }
+}
