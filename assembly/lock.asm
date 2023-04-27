@@ -69,172 +69,499 @@ START
     clrf TRISA
     movlw 0xFF
     movwf TRISD
-    movlw 0x09
+    movlw 0x04; count of the PRZYCISKI reading code
     movwf 0x86
     call SET_CODE
 
 SET_CODE
-    call LOOP
-    movf 0x90, W 
-    movwf Digits
-    bcf TRISB, 0
+    bsf PORTB, 4
+    goto PRZYCISKI_1
+
+SAVE_FST
     bsf PORTB, 0
-    call LOOP
-    movf 0x90, W 
-    movwf Digits+1
-    bcf TRISB, 1
+    movf 0x90, W
+    movwf 0x80
+    goto PRZYCISKI_2
+
+SAVE_SCD
     bsf PORTB, 1
-    call LOOP
+    movf 0x90, W
+    movwf 0x81 
+    call PRZYCISKI_3
+
+SAVE_THR
+    bsf PORTB, 2
+    movf 0x90, W
+    movwf 0x82
+    call PRZYCISKI_4
+
+SAVE_FTH
+    bsf PORTB, 3 ; wpisano 4 cyfrę
     movf 0x90, W 
-    movwf Digits+2
-    call LOOP
-    movf 0x90, W 
-    movwf Digits+3
-    bcf TRISB, 1
-    bsf PORTB, 1
+    movwf 0x83
+    bcf PORTB, 4
     goto UNLOCK_CODE
 
 UNLOCK_CODE
-    call LOOP
-    movf 0x90, W 
-    movwf Input_code
-    call LOOP
-    movf 0x90, W 
-    movwf Input_code+1
-    call LOOP
-    movf 0x90, W 
-    movwf Input_code+2
-    call LOOP
-    movf 0x90, W 
-    movwf Input_code+3
-    goto COMPARE_CODE
+    ; turn of the leds displaying the code
+    bcf PORTB, 0
+    bcf PORTB, 1
+    bcf PORTB, 2
+    bcf PORTB, 3
     
-COMPARE_CODE
-    movlw 4
-    movwf loop
-;    clrf loop     ; initialize a temporary variable to 0
+    bcf PORTB, 4 ; open led off
+    bsf PORTB, 5 ; closed led on
+    
+    goto PRZYCISKI_1_LOCK
 
-    goto compare_loop
-    
-compare_loop
-    movf Digits, W   ; load the first element of the first array into the W register
-    subwf Input_code, W  ; subtract the first element of the second array from W
-    btfsc STATUS, Z   ; check if the result of the subtraction is zero (arrays match)
-    goto NOT_EQUAL    ; if not, jump to not_equal
-    incf loop, F      ; if arrays match, increment the temporary variable
-    incf Digits, F   ; increment the pointers to the next element
-    incf Input_code, F   ; in both arrays
-    decfsz loop      ; decrement the loop counter and check if it's zero
-    goto compare_loop ; if not, go back to compare_loop
-    
-    ;UNLOCKED, TURN ON THE LEDS
-    bcf TRISB, 2
+CHECK_FST
+    bsf PORTB, 0
+    movlw 0x80    ; Load 10 into WREG
+    subwf 0x90, W, 0
+    btfss STATUS, Z
+    goto PRZYCISKI_2_LOCK
+    goto UNLOCK_CODE
+
+CHECK_SCD
+    bsf PORTB, 1
+    movlw 0x81    ; Load 10 into WREG
+    subwf 0x90, W, 0
+    btfss STATUS, Z
+    goto PRZYCISKI_3_LOCK
+    goto UNLOCK_CODE
+
+CHECK_THR
     bsf PORTB, 2
-    bcf TRISB, 3
-    bsf PORTB, 3
+    movlw 0x82    ; Load 10 into WREG
+    subwf 0x90, W, 0
+    btfss STATUS, Z
+    goto PRZYCISKI_4_LOCK
+    goto UNLOCK_CODE
 
-    
-NOT_EQUAL
+CHECK_FTH
+    bsf PORTB, 3
+    movlw 0x83    ; Load 10 into WREG
+    subwf 0x90, W, 0
+    btfss STATUS, Z
+    goto UNLOCKED
     goto UNLOCK_CODE
     
-LOOP
-    bcf TRISB, 7
-    bsf PORTB, 7
-    bsf PORTC, 0
-    call WAIT
-    btfsc PORTC, 0
-    call TOP
-    bcf PORTC, 0
-    bsf PORTC, 1
-    call WAIT
-    btfsc PORTC, 1
-    call BOTTOM
-    bcf PORTC, 1
-    goto LOOP
+UNLOCKED
+    ; turn of the leds displaying the code
+    bcf PORTB, 0
+    bcf PORTB, 1
+    bcf PORTB, 2
+    bcf PORTB, 3
     
-END_LOOP
+    bcf PORTB, 5
+    bcf PORTB, 5 ; open led ON
+    bsf PORTB, 4 ; closed led OFF
+
+REALEASED_LOOP
+    btfsc PORTD, 0       
+    call REALEASED_LOOP
+    btfsc PORTD, 1       
+    call REALEASED_LOOP
+    btfsc PORTD, 2        
+    call REALEASED_LOOP
+    btfsc PORTD, 3       
+    call REALEASED_LOOP
+    btfsc PORTD, 4       
+    goto REALEASED_LOOP
+    btfsc PORTD, 5       
+    goto REALEASED_LOOP
+    btfsc PORTD, 6       
+    goto REALEASED_LOOP
+    btfsc PORTD, 7        
+    goto REALEASED_LOOP
+    btfsc PORTA, 0        
+    goto REALEASED_LOOP
     return
 
-TOP
-    btfsc PORTC, 2       
-    call ON_1
-    btfsc PORTC, 3       
-    call ON_2
-    btfsc PORTC, 4        
-    call ON_3
-    btfsc PORTC, 5       
-    call ON_4
-    btfsc PORTC, 6       
-    call ON_5
-    return
-    
-BOTTOM
-    btfsc PORTC, 2       
-    call ON_6
-    btfsc PORTC, 3       
-    call ON_7
-    btfsc PORTC, 4        
-    call ON_8
-    btfsc PORTC, 5       
-    call ON_9
-    btfsc PORTC, 6       
-    call ON_0
-    return
- 
-ON_1
-    movlw 1
-    movwf 0x90
-    return
-ON_2
-    movlw 2
-    movwf 0x90
-    return
-ON_3
-    movlw 3
-    movwf 0x90
-    return
-ON_4
-    movlw 4
-    movwf 0x90
-    return
-ON_5
-    movlw 5
-    movwf 0x90
-    return
-ON_6
-    movlw 6
-    movwf 0x90
-    return
-ON_7
-    movlw 7
-    movwf 0x90
-    return
-ON_8
-    movlw 8
-    movwf 0x90
-    return 
-ON_9
-    movlw 9
-    movwf 0x90
-    return
-ON_0
+
+PRZYCISKI_1
     movlw 0
-    movwf 0x90
-    return 
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_1
+    btfsc 0x90, 1
+    call ON_1
+    btfsc 0x90, 2
+    call ON_1
+    btfsc 0x90, 3
+    call ON_1
+    btfsc 0x90, 4
+    call ON_1
+    btfsc 0x90, 5
+    call ON_1
+    btfsc 0x90, 6
+    call ON_1
+    btfsc 0x90, 7
+    call ON_1
+    btfsc 0x90, 8
+    call ON_1
+    
+    goto PRZYCISKI_1
 
+PRZYCISKI_2
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_2
+    btfsc 0x90, 1
+    call ON_2
+    btfsc 0x90, 2
+    call ON_2
+    btfsc 0x90, 3
+    call ON_2
+    btfsc 0x90, 4
+    call ON_2
+    btfsc 0x90, 5
+    call ON_2
+    btfsc 0x90, 6
+    call ON_2
+    btfsc 0x90, 7
+    call ON_2
+    btfsc 0x90, 8
+    call ON_2
+    
+    goto PRZYCISKI_2
 
-WAIT
-    movlw 0x02
-    movwf 0x80
-    movwf 0x81
-WAIT1
-    decf 0x80
-    btfsc STATUS, Z
-    return
-WAIT2
-    decf 0x81
-    btfsc STATUS, Z
-    goto WAIT1
-    goto WAIT2
- 
+PRZYCISKI_3
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_3
+    btfsc 0x90, 1
+    call ON_3
+    btfsc 0x90, 2
+    call ON_3
+    btfsc 0x90, 3
+    call ON_3
+    btfsc 0x90, 4
+    call ON_3
+    btfsc 0x90, 5
+    call ON_3
+    btfsc 0x90, 6
+    call ON_3
+    btfsc 0x90, 7
+    call ON_3
+    btfsc 0x90, 8
+    call ON_3
+    
+    goto PRZYCISKI_3
+    
+PRZYCISKI_4
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_4
+    btfsc 0x90, 1
+    call ON_4
+    btfsc 0x90, 2
+    call ON_4
+    btfsc 0x90, 3
+    call ON_4
+    btfsc 0x90, 4
+    call ON_4
+    btfsc 0x90, 5
+    call ON_4
+    btfsc 0x90, 6
+    call ON_4
+    btfsc 0x90, 7
+    call ON_4
+    btfsc 0x90, 8
+    call ON_4
+    
+    goto PRZYCISKI_4
+    
+    
+    
+ON_1
+    call REALEASED_LOOP
+    goto SAVE_FST
+ON_2
+    call REALEASED_LOOP
+    goto SAVE_SCD
+ON_3
+    call REALEASED_LOOP
+    goto SAVE_THR
+ON_4
+    call REALEASED_LOOP
+    goto SAVE_FTH
+
+PRZYCISKI_1_LOCK
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_1_LOCK
+    btfsc 0x90, 1
+    call ON_1_LOCK
+    btfsc 0x90, 2
+    call ON_1_LOCK
+    btfsc 0x90, 3
+    call ON_1_LOCK
+    btfsc 0x90, 4
+    call ON_1_LOCK
+    btfsc 0x90, 5
+    call ON_1_LOCK
+    btfsc 0x90, 6
+    call ON_1_LOCK
+    btfsc 0x90, 7
+    call ON_1_LOCK
+    btfsc 0x90, 8
+    call ON_1_LOCK
+    
+    goto PRZYCISKI_1_LOCK
+
+PRZYCISKI_2_LOCK
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_2_LOCK
+    btfsc 0x90, 1
+    call ON_2_LOCK
+    btfsc 0x90, 2
+    call ON_2_LOCK
+    btfsc 0x90, 3
+    call ON_2_LOCK
+    btfsc 0x90, 4
+    call ON_2_LOCK
+    btfsc 0x90, 5
+    call ON_2_LOCK
+    btfsc 0x90, 6
+    call ON_2_LOCK
+    btfsc 0x90, 7
+    call ON_2_LOCK
+    btfsc 0x90, 8
+    call ON_2_LOCK
+    
+    goto PRZYCISKI_2_LOCK
+
+PRZYCISKI_3_LOCK
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_3_LOCK
+    btfsc 0x90, 1
+    call ON_3_LOCK
+    btfsc 0x90, 2
+    call ON_3_LOCK
+    btfsc 0x90, 3
+    call ON_3_LOCK
+    btfsc 0x90, 4
+    call ON_3_LOCK
+    btfsc 0x90, 5
+    call ON_3_LOCK
+    btfsc 0x90, 6
+    call ON_3_LOCK
+    btfsc 0x90, 7
+    call ON_3_LOCK
+    btfsc 0x90, 8
+    call ON_3_LOCK
+    
+    goto PRZYCISKI_3_LOCK
+    
+PRZYCISKI_4_LOCK
+    movlw 0
+    btfsc PORTD, 0
+    movlw b'00000001'
+    btfsc PORTD, 1
+    movlw b'00000010'
+    btfsc PORTD, 2
+    movlw b'00000100'
+    btfsc PORTD, 3
+    movlw b'00001000'
+    btfsc PORTD, 4
+    movlw b'00001000'
+    btfsc PORTD, 5
+    movlw b'00010000'
+    btfsc PORTD, 6
+    movlw b'00100000'
+    btfsc PORTD, 7
+    movlw b'0100000'
+    btfsc PORTA, 0
+    movlw b'10000000'
+    
+    movwf 0x90 ; załadowanie do f 0x90
+    
+    btfsc 0x90, 0
+    call ON_4_LOCK
+    btfsc 0x90, 1
+    call ON_4_LOCK
+    btfsc 0x90, 2
+    call ON_4_LOCK
+    btfsc 0x90, 3
+    call ON_4_LOCK
+    btfsc 0x90, 4
+    call ON_4_LOCK
+    btfsc 0x90, 5
+    call ON_4_LOCK
+    btfsc 0x90, 6
+    call ON_4_LOCK
+    btfsc 0x90, 7
+    call ON_4_LOCK
+    btfsc 0x90, 8
+    call ON_4_LOCK
+    
+    goto PRZYCISKI_4_LOCK
+    
+    
+    
+ON_1_LOCK
+    call REALEASED_LOOP
+    goto CHECK_FST
+ON_2_LOCK
+    bsf PORTB, 1
+    call REALEASED_LOOP
+    goto CHECK_SCD
+ON_3_LOCK
+    bsf PORTB, 2
+    call REALEASED_LOOP
+    goto CHECK_THR
+ON_4_LOCK
+    bsf PORTB, 3
+    call REALEASED_LOOP
+    goto CHECK_FTH
+
     END
