@@ -1,5 +1,5 @@
 {
-  "## Plik. 1": {
+  "# Plik. 1": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij przeznaczenie poszczeg\u00f3lnych bit\u00f3w rejestru STATUS.": "Rejestr STATUS jest rejestrem stanu u\u017cywanym w wielu mikrokontrolerach i mikroprocesorach. Zawiera on wiele bit\u00f3w, z kt\u00f3rych ka\u017cdy pe\u0142ni okre\u015blon\u0105 rol\u0119:\n\n- bit C: przeniesienie - ustawiany wtedy, gdy poprzednia operacja matematyczna spowodowa\u0142a przeniesienie (ang. carry)\n- bit DC: po\u0142owa przeniesienia - ustawiany wtedy, gdy poprzednia operacja matematyczna spowodowa\u0142a przeniesienie w po\u0142owie warto\u015bci (ang. half-carry)\n- bit Z: zero - ustawiany wtedy, gdy wynik poprzedniej operacji matematycznej jest r\u00f3wny 0\n- bit S: znak - ustawiany wtedy, gdy wynik poprzedniej operacji matematycznej jest ujemny\n- bit P/V: parzysto\u015b\u0107/przepe\u0142nienie - u\u017cywany w niekt\u00f3rych architekturach procesor\u00f3w do sygnalizowania b\u0142\u0119du przepe\u0142nienia (ang. overflow)\n- bit N: ustawiany wtedy, gdy ostatnio wykonana operacja by\u0142a odejmowaniem (ang. subtract)\n\nDzi\u0119ki wykorzystaniu tych bit\u00f3w, mo\u017cna np. w \u0142atwy spos\u00f3b sprawdzi\u0107, czy wynik ostatniej operacji matematycznej spe\u0142nia okre\u015blone warunki, co mo\u017ce by\u0107 przydatne w wielu sytuacjach."
@@ -13,7 +13,7 @@
     ],
     "#n": 1
   },
-  "## Plik. 2": {
+  "# Plik. 2": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij sposoby adresacji pami\u0119ci programu w mikrokontrolerze PIC16f877A.": "Mikrokontroler PIC16f877A ma ograniczone mo\u017cliwo\u015bci adresacji pami\u0119ci w por\u00f3wnaniu do bardziej zaawansowanych mikrokontroler\u00f3w. Adresacja pami\u0119ci w tym mikrokontrolerze mo\u017ce odbywa\u0107 si\u0119 na kilka sposob\u00f3w:\n\n1. Adresowanie bezpo\u015brednie - Polega na bezpo\u015brednim odwo\u0142ywaniu si\u0119 do adresu pami\u0119ci w instrukcji. Na przyk\u0142ad, instrukcja: \"MOVWF 0x20\" przeniesie warto\u015b\u0107 rejestru roboczego do adresu 0x20 w pami\u0119ci danych.\n\n2. Adresowanie za pomoc\u0105 rejestru wskazuj\u0105cego - Wykorzystuj\u0105c rejestry wska\u017anika (W), mo\u017cna odnie\u015b\u0107 si\u0119 do jednego adresu pami\u0119ci z danymi lub instrukcji. Przyk\u0142adowo, instrukcja \"MOVWF FSR\" przenosi warto\u015b\u0107 rejestru roboczego (W) do rejestru wska\u017anika (FSR), kt\u00f3ry mo\u017ce s\u0142u\u017cy\u0107 do adresowania pami\u0119ci.\n\n3. Adresowanie za pomoc\u0105 rejestru i przesuni\u0119cia - Ten spos\u00f3b adresacji pami\u0119ci umo\u017cliwia przesy\u0142anie do pami\u0119ci adresu, kt\u00f3ry jest przesuni\u0119ciem w ramach zawarto\u015bci rejestru wska\u017anika. Przyk\u0142adowo, je\u015bli FSR ma warto\u015b\u0107 0x10, to instrukcja \"MOVWF 0x0 (FSR)\" przeniesie warto\u015b\u0107 rejestru roboczego do adresu pami\u0119ci 0x10.\n\n4. Adresowanie za pomoc\u0105 sta\u0142ej i rejestru - Zastosowanie sta\u0142ej (lub litera\u0142u) i rejestru umo\u017cliwia dost\u0119p do adresu pami\u0119ci, kt\u00f3rego warto\u015b\u0107 jest wynikiem dodania warto\u015bci rejestru roboczego do podanej sta\u0142ej. Przyk\u0142adowo, instrukcja \"MOVLW 0x0A, ADDWF 0x20,W\" pobierze warto\u015b\u0107 0x0A do rejestru roboczego, doda j\u0105 do zawarto\u015bci adresu 0x20 w pami\u0119ci danych i wynik przenosi do rejestru roboczego.\n\n5. Adresowanie za pomoc\u0105 indeksowania - Umo\u017cliwia to dost\u0119p do pami\u0119ci poprzez przypisanie do adresu pami\u0119ci warto\u015bci liczbowej lub zawarto\u015bci rejestru. Na przyk\u0142ad, instrukcja \"MOVF TBL, W, 0x1\" przeniesie warto\u015b\u0107 z tablicy pami\u0119ci o adresie TBL do rejestru roboczego (W) i inkrementuje adres TBL o 1."
@@ -27,7 +27,7 @@
     ],
     "#n": 2
   },
-  "## Plik. 3": {
+  "# Plik. 3": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij sposoby adresacji pami\u0119ci danych w mikrokontrolerze PIC16f877A.": "W mikrokontrolerze PIC16f877A, pami\u0119\u0107 danych mo\u017ce by\u0107 adresowana na kilka sposob\u00f3w:\n\n1. Adresowanie bezpo\u015brednie - adresowane s\u0105 bezpo\u015brednio rejestry, kt\u00f3re przechowuj\u0105 dane. W tym przypadku, adres rejestru wskazuje na konkretny rejestr w pami\u0119ci danych.\n\n2. Adresowanie po\u015brednie - adresowane s\u0105 rejestry wska\u017anikowe, kt\u00f3re wskazuj\u0105 na miejsce, gdzie przechowywane s\u0105 dane. W tym przypadku, nie jest konieczne podanie bezpo\u015bredniego adresu pami\u0119ci, lecz wska\u017anik wskazuje na ni\u0105.\n\n3. Adresowanie indeksowe - stosowane jest w przypadku dost\u0119pu do tablic lub struktur danych. Adres pami\u0119ci jest obliczany na podstawie warto\u015bci indeksu oraz offsetu.\n\n4. Adresowanie autoinkrementacyjne - pozwala na dynamiczne zmienianie adresu pami\u0119ci przy ka\u017cdym odwo\u0142aniu do niego. W przypadku ustawienia bitu INDF Auto-Increment (INC), adres pami\u0119ci zostaje zwi\u0119kszony o 1 po ka\u017cdym odczycie lub zapisie.\n\n5. Adresowanie bezwzgl\u0119dne - adres pami\u0119ci jest podawany wprost, bezpo\u015brednio w instrukcji. W tym przypadku, mo\u017cliwe jest odwo\u0142anie si\u0119 do dowolnego miejsca w pami\u0119ci danych."
@@ -41,7 +41,7 @@
     ],
     "#n": 3
   },
-  "## Plik. 4": {
+  "# Plik. 4": {
     "q&a": [
       {
         "Zad. 1 Przedstaw i opisz elementy pami\u0119ci programu mikrokontrolera PIC16f877A.": "Mikrokontroler PIC16f877A ma nast\u0119puj\u0105ce elementy pami\u0119ci:\n\n1. Pami\u0119\u0107 programu (flash): jest to pami\u0119\u0107, w kt\u00f3rej znajduj\u0105 si\u0119 instrukcje programu. Mo\u017ce pomie\u015bci\u0107 do 14 336 s\u0142\u00f3w (1 s\u0142owo = 14 bit\u00f3w).\n\n2. Pami\u0119\u0107 danych RAM: jest to pami\u0119\u0107, w kt\u00f3rej program przechowuje zmienne i bufory. Mo\u017ce pomie\u015bci\u0107 do 368 bajt\u00f3w.\n\n3. Pami\u0119\u0107 FIFO: jest to pami\u0119\u0107, kt\u00f3ra s\u0142u\u017cy do przechowywania danych w trybie kolejki. Jest u\u017cywana w \u0142\u0105czno\u015bci asynchronicznej i Synchronous Serial Port (SSP).\n\n4. Pami\u0119\u0107 EEPROM: jest to pami\u0119\u0107, w kt\u00f3rej program mo\u017ce przechowywa\u0107 dane trwa\u0142e. Mo\u017ce pomie\u015bci\u0107 do 256 bajt\u00f3w.\n\n5. Pami\u0119\u0107 rejestrowa: jest to zestaw specjalnych rejestr\u00f3w w mikrokontrolerze, kt\u00f3re przechowuj\u0105 stany flag, adresy, warto\u015bci i inne dane wa\u017cne dla dzia\u0142ania programu.\n\n6. Pami\u0119\u0107 stosu: jest to specjalna pami\u0119\u0107 w mikrokontrolerze, kt\u00f3ra s\u0142u\u017cy do przechowywania adres\u00f3w powrotu i danych operacyjnych w trakcie wykonywania funkcji.\n\n7. Pami\u0119\u0107 wektor\u00f3w przerwa\u0144: jest to pami\u0119\u0107, w kt\u00f3rej przechowywane s\u0105 adresy funkcji obs\u0142uguj\u0105cych przerwania."
@@ -55,7 +55,7 @@
     ],
     "#n": 4
   },
-  "## Plik. 5": {
+  "# Plik. 5": {
     "q&a": [
       {
         "Zad. 1 Przedstaw i opisz podstawowe elementy pami\u0119ci mikrokontrolera PIC16f877A.": "1. Pami\u0119\u0107 programu (FLASH) - to pami\u0119\u0107, w kt\u00f3rej przechowywany jest program zarz\u0105dzaj\u0105cy prac\u0105 mikrokontrolera. Zawiera ona instrukcje do wykonania przez procesor.\n\n2. Pami\u0119\u0107 danych SRAM - to pami\u0119\u0107, w kt\u00f3rej przechowywane s\u0105 zmienne oraz wyniki po\u015brednie oblicze\u0144.\n\n3. Pami\u0119\u0107 EEPROM - to pami\u0119\u0107 nieulotna, w kt\u00f3rej przechowywane s\u0105 dane, kt\u00f3re nie powinny by\u0107 tracone przy wy\u0142\u0105czeniu zasilania.\n\n4. Przetwornik analogowo-cyfrowy (ADC) - to uk\u0142ad umo\u017cliwiaj\u0105cy odczytanie sygna\u0142u analogowego i zamian\u0119 go na sygna\u0142 cyfrowy, kt\u00f3ry mo\u017ce by\u0107 przetwarzany przez mikrokontroler.\n\n5. Modu\u0142 licznika/odbiornika czasu (Timer/Counter) - to uk\u0142ad umo\u017cliwiaj\u0105cy pomiar czasu oraz generacj\u0119 sygna\u0142\u00f3w o okre\u015blonym czasie trwania.\n\n6. Interfejsy komunikacyjne - mikrokontroler PIC16f877A posiada wiele interfejs\u00f3w komunikacyjnych, takich jak UART, SPI czy I2C, umo\u017cliwiaj\u0105cych komunikacj\u0119 z innymi urz\u0105dzeniami.\n\n7. Wej\u015bcia/wyj\u015bcia (I/O) - mikrokontroler posiada wiele port\u00f3w wej\u015bcia/wyj\u015bcia, kt\u00f3re umo\u017cliwiaj\u0105 pod\u0142\u0105czenie r\u00f3\u017cnych urz\u0105dze\u0144 zewn\u0119trznych, takich jak przyciski, diody, czujniki, silniki itp.\n\n8. Procesor - to g\u0142\u00f3wny element mikrokontrolera, odpowiedzialny za przetwarzanie danych i wykonywanie instrukcji programu. W przypadku PIC16f877A jest to procesor RISC o taktowaniu do 20 MHz."
@@ -66,7 +66,7 @@
     ],
     "#n": 5
   },
-  "## Plik. 6": {
+  "# Plik. 6": {
     "q&a": [
       {
         "Zad. 1 Opisz spos\u00f3b dzia\u0142ania stosu i instrukcje wykorzystywane do jego obs\u0142ugi w mikrokontrolerach klasy PIC18fxx2 i": "Stos to struktura danych, w kt\u00f3rej elementy s\u0105 dodawane lub usuwane tylko z jednego ko\u0144ca. W mikrokontrolerach klasy PIC18fxx2 stos jest implementowany w pami\u0119ci RAM i s\u0142u\u017cy do przechowywania adres\u00f3w powrotu do wywo\u0142uj\u0105cej funkcji, warto\u015bci rejestr\u00f3w i zmiennych lokalnych.\n\nInstrukcje wykorzystywane do obs\u0142ugi stosu to:\n\n- PUSH - dodaje warto\u015b\u0107 ze wskazanego rejestru na szczyt stosu.\n- POP - usuwa warto\u015b\u0107 ze szczytu stosu i zapisuje j\u0105 do wskazanego rejestru.\n- CALL - dodaje adres powrotu na stos i przechodzi do wskazanej funkcji.\n- RET - usuwa adres powrotu ze stosu i wraca do wywo\u0142uj\u0105cej funkcji.\n\nPrzyk\u0142ad u\u017cycia stosu w programie w j\u0119zyku assembler dla mikrokontrolera PIC18fxx2:\n\nORG 0x00\nSTART:\n    CALL FUNCTION\n    ; powr\u00f3t z funkcji do START\n    RET\n\nFUNCTION:\n    ; dodanie warto\u015bci 0x05 na stos\n    MOVLW 0x05\n    PUSH WREG\n    ; dodanie warto\u015bci 0x0A na stos\n    MOVLW 0x0A\n    PUSH WREG\n    ; usuni\u0119cie warto\u015bci ze szczytu stosu i zapisanie jej do rejestru\n    POP REG1\n    ; usuni\u0119cie warto\u015bci ze szczytu stosu i zapisanie jej do rejestru\n    POP REG2\n    ; dodanie warto\u015bci z rejestru REG1 i REG2 i wynik zapisanie na stosie\n    ADDWF REG1, W\n    PUSH WREG\n    ; powr\u00f3t do START\n    RET\n\nW powy\u017cszym przyk\u0142adzie warto\u015b\u0107 0x05 jest najpierw dodawana na stos za pomoc\u0105 instrukcji PUSH, a nast\u0119pnie jest pobierana ze szczytu stosu za pomoc\u0105 instrukcji POP i zapisywana do rejestru REG1. Podobnie, warto\u015b\u0107 0x0A jest dodana na stos, pobrana ze szczytu stosu i zapisana do rejestru REG2. Nast\u0119pnie te dwie warto\u015bci s\u0105 dodawane za pomoc\u0105 instrukcji ADDWF i wynik jest zapisywany na stosie. Na koniec funkcja zwraca warto\u015b\u0107 i wraca do wywo\u0142uj\u0105cej funkcji za pomoc\u0105 instrukcji RET."
@@ -80,7 +80,7 @@
     ],
     "#n": 6
   },
-  "## Plik. 7": {
+  "# Plik. 7": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij znaczenie \ufb02ag kon\ufb01guracji w mikrokontrolerze PIC16f877A": "Flagi konfiguracji w mikrokontrolerze PIC16f877A to specjalne bity, kt\u00f3re umo\u017cliwiaj\u0105 ustawienie r\u00f3\u017cnych tryb\u00f3w pracy mikrokontrolera. Flagi te kontroluj\u0105 podstawowe funkcje takie jak w\u0142\u0105czanie i wy\u0142\u0105czanie przerwa\u0144, tryby konwersji A/D, ustawianie pr\u0119dko\u015bci zegara procesora, tryby programowania i wiele innych. Ustawienie odpowiednich flag konfiguracji jest wa\u017cnym etapem projektowania uk\u0142ad\u00f3w opartych na mikrokontrolerze, poniewa\u017c ma to wp\u0142yw na wydajno\u015b\u0107 i funkcjonalno\u015b\u0107 ca\u0142ej aplikacji."
@@ -94,7 +94,7 @@
     ],
     "#n": 7
   },
-  "## Plik. 8": {
+  "# Plik. 8": {
     "q&a": [
       {
         "Zad. 1 Czym jest histereza w uk\u0142adach wej\u015bciowo-wyj\u015bciowych.": "Histereza w uk\u0142adach wej\u015bciowo-wyj\u015bciowych to zjawisko, w kt\u00f3rym warto\u015b\u0107 wyj\u015bciowa nie zale\u017cy tylko od warto\u015bci wej\u015bciowej w danym momencie, ale r\u00f3wnie\u017c od historii zmian warto\u015bci wej\u015bciowej. Innymi s\u0142owy, histereza wyst\u0119puje, gdy zmiana warto\u015bci wej\u015bciowej nie powoduje natychmiastowej i dok\u0142adnej zmiany warto\u015bci wyj\u015bciowej, ale na wp\u0142ywaj\u0105 na ni\u0105 zmiany wykonywane wcze\u015bniej. Jest to zjawisko powszechne w wielu uk\u0142adach mechanicznych, elektrycznych i steruj\u0105cych. Przyk\u0142adem histerezy mo\u017ce by\u0107 sytuacja, w kt\u00f3rej d\u017awignia urz\u0105dzenia pozostanie w pozycji otwartej, nawet gdy warto\u015b\u0107 wej\u015bciowa si\u0119 zmieni\u0142a, a dopiero gdy ta warto\u015b\u0107 zostanie zmieniona o wiele wi\u0119ksz\u0105 ilo\u015b\u0107, d\u017awignia zacznie si\u0119 porusza\u0107."
@@ -108,7 +108,7 @@
     ],
     "#n": 8
   },
-  "## Plik. 9": {
+  "# Plik. 9": {
     "q&a": [
       {
         "Zad. 1 W jaki spos\u00f3b zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofon\u00f3w.": "Zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofon\u00f3w poprzez wykorzystanie specjalnych kryszta\u0142\u00f3w piezoelektrycznych, takich jak kwarc czy turmalin. Kryszta\u0142 taki jest umieszczany w mikrofonie i poddawany wibracjom wywo\u0142anym przez d\u017awi\u0119ki, kt\u00f3re maj\u0105 zosta\u0107 zarejestrowane. Wibracje te wp\u0142ywaj\u0105 na kryszta\u0142 piezoelektryczny, kt\u00f3ry generuje na swoich ko\u0144cach napi\u0119cie elektryczne proporcjonalne do si\u0142y tych wibracji. Napi\u0119cie to jest nast\u0119pnie wzmacniane i przetwarzane w sygna\u0142 d\u017awi\u0119kowy, kt\u00f3ry mo\u017ce by\u0107 zapisany lub przes\u0142any na dalsze urz\u0105dzenia. Dzi\u0119ki temu w\u0142a\u015bnie zjawisku piezoelektrycznemu mo\u017cliwe jest nagrywanie d\u017awi\u0119k\u00f3w i g\u0142os\u00f3w oraz ich przekazywanie za pomoc\u0105 mikrofon\u00f3w."
@@ -122,7 +122,7 @@
     ],
     "#n": 9
   },
-  "## Plik. 10": {
+  "# Plik. 10": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania termopary i \u0142a\u0144cucha termicznego.": "Termopary to urz\u0105dzenia pomiarowe, kt\u00f3re wykorzystuj\u0105 zjawisko Seebecka do pomiaru temperatury. Zjawisko to polega na powstawaniu si\u0142y elektromotorycznej w przewodniku, gdy r\u00f3\u017cnica temperatur jest mi\u0119dzy jego dwoma ko\u0144cami. W termoparze sk\u0142adaj\u0105cym si\u0119 z dw\u00f3ch r\u00f3\u017cnych metali, powstaj\u0105ce si\u0142y elektromotoryczne s\u0105 proporcjonalne do r\u00f3\u017cnicy temperatur mi\u0119dzy ko\u0144cami. Ta r\u00f3\u017cnica napi\u0119cia jest mierzona i przeliczana na temperatur\u0119 za pomoc\u0105 tabel termostatycznych.\n\n\u0141a\u0144cuch termiczny to system lub proces transportu energii cieplnej z jednego punktu do drugiego, wykorzystuj\u0105cy r\u00f3\u017cne elementy termiczne, takie jak termopary, termometry oporowe czy czujniki temperatury typu RTD. Proces ten wymaga przesy\u0142ania energii cieplnej z miejsca o wy\u017cszej temperaturze do miejsca o ni\u017cszej temperaturze. W \u0142a\u0144cuchu termicznym wa\u017cne jest wyznaczenie strumienia ciep\u0142a mi\u0119dzy \u017ar\u00f3d\u0142em a odbiornikiem, jak r\u00f3wnie\u017c pr\u0119dko\u015b\u0107 przep\u0142ywu ciep\u0142a przez poszczeg\u00f3lne elementy termiczne. Wykorzystanie \u0142a\u0144cucha termicznego jest niezwykle istotne w przemy\u015ble, zw\u0142aszcza w procesach produkcyjnych, gdzie kontrola temperatur jest kluczowa dla zachowania jako\u015bci produkt\u00f3w i proces\u00f3w produkcyjnych."
@@ -136,7 +136,7 @@
     ],
     "#n": 10
   },
-  "## Plik. 11": {
+  "# Plik. 11": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania kamery CCD.": "Kamera CCD (Charge-Coupled Device) sk\u0142ada si\u0119 z matrycy setek tysi\u0119cy lub milion\u00f3w pikseli, z kt\u00f3rych ka\u017cdy rejestruje intensywno\u015b\u0107 \u015bwiat\u0142a padaj\u0105cego na niego. Piksele te s\u0105 z\u0142o\u017cone z p\u00f3l p\u00f3\u0142przewodnik\u00f3w, kt\u00f3re przechowuj\u0105 \u0142adunki elektryczne w spos\u00f3b proporcjonalny do ilo\u015bci \u015bwiat\u0142a padaj\u0105cego na nie.\n\nW momencie gdy \u015bwiat\u0142o pada na piksel, elektrony przenosz\u0105 si\u0119 z pola p\u00f3\u0142przewodnikowego w kierunku elektrody zasilaj\u0105cej dzi\u0119ki efektowi fotoelektrycznemu. Nast\u0119pnie, \u0142adunki s\u0105 przesuwane przez uk\u0142ad poziomych i pionowych przewod\u00f3w, tak zwany uk\u0142ad sterowania odczytem (ang. readout register), do specjalnego uk\u0142adu analogowo-cyfrowego konwertera (ang. ADC - Analog-to-Digital Converter), kt\u00f3ry t\u0142umaczy sygna\u0142 analogowy na cyfrowy.\n\nIstniej\u0105 r\u00f3\u017cne sposoby organizacji przewod\u00f3w uk\u0142adu sterowania odczytem, ale najcz\u0119\u015bciej stosowanymi s\u0105 architektury \"frame transfer\" i \"interline transfer\". W przypadku pierwszej, sk\u0142adaj\u0105cej si\u0119 z dw\u00f3ch matryc CCD, jedna matryca zajmuje si\u0119 zbieraniem na\u015bwietlonego obrazu, podczas gdy druga jest u\u017cywana do realizacji przetwarzania obrazu. W drugim przypadku przewody uk\u0142adu sterowania odczytem s\u0105 zamontowane wewn\u0105trz pikseli, dzi\u0119ki czemu jest ona bardziej kompaktowa i osi\u0105ga wy\u017csz\u0105 pr\u0119dko\u015b\u0107 ni\u017c architektura \"frame transfer\".\n\nW procesie odczytu ka\u017cdego piksela, sygna\u0142 jest wzmacniany i przekszta\u0142cany w posta\u0107 cyfrow\u0105, a nast\u0119pnie zapisywany w pami\u0119ci kamery. W ten spos\u00f3b, obraz jest tworzony z wielu pikseli, kt\u00f3re s\u0105 odczytywane sekwencyjnie i zapisywane na karcie pami\u0119ci kamery.\n\nKamery CCD znajduj\u0105 zastosowanie w wielu r\u00f3\u017cnych dziedzinach, w tym w systemach telewizyjnych, przemys\u0142owych, medycznych i naukowych. Dzi\u0119ki ich wysokiej rozdzielczo\u015bci i czu\u0142o\u015bci na \u015bwiat\u0142o, kamery CCD s\u0105 idealnym wyborem do wykonywania zdj\u0119\u0107 i film\u00f3w o wysokiej jako\u015bci i ostro\u015bci."
@@ -150,7 +150,7 @@
     ],
     "#n": 11
   },
-  "## Plik. 12": {
+  "# Plik. 12": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania konwertera analogowo-cyfrowego. Zamie\u015b\u0107 niezb\u0119dne obliczenia.": "Konwerter analogowo-cyfrowy (ADC) jest urz\u0105dzeniem, kt\u00f3re przekszta\u0142ca sygna\u0142 analogowy na posta\u0107 cyfrow\u0105. Dzia\u0142anie ADC polega na pr\u00f3bkowaniu sygna\u0142u analogowego co okre\u015blony czas oraz kwantowaniu \u2013 przyporz\u0105dkowaniu warto\u015bci cyfrowej do amplitudy pr\u00f3bek. \n\nProces ten mo\u017cna przedstawi\u0107 nast\u0119puj\u0105co:\n\n1. Sygna\u0142 analogowy jest podawany na wej\u015bcie ADC.\n2. Sygna\u0142 jest pr\u00f3bkowany z okre\u015blon\u0105 cz\u0119stotliwo\u015bci\u0105 f_s, kt\u00f3ra jest wyra\u017cana w Hz (np. 10 kHz). \n3. Nast\u0119pnie sygna\u0142 jest kwantowany, czyli przetwarzany na warto\u015bci dyskretne z okre\u015blon\u0105 rozdzielczo\u015bci\u0105. Rozdzielczo\u015b\u0107 okre\u015blana jest przez liczb\u0119 bit\u00f3w u\u017cytych do zapisu warto\u015bci cyfrowej. Im wi\u0119cej bit\u00f3w, tym mniejsze skoki mi\u0119dzy kolejnymi warto\u015bciami cyfrowymi. Na przyk\u0142ad: \n   - dla 8 bit\u00f3w rozdzielczo\u015bci (typowy zakres 0-255), ka\u017cda jednostka zmiany sygna\u0142u odpowiada zmianie o oko\u0142o 0,4% maksymalnej warto\u015bci sygna\u0142u.\n   - dla 16 bit\u00f3w rozdzielczo\u015bci (typowy zakres 0-65535), ka\u017cda jednostka zmiany sygna\u0142u odpowiada zmianie o oko\u0142o 0,0015% maksymalnej warto\u015bci sygna\u0142u.\n4. Warto\u015bci cyfrowe zostaj\u0105 zapisane w pami\u0119ci ADC i s\u0105 gotowe do przetworzenia przez cyfrowy uk\u0142ad elektroniczny. \n\nObliczenia:\n\nCz\u0119stotliwo\u015b\u0107 pr\u00f3bkowania f_s jest odwrotno\u015bci\u0105 czasu trwania jednej pr\u00f3bki T_s, czyli: \nf_s = 1/T_s\n\nRozdzielczo\u015b\u0107 ADC dla n bit\u00f3w wynosi:\nR = (V_max - V_min)/(2^n)\n\ngdzie V_max to maksymalna warto\u015b\u0107 sygna\u0142u analogowego, a V_min to minimalna warto\u015b\u0107 sygna\u0142u analogowego. \n\nPrzyk\u0142adowo, dla ADC o rozdzielczo\u015bci 12 bit\u00f3w i zakresie 0-5 V, rozdzielczo\u015b\u0107 wynosi: \nR = (5 V - 0 V)/(2^12) = 0,00122 V\n\nOznacza to, \u017ce ka\u017cda jednostka zmiany sygna\u0142u odpowiada zmianie o oko\u0142o 0,024% maksymalnej warto\u015bci sygna\u0142u."
@@ -164,7 +164,7 @@
     ],
     "#n": 12
   },
-  "## Plik. 13": {
+  "# Plik. 13": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania konwertera cyfrowo-analogowego. Zamie\u015b\u0107 niezb\u0119dne obliczenia.": "Konwerter cyfrowo-analogowy (DAC) jest urz\u0105dzeniem, kt\u00f3re przyjmuje cyfrowy sygna\u0142 wej\u015bciowy i przekszta\u0142ca go na analogowy sygna\u0142 wyj\u015bciowy. Proces ten polega na przydzieleniu warto\u015bci sygna\u0142u cyfrowego do odpowiednich poziom\u00f3w napi\u0119cia na wyj\u015bciu konwertera.\n\nDAC zwykle sk\u0142ada si\u0119 z trzech g\u0142\u00f3wnych komponent\u00f3w: rejestru przesuwnego, przetwornika wagowego i wzmacniacza.\n\nRejestr przesuwny s\u0142u\u017cy do przechowywania kolejnych bit\u00f3w sygna\u0142u cyfrowego i przesuwania ich przez system, aby uzyska\u0107 kolejne warto\u015bci sygna\u0142u. Przetwornik wagowy przetwarza warto\u015bci bit\u00f3w z rejestru przesuwnego na napi\u0119cia odpowiednie dla ka\u017cdej warto\u015bci. Oddzielne przetworniki wagowe maj\u0105 r\u00f3\u017cn\u0105 precyzj\u0119, aby osi\u0105gn\u0105\u0107 odpowiedni\u0105 jako\u015b\u0107 sygna\u0142u.\n\nWzmacniacz s\u0142u\u017cy do wzmocnienia sygna\u0142u wyj\u015bciowego do odpowiedniego poziomu napi\u0119cia, kt\u00f3ry b\u0119dzie odpowiedni dla urz\u0105dze\u0144 odbiorczych, takich jak g\u0142o\u015bniki lub przetworniki sygna\u0142u.\n\nObliczenia dotycz\u0105ce dzia\u0142ania konwertera cyfrowo-analogowego obejmuj\u0105 dobranie napi\u0119\u0107 minimalnego i maksymalnego, potrzebnych do uzyskania odpowiedniego zakresu sygna\u0142u wyj\u015bciowego. Przyk\u0142adowo, je\u015bli DAC ma zakres wyj\u015bciowy od 0 do 5 wolt\u00f3w i przetwornik wagowy ma 8 bit\u00f3w, obliczenia b\u0119d\u0105 wygl\u0105da\u0107 nast\u0119puj\u0105co:\n\n- Warto\u015b\u0107 minimalna sygna\u0142u cyfrowego: 00000000 (0)\n- Warto\u015b\u0107 maksymalna sygna\u0142u cyfrowego: 11111111 (255)\n- Zakres warto\u015bci przetworzonych na napi\u0119cie: 0-5V\n- Warto\u015b\u0107 napi\u0119cia dla ka\u017cdej warto\u015bci sygna\u0142u cyfrowego: 5 / 255 = ~0.0196 V\n\nNast\u0119pnie, w celu uzyskania warto\u015bci sygna\u0142u analogowego dla konkretnej warto\u015bci cyfrowej, ta warto\u015b\u0107 zostaje pomno\u017cona przez warto\u015b\u0107 napi\u0119cia dla ka\u017cdego bitu wagowego i dodana do siebie, aby uzyska\u0107 sumaryczn\u0105 warto\u015b\u0107 napi\u0119cia dla ca\u0142ego sygna\u0142u analogowego."
@@ -178,7 +178,7 @@
     ],
     "#n": 13
   },
-  "## Plik. 14": {
+  "# Plik. 14": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij zastosowanie Supervisor-a w oprogramowaniu Webots. Poka\u017c jak i jakie instrukcje s\u0142u\u017c\u0105 do odczytywania": "i modyfikowania parametr\u00f3w symulacji za pomoc\u0105 Supervisor-a.\n\nSupervisor w Webots to proces, kt\u00f3ry zarz\u0105dza symulacj\u0105 robot\u00f3w i \u015brodowiska. Jego g\u0142\u00f3wnym zadaniem jest kontrolowanie symulacji, w tym modyfikowanie parametr\u00f3w, odczytywanie informacji o robotach i zmiana zachowania obiekt\u00f3w symulacji. Supervisor korzysta z j\u0119zyka Python, co umo\u017cliwia u\u017cytkownikom \u0142atwe programowanie interakcji mi\u0119dzy robotami i \u015brodowiskiem symulacyjnym. \n\nAby odczyta\u0107 parametry symulacji za pomoc\u0105 Supervisor-a, mo\u017cemy u\u017cy\u0107 nast\u0119puj\u0105cych instrukcji:\n\n```python\ntime_step = int(robot.getBasicTimeStep())\n```\n\nJest to przyk\u0142ad instrukcji, kt\u00f3ra pobiera warto\u015b\u0107 podstawowego kroku czasowego u\u017cywanego w symulacji, kt\u00f3ry mo\u017ce by\u0107 p\u00f3\u017aniej wykorzystany dla potrzeb sterowania robotem.\n\nAby zmieni\u0107 parametry symulacji, mo\u017cemy u\u017cy\u0107 na przyk\u0142ad nast\u0119puj\u0105cej instrukcji:\n\n```python\nrobot.setJointTargetPosition(joint_names, joint_positions)\n```\n\nJest to instrukcja, kt\u00f3ra ustawia pozycj\u0119 staw\u00f3w robota na okre\u015blonych pozycjach. Zamiast \"joint_names\" nale\u017cy poda\u0107 nazw\u0119 stawu, a zamiast \"joint_positions\" - warto\u015b\u0107 pozycji w radianach. \n\nInn\u0105 przyk\u0142adow\u0105 instrukcj\u0105 mo\u017ce by\u0107:\n\n```python\nrobot_node = supervisor.getFromDef(\"ROBOT\")\ntranslation_field = robot_node.getField(\"translation\")\ntranslation = translation_field.getSFVec3f()\n```\n\nInstrukcja ta pobiera pozycj\u0119 robota (wsp\u00f3\u0142rz\u0119dne x, y, z) i przypisuje j\u0105 do zmiennej \"translation\". \n\nZastosowanie Supervisor-a w Webots jest szczeg\u00f3lnie przydatne w przypadku ch\u0119ci personalizowania parametr\u00f3w symulacji i dodawania nowych funkcjonalno\u015bci do robot\u00f3w. Umo\u017cliwia to u\u017cytkownikom tworzenie bardziej z\u0142o\u017conych program\u00f3w, kt\u00f3re wykorzystuj\u0105 dane z symulacji do tworzenia bardziej interaktywnej i realistycznej wirtualnej rzeczywisto\u015bci."
@@ -189,7 +189,7 @@
     ],
     "#n": 14
   },
-  "## Plik. 15": {
+  "# Plik. 15": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij poj\u0119cie przekszta\u0142ce\u0144 jednorodnych.": "Przekszta\u0142cenia jednorodne to takie dzia\u0142ania matematyczne, kt\u00f3re zachowuj\u0105 proporcjonalno\u015b\u0107 mi\u0119dzy zmiennymi. Oznacza to, \u017ce je\u015bli mno\u017cymy warto\u015bci zmiennych przez pewn\u0105 sta\u0142\u0105, to wynik przekszta\u0142cenia r\u00f3wnie\u017c zostanie pomno\u017cony przez t\u0119 sam\u0105 sta\u0142\u0105. \n\nFormalnie, przekszta\u0142cenie f nazywamy jednorodnym stopnia k, je\u015bli dla dowolnego x i dowolnej sta\u0142ej c zachodzi:\n\nf(cx) = c^k * f(x)\n\nPrzyk\u0142adem przekszta\u0142cenia jednorodnego jest pierwiastkowanie, poniewa\u017c dla dowolnego x i dowolnej sta\u0142ej c zachodzi:\n\nsqrt(c * x) = sqrt(c) * sqrt(x)\n\nInnym przyk\u0142adem s\u0105 przekszta\u0142cenia afiniczne, czyli przesuni\u0119cia, obroty i skalowania figur geometrycznych. Skalowanie jest przyk\u0142adem przekszta\u0142cenia jednorodnego stopnia 2, poniewa\u017c podwojenie d\u0142ugo\u015bci kraw\u0119dzi figury skutkuje jej czterokrotnym powi\u0119kszeniem powierzchni."
@@ -203,7 +203,7 @@
     ],
     "#n": 15
   },
-  "## Plik. 16": {
+  "# Plik. 16": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij przeznaczenie poszczeg\u00f3lnych bit\u00f3w rejestru STATUS.": "Rejestr STATUS jest rejstrem wewn\u0119trznym procesora, kt\u00f3ry zawiera informacje o stanie procesora oraz wynikach ostatnio wykonanych operacji.\n\nPoszczeg\u00f3lne bity rejestru STATUS pe\u0142ni\u0105 nast\u0119puj\u0105ce funkcje:\n\n- bit C (Carry) - przeniesienie po wykonaniu operacji arytmetycznej lub logicznej\n- bit DC (Digit Carry) - przeniesienie w przypadku operacji na cyfrach dziesi\u0119tnych\n- bit Z (Zero) - wynik ostatniej operacji by\u0142 r\u00f3wny zeru\n- bit PD (Power Down) - procesor znajduje si\u0119 w trybie oszcz\u0119dzania energii\n- bit TO (Time-out) - wyst\u0105pi\u0142o przerwanie zegara wewn\u0119trznego\n- bit RP0 (Register Bank Select) - wyb\u00f3r banku rejestr\u00f3w\n- bit IRP (Register Bank Select) - wyb\u00f3r banku rejestr\u00f3w\n- bit n/A (Not Applicable) - niewykorzystywany\n\nKa\u017cdy z bit\u00f3w rejestru STATUS ma swoje unikalne przeznaczenie, kt\u00f3re zale\u017cy od trybu pracy procesora i wykonywanych operacji. Na podstawie stanu rejestr\u00f3w mo\u017cna kontrolowa\u0107 przebieg programu i podejmowa\u0107 dalsze decyzje w zale\u017cno\u015bci od wynik\u00f3w operacji."
@@ -217,7 +217,7 @@
     ],
     "#n": 16
   },
-  "## Plik. 17": {
+  "# Plik. 17": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij sposoby adresacji pami\u0119ci programu w mikrokontrolerze PIC16f877A.": "Mikrokontroler PIC16f877A ma 13-bitow\u0105 przestrze\u0144 adresow\u0105, co oznacza, \u017ce \u200b\u200bmo\u017ce obs\u0142ugiwa\u0107 do 8KB pami\u0119ci. Sposoby adresacji pami\u0119ci programu w mikrokontrolerze PIC16f877A obejmuj\u0105:\n\n1. Bezpo\u015brednia adresacja - u\u017cywa bezpo\u015bredniego adresu 8-bitowego, kt\u00f3ry wskazuje na konkretny bajt pami\u0119ci. Na przyk\u0142ad, instrukcja \"MOVLW 0x0A\" \u0142aduje warto\u015b\u0107 0x0A do rejestru W, a instrukcja \"MOVWF 0x20\" zapisuje warto\u015b\u0107 w rejestrze W do adresu 0x20 w pami\u0119ci.\n\n2. Bezpo\u015brednia adresacja z przesuni\u0119ciem - u\u017cywa bezpo\u015bredniego adresu 8-bitowego i sta\u0142ej wzgl\u0119dnej, kt\u00f3ra okre\u015bla przesuni\u0119cie od adresu bazowego. Na przyk\u0142ad, instrukcja \"MOVLW 0x0A\" \u0142aduje warto\u015b\u0107 0x0A do rejestru W, a instrukcja \"MOVWF 0x20+2\" zapisuje warto\u015b\u0107 w rejestrze W do adresu 0x22 w pami\u0119ci (0x20 + 2).\n\n3. Indyrekcyjna adresacja - u\u017cywa warto\u015bci z rejestru, aby wyznaczy\u0107 adres pami\u0119ci. Na przyk\u0142ad, instrukcja \"MOVLW 0x10\" \u0142aduje warto\u015b\u0107 0x10 do rejestru W, a instrukcja \"MOVWF FSR\" ustawia FSR na adres 0x10. Nast\u0119pnie instrukcja \"MOVWF [FSR]\" zapisuje warto\u015b\u0107 w rejestrze W do adresu wskazywanego przez FSR.\n\n4. Indyrekcyjna adresacja z przesuni\u0119ciem - u\u017cywa rejestru i sta\u0142ej wzgl\u0119dnej, aby wyznaczy\u0107 adres pami\u0119ci. Na przyk\u0142ad, instrukcja \"MOVLW 0x10\" \u0142aduje warto\u015b\u0107 0x10 do rejestru W, a instrukcja \"MOVWF FSR\" ustawia FSR na adres 0x10. Nast\u0119pnie instrukcja \"MOVWF [FSR+2]\" zapisuje warto\u015b\u0107 w rejestrze W do adresu 0x12 (0x10 + 2) wskazywanego przez FSR.\n\n5. Adresacja sta\u0142a - u\u017cywa bezpo\u015bredniej warto\u015bci sta\u0142ej jako adresu pami\u0119ci. Na przyk\u0142ad, instrukcja \"MOVLW 0x0A\" \u0142aduje warto\u015b\u0107 0x0A do rejestru W, a instrukcja \"GOTO 0x100\" przeskakuje do adresu 0x100 w pami\u0119ci.\n\n6. Rozszerzona adresacja - u\u017cywa 21-bitowego adresu do dost\u0119pu do wi\u0119kszej pami\u0119ci. Ta forma adresacji jest dost\u0119pna tylko w pewnych trybach pracy i niekt\u00f3rych uk\u0142adach, a nie w standardowym trybie pracy PIC16f877A."
@@ -231,7 +231,7 @@
     ],
     "#n": 17
   },
-  "## Plik. 18": {
+  "# Plik. 18": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij sposoby adresacji pami\u0119ci danych w mikrokontrolerze PIC16f877A.": "Mikrokontroler PIC16f877A u\u017cywa dw\u00f3ch sposob\u00f3w adresacji pami\u0119ci danych: bezpo\u015bredniej i po\u015bredniej.\n\nAdresowanie bezpo\u015brednie polega na bezpo\u015brednim odwo\u0142aniu do konkretnego adresu pami\u0119ci, w kt\u00f3rym znajduje si\u0119 dane. Adres ten mo\u017ce zosta\u0107 zdefiniowany w kodzie programu lub pobrany z rejestru. W przypadku PIC16f877A, zakres adresowania bezpo\u015bredniego wynosi od 0x00 do 0xFF i odnosi si\u0119 do rejestr\u00f3w wewn\u0119trznych, pami\u0119ci RAM oraz pami\u0119ci EEPROM.\n\nAdresowanie po\u015brednie jest u\u017cywane, gdy konkretny adres danych jest nieznany lub wymaga dynamicznego okre\u015blenia. W takim przypadku, adres danych jest zapisywany w rejestrze specjalnym, wskazuj\u0105cym na kolejny adres, kt\u00f3ry zawiera w\u0142a\u015bciwe dane. W PIC16f877A adresowanie po\u015brednie jest realizowane poprzez rejestry WREG, FSR oraz PCLATH.\n\nRejestr WREG (Working Register) s\u0142u\u017cy do przechowywania warto\u015bci tymczasowych lub do realizowania operacji arytmetycznych. W przypadku adresowania po\u015bredniego, warto\u015b\u0107 adresu pami\u0119ci jest zapisywana w rejestrze WREG.\n\nRejestr FSR (File Select Register) umo\u017cliwia wyb\u00f3r jednego z bank\u00f3w rejestr\u00f3w, w kt\u00f3rym znajduje si\u0119 adres pami\u0119ci. Warto\u015b\u0107 zapisana w rejestrze FSR jest dodawana do warto\u015bci z rejestru WREG, tworz\u0105c pe\u0142en adres pami\u0119ci.\n\nRejestr PCLATH (Program Counter Latch High) s\u0142u\u017cy do przechowywania cz\u0119\u015bci wysokiej adresu pami\u0119ci programu. W przypadku adresowania po\u015bredniego w pami\u0119ci programu, warto\u015b\u0107 z rejestr\u00f3w FSR i WREG dodawana jest do warto\u015bci PCLATH, aby utworzy\u0107 pe\u0142ny adres."
@@ -245,7 +245,7 @@
     ],
     "#n": 18
   },
-  "## Plik. 19": {
+  "# Plik. 19": {
     "q&a": [
       {
         "Zad. 1 Przedstaw i opisz elementy pami\u0119ci programu mikrokontrolera PIC16f877A.": "Mikrokontroler PIC16f877A posiada nast\u0119puj\u0105ce elementy pami\u0119ci:\n\n1. Pami\u0119\u0107 flash - s\u0142u\u017cy do przechowywania programu u\u017cytkownika, kt\u00f3ry jest zapisywany czytelnym kodem asemblera i przechowywany w pami\u0119ci flash. Ta pami\u0119\u0107 jest nieulotna i pozwala na programowanie mikrokontrolera.\n\n2. Pami\u0119\u0107 EEPROM - ta pami\u0119\u0107 jest r\u00f3wnie\u017c nieulotna i s\u0142u\u017cy do przechowywania danych, kt\u00f3re s\u0105 zaprogramowane na sta\u0142e i nie ulegaj\u0105 zmianie. P\u0142ytka rozwojowa mikrokontrolera PIC16f877A ma 256 bajt\u00f3w pami\u0119ci EEPROM.\n\n3. Pami\u0119\u0107 RAM - ta pami\u0119\u0107 jest ulotna i s\u0142u\u017cy do przechowywania danych podczas dzia\u0142ania programu. Pami\u0119\u0107 RAM ma pojemno\u015b\u0107 368 bajt\u00f3w.\n\n4. Pami\u0119\u0107 rejestrowa - mikrokontrolery PIC maj\u0105 wiele rejestr\u00f3w, kt\u00f3re s\u0142u\u017c\u0105 do wykonywania r\u00f3\u017cnych operacji i przechowywania danych tymczasowych.\n\n5. Pami\u0119\u0107 programowa - s\u0142u\u017cy do przechowywania specjalnych instrukcji, kt\u00f3re pozwalaj\u0105 na kontrolowanie dzia\u0142ania mikrokontrolera.\n\nW sumie PIC16f877A oferuje a\u017c 14-bitowe adresowanie, przy jednoczesnym braku stronicowania, co daje do\u015b\u0107 du\u017cy zakres zastosowa\u0144 i \u0142atwo\u015b\u0107 programowania."
@@ -259,7 +259,7 @@
     ],
     "#n": 19
   },
-  "## Plik. 20": {
+  "# Plik. 20": {
     "q&a": [
       {
         "Zad. 1 Przedstaw i opisz podstawowe elementy pami\u0119ci mikrokontrolera PIC16f877A.": "Podstawowe elementy pami\u0119ci mikrokontrolera PIC16f877A to:\n\n1. Flash - pami\u0119\u0107 programu, kt\u00f3ra przechowuje kod programu. Jest nieulotna i mo\u017ce zosta\u0107 zaktualizowana przez programowanie.\n\n2. EEPROM - elektrycznie kasowalna i programowalna pami\u0119\u0107 tylko do odczytu, kt\u00f3ra przechowuje dane, takie jak zmienne i sta\u0142e. Jest trwale zapisana nawet po od\u0142\u0105czeniu zasilania.\n\n3. SRAM - pami\u0119\u0107 RAM, kt\u00f3ra s\u0142u\u017cy jako szybka pami\u0119\u0107 robocza dla programu i danych, kt\u00f3re aktualnie s\u0105 u\u017cywane. Jest ulotna i traci dane po od\u0142\u0105czeniu zasilania.\n\n4. Special Function Registers (SFRs) - pami\u0119\u0107 specjalna, kt\u00f3ra przechowuje informacje o konfiguracji i stanu mikrokontrolera, takie jak status flagi, rejestry wej\u015bciowe/wyj\u015bciowe i liczniki zegarowe.\n\n5. Stos - obszar pami\u0119ci, kt\u00f3ry przechowuje dane stosowane w czasie wykonywania programu, takie jak zmienne lokalne i adresy powrotu z funkcji.\n\n6. Dane programowe - obszar w pami\u0119ci flash, kt\u00f3ry przechowuje dane liczbowe i tekstowe, takie jak sta\u0142e i tablice.\n\n7. We/wy porty - s\u0142u\u017c\u0105 do komunikacji z urz\u0105dzeniami zewn\u0119trznymi, takimi jak czujniki, przetworniki i wy\u015bwietlacze."
@@ -273,7 +273,7 @@
     ],
     "#n": 20
   },
-  "## Plik. 21": {
+  "# Plik. 21": {
     "q&a": [
       {
         "Zad. 1 Opisz spos\u00f3b dzia\u0142ania stosu i instrukcje wykorzystywane do jego obs\u0142ugi w mikrokontrolerach klasy PIC18fxx2 i": "Stos w mikrokontrolerach klasy PIC18Fxx2 jest obs\u0142ugiwany przez dwa rejestry: SP i WREG.\n\nSP (Stack Pointer) przechowuje adres w pami\u0119ci, gdzie znajduje si\u0119 ostatni zapisany na stosie element. Pocz\u0105tkowo SP ustawiany jest na najwy\u017cszy adres w pami\u0119ci zaalokowanym na stos. Przy dodawaniu nowego elementu na stos SP jest dekrementowany, a przy zdejmowaniu elementu ze stosu SP jest inkrementowany.\n\nWREG (Working Register) to rejestr specjalnego przeznaczenia, kt\u00f3ry s\u0142u\u017cy do przechowywania warto\u015bci tymczasowych w trakcie wykonywania programu. W przypadku stosu, WREG s\u0142u\u017cy do przechowywania warto\u015bci, kt\u00f3ra ma zosta\u0107 dodana na stos lub pobrana ze stosu.\n\nInstrukcje wykorzystywane do obs\u0142ugi stosu w mikrokontrolerach klasy PIC18Fxx2 to:\n\n- PUSH: dodaje warto\u015b\u0107 z rejestru WREG na stos, dekrementuje SP\n- POP: pobiera warto\u015b\u0107 ze stosu i zapisuje j\u0105 do rejestru WREG, inkrementuje SP\n- CALL: dodaje adres powrotu na stos, dekrementuje SP, skacze do procedury\n- RETURN: pobiera adres powrotu ze stosu, inkrementuje SP, wraca do miejsca, z kt\u00f3rego zosta\u0142o wywo\u0142ane CALL\n\nDodatkowo, w mikrokontrolerach tej klasy stos wykorzystywany jest r\u00f3wnie\u017c do przechowywania rejestr\u00f3w kontekstu podczas przerwania, za kt\u00f3rych obs\u0142ug\u0119 odpowiada regu\u0142a LIFO (Last-In-First-Out), czyli ostatni zapisany element jest jako pierwszy pobierany ze stosu. Do obs\u0142ugi przerwa\u0144 stosowane s\u0105 specjalne instrukcje, takie jak:\n\n- PUSHALL: dodaje na stos wszystkie rejestry og\u00f3lnego przeznaczenia oraz rejestr statusu\n- POPALL: pobiera ze stosu warto\u015bci wszystkich rejestr\u00f3w og\u00f3lnego przeznaczenia oraz rejestr statusu\n\nDzi\u0119ki stosowi mo\u017cna \u0142atwo przekazywa\u0107 argumenty i zmienna lokalne mi\u0119dzy r\u00f3\u017cnymi cz\u0119\u015bciami programu, a tak\u017ce zapisywa\u0107 i odczytywa\u0107 adresy powrotu do i z procedur. Stos ma r\u00f3wnie\u017c zastosowanie w obs\u0142udze przerwa\u0144, gdzie pozwala na zachowanie kontekstu programu przed jego wykonaniem."
@@ -287,7 +287,7 @@
     ],
     "#n": 21
   },
-  "## Plik. 22": {
+  "# Plik. 22": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij znaczenie \ufb02ag kon\ufb01guracji w mikrokontrolerze PIC16f877A": "Flagi konfiguracji w mikrokontrolerze PIC16f877A s\u0142u\u017c\u0105 do ustawiania trybu pracy mikrokontrolera oraz konfiguracji jego peryferi\u00f3w. Flagi te s\u0105 przechowywane w specjalnej kom\u00f3rce pami\u0119ci o nazwie rejestru konfiguracji. Konfiguracja ta mo\u017ce by\u0107 ustawiana przez programist\u0119 lub automatycznie przez mikrokontroler w zale\u017cno\u015bci od potrzeb.\n\nPrzyk\u0142adowe ustawienia, kt\u00f3re mo\u017cna dokona\u0107 za pomoc\u0105 flag konfiguracyjnych to:\n- wyb\u00f3r trybu oscylatora (wewn\u0119trznego lub zewn\u0119trznego)\n- ustawienia trybu pracy uk\u0142adu taktuj\u0105cego (zegar synchroniczny lub asynchroniczny)\n- ustawienia przerwa\u0144 (w\u0142\u0105czanie i wy\u0142\u0105czanie poszczeg\u00f3lnych rodzaj\u00f3w przerwa\u0144)\n- konfiguracja uk\u0142ad\u00f3w peryferyjnych (np. modu\u0142u ADC)\n\nFlagi konfiguracyjne umo\u017cliwiaj\u0105 dostosowanie mikrokontrolera do konkretnych wymaga\u0144 aplikacji. Prawid\u0142owa konfiguracja pozwala na optymalne wykorzystanie zasob\u00f3w mikrokontrolera oraz zapewnia jego stabiln\u0105 i bezpieczn\u0105 prac\u0119."
@@ -301,7 +301,7 @@
     ],
     "#n": 22
   },
-  "## Plik. 23": {
+  "# Plik. 23": {
     "q&a": [
       {
         "Zad. 1 Czym jest histereza w uk\u0142adach wej\u015bciowo-wyj\u015bciowych.": "Histereza to stan, w kt\u00f3rym warto\u015b\u0107 wyj\u015bciowa uk\u0142adu zale\u017cy nie tylko od warto\u015bci bie\u017c\u0105cej warto\u015bci wej\u015bciowej, ale tak\u017ce od poprzednich warto\u015bci wej\u015bciowych. Innymi s\u0142owy, uk\u0142ad mo\u017ce reagowa\u0107 na zmiany warto\u015bci wej\u015bciowej w spos\u00f3b op\u00f3\u017aniony lub skokowy w przypadku, gdy warto\u015b\u0107 wej\u015bciowa wypada poza pewne ustalone granice. W przypadku uk\u0142ad\u00f3w wej\u015bciowo-wyj\u015bciowych, histereza jest cz\u0119sto wykorzystywana w celu unikni\u0119cia falowania wyj\u015bciowego lub generowania sygna\u0142\u00f3w o praktycznym zastosowaniu. Histereza mo\u017ce r\u00f3wnie\u017c wp\u0142yn\u0105\u0107 na stabilno\u015b\u0107 i dok\u0142adno\u015b\u0107 pomiar\u00f3w w przypadku urz\u0105dze\u0144 pomiarowych lub regulacyjnych."
@@ -312,7 +312,7 @@
     ],
     "#n": 23
   },
-  "## Plik. 24": {
+  "# Plik. 24": {
     "q&a": [
       {
         "Zad. 1 W jaki spos\u00f3b zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofon\u00f3w.": "Mikrofony s\u0105 urz\u0105dzeniami, kt\u00f3re wykorzystuj\u0105 zjawisko piezoelektryczne do przekszta\u0142cenia fal d\u017awi\u0119kowych na sygna\u0142 elektryczny. Elementem piezoelektrycznym w mikrofonie jest ceramiczny kryszta\u0142. Kiedy fale d\u017awi\u0119kowe docieraj\u0105 do mikrofonu, kryszta\u0142 ulega odkszta\u0142ceniu, co prowadzi do powstania \u0142adunk\u00f3w elektrycznych na jego powierzchniach. \n\nTe \u0142adunki elektryczne s\u0105 nast\u0119pnie pobierane przez elektrody mikrofonu, kt\u00f3re przetwarzaj\u0105 je na sygna\u0142 elektryczny, kt\u00f3ry mo\u017ce by\u0107 zarejestrowany przez urz\u0105dzenia nagrywaj\u0105ce. W ten spos\u00f3b, kryszta\u0142 piezoelektryczny w mikrofonie s\u0142u\u017cy jako czujnik ruchu, przetwarzaj\u0105c drgania powietrza na sygna\u0142 elektryczny, kt\u00f3ry mo\u017ce by\u0107 wykorzystany do nagrywania d\u017awi\u0119ku. \n\nDzi\u0119ki prostocie i niezawodno\u015bci, mikrofony piezoelektryczne s\u0105 powszechnie stosowane w r\u00f3\u017cnych zastosowaniach, od nagrywania muzyki i g\u0142os\u00f3w, a\u017c po kontroli ha\u0142asu i detekcji wibracji w przemy\u015ble."
@@ -326,7 +326,7 @@
     ],
     "#n": 24
   },
-  "## Plik. 25": {
+  "# Plik. 25": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania termopary i \u0142a\u0144cucha termicznego.": "Termopary s\u0105 urz\u0105dzeniami termometrycznymi sk\u0142adaj\u0105cymi si\u0119 z dw\u00f3ch przylegaj\u0105cych do siebie przewod\u00f3w r\u00f3\u017cnego materia\u0142u. Kiedy miejsca \u0142\u0105czenia tych przewod\u00f3w s\u0105 poddane r\u00f3\u017cnicom temperatur, to generuje to si\u0142\u0119 elektromotoryczn\u0105 (SEM). Wynikaj\u0105ce z tego napi\u0119cie jest proporcjonalne do r\u00f3\u017cnicy temperatur pomi\u0119dzy punktami po\u0142\u0105czenia przewod\u00f3w.\n\n\u0141a\u0144cuch termiczny natomiast to system, w kt\u00f3rym przenoszenie ciep\u0142a zachodzi sekwencyjnie. Sk\u0142ada si\u0119 on z element\u00f3w, kt\u00f3re s\u0105 po\u0142\u0105czone w serii lub r\u00f3wnolegle, przy czym przep\u0142yw ciep\u0142a zachodzi od element\u00f3w o wy\u017cszej temperaturze do ni\u017cszej. W \u0142a\u0144cuchu termicznym mamy do czynienia z r\u00f3\u017cnymi elementami, takimi jak materia\u0142y izolacyjne, przewody elektryczne lub pomiary ciep\u0142a oraz urz\u0105dzenia (np. piece lub ch\u0142odnice), kt\u00f3re zapewniaj\u0105 transfer energii cieplnej. Pomi\u0119dzy elementami mog\u0105 wyst\u0119powa\u0107 opory cieplne, kt\u00f3re wp\u0142ywaj\u0105 na przenikanie ciep\u0142a w \u0142a\u0144cuchu termicznym.\n\nW obu przypadkach kluczowym elementem jest przenoszenie energii, jednak w przypadku termopary energia jest przekazywana w postaci energii elektrycznej, a w \u0142a\u0144cuchu termicznym przenoszona jest energia cieplna."
@@ -340,7 +340,7 @@
     ],
     "#n": 25
   },
-  "## Plik. 26": {
+  "# Plik. 26": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania kamery CCD.": "Kamera CCD (Charge-Coupled Device) dzia\u0142a w oparciu o zjawisko fotoelektryczne, kt\u00f3re polega na tym, \u017ce foton (cz\u0105stka \u015bwiat\u0142a) uderzaj\u0105c w materi\u0119 wybija z niej elektron. \n\nW kamerze CCD znajduje si\u0119 p\u0142ytka krzemowa pokryta ma\u0142ymi pikselami, na kt\u00f3rych padaj\u0105 fotony. Piksele te tworz\u0105 macierz, kt\u00f3ra sk\u0142ada si\u0119 z tysi\u0119cy wertykalnych i horyzontalnych rz\u0119d\u00f3w pikseli. Ka\u017cdy piksel zawiera warstw\u0119 p\u00f3\u0142przewodnika, kt\u00f3ra reaguje na fotony i wybija z niej elektrony. \n\nNast\u0119pnie elektrony s\u0105 przesuwane przez tzw. uk\u0142ad CCD (ang. charge-coupled device), czyli matryc\u0119 elektrod, kt\u00f3re tworz\u0105 elektryczne pola. Pole te przesuwaj\u0105 elektrony z jednego piksela do drugiego, zgodnie z zaprogramowanym skanowaniem obrazu. \n\nKiedy elektrony przemieszczaj\u0105 si\u0119 przez uk\u0142ad CCD, s\u0105 one przetwarzane na sygna\u0142 elektryczny, kt\u00f3ry odpowiada nat\u0119\u017ceniu \u015bwiat\u0142a, jakie pad\u0142o na piksel. Sygna\u0142y te s\u0105 konwertowane na wynikowy obraz, kt\u00f3ry wy\u015bwietla si\u0119 na ekranie monitora lub zapisuje na no\u015bniku danych. \n\nW wyniku dzia\u0142ania kamery CCD obraz jest generowany bardzo szybko \u2013 generowanie jednego klatki trwa zaledwie u\u0142amki sekundy \u2013 co czyni j\u0105 idealn\u0105 do zastosowa\u0144 wideo i fotograficznych."
@@ -354,7 +354,7 @@
     ],
     "#n": 26
   },
-  "## Plik. 27": {
+  "# Plik. 27": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania konwertera analogowo-cyfrowego. Zamie\u015b\u0107 niezb\u0119dne obliczenia.": "Konwerter analogowo-cyfrowy (ADC) to urz\u0105dzenie elektroniczne, kt\u00f3re konwertuje sygna\u0142 analogowy na sygna\u0142 cyfrowy. Spos\u00f3b jego dzia\u0142ania opiera si\u0119 na pr\u00f3bkowaniu i kwantowaniu sygna\u0142u.\n\nPr\u00f3bkowanie polega na pobieraniu pr\u00f3bek sygna\u0142u wej\u015bciowego w regularnych odst\u0119pach czasowych. Odst\u0119p mi\u0119dzy pr\u00f3bkami okre\u015blany jest przez cz\u0119stotliwo\u015b\u0107 pr\u00f3bkowania, wyra\u017con\u0105 w hertzach (Hz). Im wy\u017csza cz\u0119stotliwo\u015b\u0107 pr\u00f3bkowania, tym wi\u0119ksza dok\u0142adno\u015b\u0107 i wierno\u015b\u0107 rekonstrukcji sygna\u0142u.\n\nKwantowanie polega na przypisywaniu ka\u017cdej pobranej pr\u00f3bce warto\u015bci binarnej, czyli w systemie dw\u00f3jkowym. W wyniku tego procesu sygna\u0142 analogowy zostaje zast\u0105piony ci\u0105giem warto\u015bci binarnych, kt\u00f3re reprezentuj\u0105 warto\u015bci sygna\u0142u w poszczeg\u00f3lnych chwilach czasu.\n\nObliczenia, jakie nale\u017cy wykona\u0107 w konwerterze analogowo-cyfrowym, zwi\u0105zane s\u0105 z procesem kwantowania, a dok\u0142adniej z wyznaczaniem poziomu sygna\u0142u. Warto\u015b\u0107 binarna opisuj\u0105ca pr\u00f3bk\u0119 sygna\u0142u jest uzyskiwana przez por\u00f3wnanie jej z okre\u015blonym poziomem progowym. Je\u017celi warto\u015b\u0107 sygna\u0142u jest wi\u0119ksza ni\u017c pr\u00f3g, to wynikiem kwantowania jest warto\u015b\u0107 binarna 1, a je\u015bli warto\u015b\u0107 sygna\u0142u jest mniejsza lub r\u00f3wna ni\u017c pr\u00f3g, to wynikiem kwantowania jest warto\u015b\u0107 binarna 0.\n\nWz\u00f3r na wyznaczanie warto\u015bci sygna\u0142u cyfrowego w zale\u017cno\u015bci od warto\u015bci analogowej i pr\u00f3g\u00f3w kwantyzacji wygl\u0105da nast\u0119puj\u0105co:\n\nVout = Q * [(Vana - Vmin) / (Vmax - Vmin)]\n\ngdzie:\n- Vout to warto\u015b\u0107 sygna\u0142u cyfrowego\n- Q to liczba poziom\u00f3w kwantyzacji, okre\u015blana przez liczb\u0119 bit\u00f3w u\u017cytych w procesie kwantowania\n- Vana to warto\u015b\u0107 sygna\u0142u analogowego\n- Vmin to minimalna warto\u015b\u0107 sygna\u0142u analogowego\n- Vmax to maksymalna warto\u015b\u0107 sygna\u0142u analogowego.\n\nWarto\u015b\u0107 Vout wyra\u017cona jest binarnie i opisuje warto\u015b\u0107 sygna\u0142u w danym czasie. Ca\u0142y proces odbywa si\u0119 bardzo szybko, w zale\u017cno\u015bci od cz\u0119stotliwo\u015bci pr\u00f3bkowania, umo\u017cliwiaj\u0105c szybk\u0105 i precyzyjn\u0105 cyfrow\u0105 analiz\u0119 sygna\u0142u analogowego."
@@ -368,7 +368,7 @@
     ],
     "#n": 27
   },
-  "## Plik. 28": {
+  "# Plik. 28": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania konwertera cyfrowo-analogowego. Zamie\u015b\u0107 niezb\u0119dne obliczenia.": "Konwerter cyfrowo-analogowy (DAC) to uk\u0142ad elektroniczny, kt\u00f3ry przetwarza sygna\u0142 cyfrowy na sygna\u0142 analogowy. DAC konwertuje ci\u0105g\u0142y sygna\u0142 binarny na odpowiadaj\u0105cy mu sygna\u0142 napi\u0119ciowy lub pr\u0105dowy, kt\u00f3ry mo\u017ce by\u0107 odczytywany przez dalsze urz\u0105dzenia.\n\nProces przetwarzania sygna\u0142u cyfrowego na analogowy w DAC polega na podstawieniu warto\u015bci liczby binarnej do wzoru na warto\u015b\u0107 napi\u0119cia lub pr\u0105du. Wz\u00f3r ten mo\u017ce by\u0107 r\u00f3\u017cny w zale\u017cno\u015bci od typu DAC, jednak w wi\u0119kszo\u015bci przypadk\u00f3w wykorzystuje si\u0119 wz\u00f3r liniowy:\n\nVout = (Vref * D) / 2^n\n\ngdzie:\n- Vout - napi\u0119cie analogowe wyj\u015bciowe DAC\n- Vref - warto\u015b\u0107 napi\u0119cia odniesienia, np. 2.5V\n- D - warto\u015b\u0107 cyfrowa wej\u015bciowa sygna\u0142u, od 0 do 2^n-1, gdzie n to liczba bit\u00f3w DAC\n- n - liczba bit\u00f3w DAC\n\nPodstawiaj\u0105c konkretne liczby, przyk\u0142adowo dla 8-bitowego DAC i warto\u015bci napi\u0119cia odniesienia Vref = 2.5V, otrzymujemy:\n\nVout = (2.5V * D) / 2^8\n\nW takim przypadku warto\u015b\u0107 napi\u0119cia analogowego wyj\u015bciowego b\u0119dzie si\u0119 zmienia\u0107 od 0V do 2.5V z krokiem 9.77 mV, gdy warto\u015b\u0107 D zwi\u0119ksza si\u0119 od 0 do 255.\n\nW skr\u00f3cie, DAC konwertuje warto\u015bci cyfrowe na odpowiadaj\u0105ce im warto\u015bci analogowe wed\u0142ug okre\u015blonego wzoru."
@@ -382,7 +382,7 @@
     ],
     "#n": 28
   },
-  "## Plik. 29": {
+  "# Plik. 29": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij zastosowanie Supervisor-a w oprogramowaniu Webots. Poka\u017c jak i jakie instrukcje s\u0142u\u017c\u0105 do odczytywania": "i modyfikowania parametr\u00f3w robota.\n\nSupervisor w oprogramowaniu Webots to narz\u0119dzie, kt\u00f3re umo\u017cliwia u\u017cytkownikowi kontrolowanie symulacji i interakcj\u0119 z robotami. Dzi\u0119ki temu narz\u0119dziu u\u017cytkownik mo\u017ce modyfikowa\u0107 ustawienia symulacji i parametry robota w czasie jej trwania.\n\nAby odczyta\u0107 lub zmodyfikowa\u0107 parametry robota w Webotsie, nale\u017cy u\u017cy\u0107 Specyfikacji Dynamicznej Robota (Robot Dynamic Specification). S\u0142u\u017cy do tego klasa Robot (Supervisor), kt\u00f3ra reprezentuje robota w symulacji. Aby uzyska\u0107 dost\u0119p do specyfikacji danego robota, nale\u017cy wywo\u0142a\u0107 metod\u0119 getRobot() na obiekcie Supervisor.\n\nPrzyk\u0142adowy kod s\u0142u\u017c\u0105cy do odczytania pozycji robota (np. jego wsp\u00f3\u0142rz\u0119dnych x, y, z) wygl\u0105da nast\u0119puj\u0105co:\n\n```python\nfrom controller import Robot\n\n# Inicjowanie robota\nrobot = Robot()\n\n# Pobranie pozycji robota\nposition = robot.getFromDef(\"myRobot\").getPosition()\n\n# Wy\u015bwietlenie pozycji\nprint(\"Pozycja robota: \", position)\n```\n\nNatomiast przyk\u0142adowy kod s\u0142u\u017c\u0105cy do zmiany pr\u0119dko\u015bci robota wygl\u0105da nast\u0119puj\u0105co:\n\n```python\nfrom controller import Robot\n\n# Inicjowanie robota\nrobot = Robot()\n\n# Pobieranie kana\u0142u pr\u0119dko\u015bci silnika\nleftMotor = robot.getDevice(\"left wheel motor\")\nrightMotor = robot.getDevice(\"right wheel motor\")\n\n# Ustawienie pr\u0119dko\u015bci robota\nleftMotor.setVelocity(10)\nrightMotor.setVelocity(10)\n```\n\nW powy\u017cszym kodzie pobierane s\u0105 kana\u0142y pr\u0119dko\u015bci silnik\u00f3w lewego i prawego ko\u0142a, a nast\u0119pnie ustawiana jest pr\u0119dko\u015b\u0107 obrotowa obu k\u00f3\u0142 na poziomie 10 rad/s."
@@ -396,7 +396,7 @@
     ],
     "#n": 29
   },
-  "## Plik. 30": {
+  "# Plik. 30": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij poj\u0119cie przekszta\u0142ce\u0144 jednorodnych.": "Przekszta\u0142cenia jednorodne to takie przekszta\u0142cenia geometryczne, kt\u00f3re zachowuj\u0105 proporcje i proporcjonalno\u015b\u0107 mi\u0119dzy elementami. Innymi s\u0142owy, je\u015bli przekszta\u0142cenie jednorodne zmienia d\u0142ugo\u015b\u0107 jednej linii, to zmienia ono r\u00f3wnie\u017c d\u0142ugo\u015b\u0107 pozosta\u0142ych linii w proporcjonalny spos\u00f3b. Przyk\u0142adem przekszta\u0142cenia jednorodnego jest homotetia, czyli przekszta\u0142cenie polegaj\u0105ce na zmianie skali ka\u017cdego punktu wzgl\u0119dem pewnego punktu, tak aby zachowa\u0107 proporcje. Innymi przyk\u0142adami s\u0105 przesuni\u0119cie, obr\u00f3t i odbicie lustrzane. Przekszta\u0142cenia jednorodne s\u0105 wa\u017cne w matematyce, a tak\u017ce w fizyce, gdzie opisuj\u0105 zachowanie si\u0119 obiekt\u00f3w w r\u00f3\u017cnych skalach."
@@ -410,7 +410,7 @@
     ],
     "#n": 30
   },
-  "## Plik. 31": {
+  "# Plik. 31": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij przeznaczenie poszczeg\u00f3lnych bit\u00f3w rejestru STATUS.": "Rejestr STATUS jest rejestrem flagowym, kt\u00f3ry informuje o r\u00f3\u017cnych warunkach w trakcie dzia\u0142ania procesora. Poszczeg\u00f3lne bity maj\u0105 nast\u0119puj\u0105ce przeznaczenie:\n\n- Bit 0 (C) - carry flag, informuje o wyst\u0105pieniu przeniesienia lub po\u017cyczki podczas operacji arytmetycznych.\n- Bit 1 (DC) - digit carry flag, informuje o wyst\u0105pieniu przeniesienia lub po\u017cyczki w cz\u0119\u015bci ni\u017cszej czterech bit\u00f3w podczas operacji arytmetycznych.\n- Bit 2 (Z) - zero flag, informuje o wyst\u0105pieniu warto\u015bci zero w wyniku operacji.\n- Bit 3 (PD) - power-down flag, informuje o trybie oszcz\u0119dzania energii zwi\u0105zanym z wy\u0142\u0105czeniem procesora/rejestru RAm.\n- Bit 4 (TO) - timeout flag, informuje o przekroczeniu czasu wykonania danej operacji.\n- Bit 5 (R) - reserved, nieu\u017cywany bit.\n- Bit 6 (I) - interrupt flag, informuje o zezwoleniu (I = 1)/zablokowaniu (I = 0) na obs\u0142ug\u0119 przerwa\u0144.\n- Bit 7 (N) - negative flag, informuje o wyniku operacji o ujemnej warto\u015bci."
@@ -424,7 +424,7 @@
     ],
     "#n": 31
   },
-  "## Plik. 32": {
+  "# Plik. 32": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij sposoby adresacji pami\u0119ci programu w mikrokontrolerze PIC16f877A.": "W mikrokontrolerze PIC16f877A dost\u0119pne s\u0105 r\u00f3\u017cne sposoby adresacji pami\u0119ci, w tym:\n\n1. Adresowanie bezpo\u015brednie \u2013 odwo\u0142anie do konkretnego adresu pami\u0119ci, np. MOVF 0x20, W oznacza przes\u0142anie zawarto\u015bci rejestru na pozycji pami\u0119ci 0x20 do rejestru W.\n\n2. Adresowanie przez rejestr poczw\u00f3rny \u2013 u\u017cywany do odwo\u0142ywania si\u0119 do pozycji pami\u0119ci odpowiadaj\u0105cej warto\u015bci przechowywanej w czterech rejestrach, np. MOVF FSR, W oznacza przes\u0142anie zawarto\u015bci pozycji w pami\u0119ci, na kt\u00f3r\u0105 wskazuje rejestr FSR, do rejestru W.\n\n3. Adresowanie przez rejestr na podstawie offsetu \u2013 odwo\u0142anie do adresu pami\u0119ci z u\u017cyciem adresu bazowego i offsetu, np. MOVLW 0x02, ADDWF PORTB, F oznacza dodanie warto\u015bci 2 do zawarto\u015bci rejestru PORTB.\n\n4. Adresowanie przez rejestr ze znacznikiem \u2013 u\u017cywane g\u0142\u00f3wnie w przypadku odwo\u0142ywania si\u0119 do pozycji pami\u0119ci tablicowej, np. MOVF TABLAT, W oznacza przes\u0142anie zawarto\u015bci pozycji w tablicy do rejestru W.\n\n5. Adresowanie bezpo\u015brednie z indeksem \u2013 odwo\u0142anie do konkretnego adresu pami\u0119ci z wykorzystaniem indeksu, np. MOVF 0x20+INDF, W oznacza przes\u0142anie zawarto\u015bci adresu pami\u0119ci wskazywanego przez zawarto\u015b\u0107 rejestru INDF o warto\u015bci 0x20 do rejestru W.\n\n6. Adresowanie przez rejestr indirekcyjny \u2013 odwo\u0142anie do adresu pami\u0119ci wskazywanego przez zawarto\u015b\u0107 rejestru, np. MOVF INDF, W oznacza przes\u0142anie zawarto\u015bci adresu pami\u0119ci wskazywanego przez rejestr INDF do rejestru W."
@@ -435,7 +435,7 @@
     ],
     "#n": 32
   },
-  "## Plik. 33": {
+  "# Plik. 33": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij sposoby adresacji pami\u0119ci danych w mikrokontrolerze PIC16f877A.": "Mikrokontroler PIC16f877A ma architektur\u0119 von Neumanna, co oznacza, \u017ce zar\u00f3wno dane, jak i instrukcje przechowywane s\u0105 w jednej pami\u0119ci. W zwi\u0105zku z tym adresowanie pami\u0119ci danych odbywa si\u0119 za pomoc\u0105 tych samych adres\u00f3w, co adresowanie instrukcji.\n\nSposoby adresacji pami\u0119ci danych w mikrokontrolerze PIC16f877A to:\n\n1. Adresowanie bezpo\u015brednie - polega na bezpo\u015brednim okre\u015bleniu adresu kom\u00f3rki pami\u0119ci danych, do kt\u00f3rej chcemy si\u0119 odwo\u0142a\u0107. Adres ten zapisywany jest bezpo\u015brednio po instrukcji, np. MOVF 0x20, w kt\u00f3rej 0x20 to adres kom\u00f3rki pami\u0119ci.\n\n2. Adresowanie po\u015brednie - wykorzystuje rejestr wska\u017anikowy (ang. pointer) do przechowywania adresu danej kom\u00f3rki pami\u0119ci. Rejestr ten mo\u017ce przyj\u0105\u0107 warto\u015b\u0107 z dowolnej innej kom\u00f3rki pami\u0119ci, co umo\u017cliwia adresowanie danych, kt\u00f3rych adresy nie s\u0105 znane na etapie pisania programu. Przyk\u0142adem instrukcji z takim sposobem adresacji jest MOVF FSR, w kt\u00f3rej FSR to rejestr wska\u017anikowy.\n\n3. Adresowanie przez stron\u0119 - polega na okre\u015bleniu adresu pami\u0119ci na podstawie warto\u015bci znajduj\u0105cej si\u0119 w rejestrze STATUS. Adres ten zawsze startuje od adresu pocz\u0105tkowego danej strony pami\u0119ci. Przyk\u0142adem instrukcji z takim sposobem adresacji jest MOVF 0x05, 0x00, w kt\u00f3rej 0x05 to numer strony pami\u0119ci.\n\n4. Adresowanie bezpo\u015brednie z przesuni\u0119ciem - umo\u017cliwia adresowanie danych w spos\u00f3b wzgl\u0119dny do adresu bazowego. Adres przesuni\u0119cia jest okre\u015blany bezpo\u015brednio po instrukcji, a warto\u015b\u0107 przesuni\u0119cia jest przechowywana w jednym z rejestr\u00f3w wewn\u0119trznych mikrokontrolera. Przyk\u0142adem instrukcji z tym sposobem adresacji jest MOVF 0x20, ACCESS, w kt\u00f3rej ACCESS oznacza adresowanie wzgl\u0119dne.\n\n5. Adresowanie po\u015brednie z przesuni\u0119ciem - po\u0142\u0105czenie adresowania po\u015bredniego z przesuni\u0119ciem. Polega na okre\u015bleniu adresu pami\u0119ci przez zsumowanie warto\u015bci przechowywanej w rejestrze wska\u017anikowym i warto\u015bci przesuni\u0119cia przechowywanej w jednym z rejestr\u00f3w wewn\u0119trznych. Przyk\u0142adem instrukcji z tym sposobem adresacji jest MOVF INDF, 0x01, w kt\u00f3rej INDF to rejestr wska\u017anikowy, a 0x01 to warto\u015b\u0107 przesuni\u0119cia."
@@ -449,7 +449,7 @@
     ],
     "#n": 33
   },
-  "## Plik. 34": {
+  "# Plik. 34": {
     "q&a": [
       {
         "Zad. 1 Przedstaw i opisz elementy pami\u0119ci programu mikrokontrolera PIC16f877A.": "Mikrokontroler PIC16f877A posiada nast\u0119puj\u0105ce elementy pami\u0119ci:\n\n1. Pami\u0119\u0107 programu - sk\u0142ada si\u0119 z 14-bitowych s\u0142\u00f3w programowych, kt\u00f3re s\u0105 przechowywane w pami\u0119ci Flash o pojemno\u015bci 14KB. W tej pami\u0119ci przechowywany jest kod programu, kt\u00f3ry steruje dzia\u0142aniem mikrokontrolera.\n\n2. Pami\u0119\u0107 danych RAM - sk\u0142ada si\u0119 z 368 bajt\u00f3w pami\u0119ci, kt\u00f3re s\u0105 podzielone na obszary og\u00f3lnego przeznaczenia, stosu i rejestry specjalne. Pami\u0119\u0107 ta s\u0142u\u017cy do przechowywania zmiennych, flag i innych danych, kt\u00f3re s\u0105 potrzebne do wykonywania programu.\n\n3. Rejestry specjalne - mikrokontroler posiada 21 jednobajtowych rejestr\u00f3w, kt\u00f3rych warto\u015bci s\u0105 wykorzystywane do zarz\u0105dzania systemem mikrokontrolera. Rejestry te s\u0105 dost\u0119pne bezpo\u015brednio dla programisty i s\u0142u\u017c\u0105 do m.in. ustawiania trybu pracy, ustawiania wej\u015b\u0107/wyj\u015b\u0107, konfiguracji przetwornik\u00f3w ADC i PWM.\n\n4. Pami\u0119\u0107 EEPROM - mikrokontroler posiada 256 bajt\u00f3w pami\u0119ci EEPROM, kt\u00f3re s\u0142u\u017c\u0105 do trwa\u0142ego przechowywania danych, np. ustawie\u0144 systemu, wynik\u00f3w pomiar\u00f3w itp. Pami\u0119\u0107 EEPROM jest zastosowana do przechowywania danych na d\u0142u\u017cszy okres czasu, nawet po od\u0142\u0105czeniu zasilania.\n\n5. Pami\u0119\u0107 programu BOOTLOADER - mikrokontroler posiada specjalny obszar pami\u0119ci Flash o pojemno\u015bci 2KB, kt\u00f3ry jest wykorzystywany do \u0142adowania program\u00f3w przez komunikacj\u0119 szeregow\u0105 UART, np. z u\u017cyciem modu\u0142u Bluetooth lub innego interfejsu komunikacyjnego.\n \nWszystkie te elementy pami\u0119ci s\u0105 istotne dla dzia\u0142ania mikrokontrolera i musz\u0105 by\u0107 odpowiednio zaplanowane i zarz\u0105dzane przez programist\u0119. Dzi\u0119ki wysokiej pojemno\u015bci pami\u0119ci oraz mo\u017cliwo\u015bci tworzenia funkcjonalno\u015bci bootloadera programista ma du\u017ce mo\u017cliwo\u015bci implementacji r\u00f3\u017cnych funkcjonalno\u015bci."
@@ -463,7 +463,7 @@
     ],
     "#n": 34
   },
-  "## Plik. 35": {
+  "# Plik. 35": {
     "q&a": [
       {
         "Zad. 1 Przedstaw i opisz podstawowe elementy pami\u0119ci mikrokontrolera PIC16f877A.": "Podstawowe elementy pami\u0119ci mikrokontrolera PIC16f877A to:\n\n1. Program Memory (Pami\u0119\u0107 programu): Jest to pami\u0119\u0107 nieulotna, w kt\u00f3rej przechowywany jest kod programu. PIC16f877A ma 14-bitow\u0105 przestrze\u0144 adresow\u0105 programu, co oznacza, \u017ce mo\u017cna z niej korzysta\u0107 z 8192 r\u00f3\u017cnych adres\u00f3w. Pami\u0119\u0107 programu mo\u017ce zawiera\u0107 zar\u00f3wno program u\u017cytkownika, jak i firmware urz\u0105dzenia.\n\n2. Data Memory (Pami\u0119\u0107 danych): Jest to pami\u0119\u0107 ulotna, w kt\u00f3rej przechowywane s\u0105 dane, zmienne i rejestry. PIC16f877A ma 8-bitow\u0105 przestrze\u0144 adresow\u0105 danych, co oznacza, \u017ce mo\u017cna z niej korzysta\u0107 z 256 r\u00f3\u017cnych adres\u00f3w. Pami\u0119\u0107 danych dzieli si\u0119 na dwie cz\u0119\u015bci:\n\n- Ram Memory (Pami\u0119\u0107 RAM): Jest to pami\u0119\u0107, kt\u00f3r\u0105 mikrokontroler mo\u017ce odczytywa\u0107 i zapisywa\u0107 dane w czasie rzeczywistym. Jest to szybka pami\u0119\u0107, ale ulotna i wymaga zasilania, aby przechowywa\u0107 dane.\n- EEPROM Memory (Pami\u0119\u0107 EEPROM): Jest to pami\u0119\u0107 nieulotna, w kt\u00f3rej przechowywane s\u0105 dane d\u0142ugotrwa\u0142e, takie jak informacje konfiguracyjne, has\u0142a, numery seryjne itp. Pami\u0119\u0107 EEPROM jest wolniejsza od RAM, ale jej dane pozostaj\u0105 zachowane nawet po wy\u0142\u0105czeniu zasilania.\n\n3. Special Function Registers (SFRs): S\u0105 to rejestry, kt\u00f3re pe\u0142ni\u0105 specjalne funkcje w mikrokontrolerze. S\u0105 to rejestry programowalne i s\u0142u\u017c\u0105 do sterowania r\u00f3\u017cnymi funkcjami urz\u0105dzenia, takimi jak przerwania, timery, interfejsy komunikacyjne itp.\n\n4. Stack Memory (Pami\u0119\u0107 stosu): Jest to obszar w pami\u0119ci danych, kt\u00f3ry s\u0142u\u017cy do przechowywania informacji o wykonywanych funkcjach i procedurach. W momencie wywo\u0142ania funkcji, adres powrotu i zmienne s\u0105 zapisywane na stosie, aby p\u00f3\u017aniej mo\u017cna by\u0142o odtworzy\u0107 stan przed wywo\u0142aniem funkcji."
@@ -477,7 +477,7 @@
     ],
     "#n": 35
   },
-  "## Plik. 36": {
+  "# Plik. 36": {
     "q&a": [
       {
         "Zad. 1 Opisz spos\u00f3b dzia\u0142ania stosu i instrukcje wykorzystywane do jego obs\u0142ugi w mikrokontrolerach klasy PIC18fxx2 i": "Stos to struktura danych LIFO (Last-In-First-Out), kt\u00f3ra pozwala na przechowywanie danych w spos\u00f3b uporz\u0105dkowany. W mikrokontrolerach klasy PIC18fxx2 stos jest obs\u0142ugiwany za pomoc\u0105 rejestr\u00f3w STKPTR oraz STKPTRH, kt\u00f3re przechowuj\u0105 informacje o aktualnym stanie stosu.\n\nAby doda\u0107 dane na stos, nale\u017cy u\u017cy\u0107 instrukcji PUSH lub LCALL, kt\u00f3re umieszczaj\u0105 warto\u015bci na szczycie stosu. Natomiast, aby pobra\u0107 dane ze stosu, stosujemy instrukcj\u0119 POP lub RETLW, kt\u00f3ra pobiera warto\u015b\u0107 ze szczycie stosu i usuwa j\u0105 z kolejki.\n\nDo obs\u0142ugi stosu w mikrokontrolerach klasy PIC18fxx2 wykorzystuje si\u0119 r\u00f3wnie\u017c specjalne instrukcje, takie jak ADDWFC, ADDFSR, SUBWFB, kt\u00f3re pozwalaj\u0105 na manipulowanie warto\u015bciami bezpo\u015brednio na stosie.\n\nPodsumowuj\u0105c, stos w mikrokontrolerach klasy PIC18fxx2 to wa\u017cny element struktury danych, kt\u00f3rej obs\u0142uga odbywa si\u0119 za pomoc\u0105 odpowiednich instrukcji i rejestr\u00f3w. Dzi\u0119ki temu mo\u017cliwe jest przechowywanie i pobieranie danych w spos\u00f3b uporz\u0105dkowany i szybki."
@@ -491,7 +491,7 @@
     ],
     "#n": 36
   },
-  "## Plik. 37": {
+  "# Plik. 37": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij znaczenie \ufb02ag kon\ufb01guracji w mikrokontrolerze PIC16f877A": "Flagi konfiguracji w mikrokontrolerze PIC16f877A to specjalne bity ustawie\u0144, kt\u00f3re pozwalaj\u0105 na programowanie podstawowych funkcji mikrokontrolera. S\u0105 to bity, kt\u00f3re odpowiadaj\u0105 za tryb pracy mikrokontrolera, rodzaj zegara, ustawienia pin\u00f3w, ustawienia przerwa\u0144, itp. Flagi konfiguracji umo\u017cliwiaj\u0105 ustawienie parametr\u00f3w mikrokontrolera, co jest konieczne dla ka\u017cdej aplikacji, kt\u00f3ra ma by\u0107 wykonana na tym mikrokontrolerze. Warto zauwa\u017cy\u0107, \u017ce flagi konfiguracji s\u0105 bardzo wa\u017cne w mikrokontrolerach, poniewa\u017c ustawienie niepoprawnego trybu pracy, zegara itp. mo\u017ce prowadzi\u0107 do powa\u017cnych problem\u00f3w z dzia\u0142aniem ca\u0142ego systemu."
@@ -505,7 +505,7 @@
     ],
     "#n": 37
   },
-  "## Plik. 38": {
+  "# Plik. 38": {
     "q&a": [
       {
         "Zad. 1 Czym jest histereza w uk\u0142adach wej\u015bciowo-wyj\u015bciowych.": "Histereza w uk\u0142adach wej\u015bciowo-wyj\u015bciowych oznacza zjawisko, w kt\u00f3rym warto\u015b\u0107 wyj\u015bcia zale\u017cy nie tylko od warto\u015bci wej\u015bcia, ale tak\u017ce od historii zmian warto\u015bci wej\u015bcia. Innymi s\u0142owy, warto\u015b\u0107 wyj\u015bcia zale\u017cy od tego, czy zmiana warto\u015bci wej\u015bcia nast\u0105pi\u0142a wzwy\u017c czy w d\u00f3\u0142 oraz od tego, jak dawno ta zmiana nast\u0105pi\u0142a. Przyk\u0142adami uk\u0142ad\u00f3w, w kt\u00f3rych wyst\u0119puje histereza, s\u0105 przeka\u017aniki elektromagnetyczne, narz\u0119dzia pomiarowe i elementy steruj\u0105ce, takie jak regulatory temperatury czy czujniki wibracji. Histereza mo\u017ce wprowadza\u0107 b\u0142\u0119dy w pomiarach i utrudnia\u0107 kontrolowanie wyj\u015bcia uk\u0142adu, co wymaga dostosowania parametr\u00f3w regulator\u00f3w do konkretnych warunk\u00f3w pracy."
@@ -519,7 +519,7 @@
     ],
     "#n": 38
   },
-  "## Plik. 39": {
+  "# Plik. 39": {
     "q&a": [
       {
         "Zad. 1 W jaki spos\u00f3b zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofon\u00f3w.": "Zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofon\u00f3w elektrodynamcznych. Mikrofony te zawieraj\u0105 b\u0142on\u0119 piezoelektryczn\u0105, kt\u00f3ra ulega deformacji w wyniku fali d\u017awi\u0119kowej. Ta deformacja generuje napi\u0119cie elektryczne, kt\u00f3re jest wzmacniane przez uk\u0142ady elektroniczne w mikrofonie i przekszta\u0142cane na sygna\u0142 d\u017awi\u0119kowy. \n\nB\u0142ona piezoelektryczna w mikrofonie sk\u0142ada si\u0119 z kryszta\u0142\u00f3w lub ceramicznego materia\u0142u piezoelektrycznego, kt\u00f3ry jest po\u0142\u0105czony z metalowymi elektrodami. Gdy fala d\u017awi\u0119kowa uderza w b\u0142on\u0119, powoduje jej deformacj\u0119, co zmienia polaryzacj\u0119 kryszta\u0142\u00f3w piezoelektrycznych i generuje napi\u0119cie elektryczne na metalowych elektrodach. \n\nNapi\u0119cie to jest nast\u0119pnie przetwarzane przez uk\u0142ady elektroniczne w mikrofonie, takie jak wzmacniacze sygna\u0142u, filtry i uk\u0142ady redukcji szum\u00f3w. W ko\u0144cu, sygna\u0142 jest sk\u0142adowany w postaci cyfrowej lub analogowej. Mikrofony elektrodynamczne s\u0105 szeroko stosowane w r\u00f3\u017cnych zastosowaniach, takich jak nagrywanie wokalu, instrument\u00f3w muzycznych, emisji g\u0142osu w systemach bezprzewodowych oraz w pomiarach akustycznych i wibracyjnych."
@@ -533,7 +533,7 @@
     ],
     "#n": 39
   },
-  "## Plik. 40": {
+  "# Plik. 40": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania termopary i \u0142a\u0144cucha termicznego.": "Termopara to urz\u0105dzenie pomiarowe s\u0142u\u017c\u0105ce do pomiaru temperatury. Sk\u0142ada si\u0119 ona z dw\u00f3ch r\u00f3\u017cnych metalowych przewod\u00f3w po\u0142\u0105czonych ze sob\u0105 w jednym ko\u0144cu, a w drugim ko\u0144cu przetwarzaj\u0105cy sygna\u0142 elektryczny. Kiedy temperatura ko\u0144ca pomiarowego ulega zmianie, to powoduje to produkcj\u0119 r\u00f3\u017cnicy potencja\u0142\u00f3w pomi\u0119dzy metalowymi przewodami. Ta r\u00f3\u017cnica potencja\u0142\u00f3w jest proporcjonalna do r\u00f3\u017cnicy temperatur pomi\u0119dzy ko\u0144cami metalowych przewod\u00f3w, co umo\u017cliwia pomiar temperatury.\n\nLancuch termiczny natomiast to zestaw element\u00f3w po\u0142\u0105czonych ze sob\u0105 termicznie, maj\u0105cych za zadanie przekazywanie ciep\u0142a z jednego punktu na inny. Sk\u0142ada si\u0119 z termopary (odpowiednio skonfigurowanej, tj. w zale\u017cno\u015bci od zastosowania), przewod\u00f3w po\u0142\u0105czeniowych i \u017ar\u00f3d\u0142a ciep\u0142a. Pomiar temperatury w takim systemie mo\u017cna przeprowadzi\u0107 w r\u00f3\u017cnych punktach w zale\u017cno\u015bci od u\u0142o\u017cenia termopary i przewod\u00f3w. Podczas tego procesu zachodz\u0105 r\u00f3\u017cne procesy termodynamiczne, np. przewodzenie, konwekcja czy promieniowanie, kt\u00f3re decyduj\u0105 o przenoszeniu energii cieplnej pomi\u0119dzy poszczeg\u00f3lnymi elementami \u0142a\u0144cucha termicznego."
@@ -547,7 +547,7 @@
     ],
     "#n": 40
   },
-  "## Plik. 41": {
+  "# Plik. 41": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania kamery CCD.": "Kamera CCD (przetwornik \u0142adunkowy) sk\u0142ada si\u0119 z matrycy mikroskopijnych pikseli, kt\u00f3re rejestruj\u0105 \u015bwiat\u0142o padaj\u0105ce na nie. Piksele s\u0105 na\u0142adowane elektrycznie, a gdy \u015bwiat\u0142o pada na piksel, fotoelektrony s\u0105 wybijane z tej na\u0142adowanej warstwy. \n\nGdy fotoelektrony zostaj\u0105 uwolnione, s\u0105 one przyci\u0105gane przez napi\u0119cie elektryczne i gromadzone na specjalnych pojemnikach nazywanych tak\u017ce \"studniami \u0142adunkowymi\". Kiedy matryca pikseli zostaje o\u015bwietlona, studnie \u0142adunkowe wype\u0142niaj\u0105 si\u0119 r\u00f3\u017cnymi ilo\u015bciami \u0142adunk\u00f3w, reprezentuj\u0105cymi r\u00f3\u017cne poziomy jasno\u015bci piksela.\n\nNast\u0119pnie, po pokryciu ca\u0142ej matrycy, \u0142adunki s\u0105 odczytywane przez uk\u0142ad odczytu, kt\u00f3ry przesy\u0142a te dane do przetwornika analogowo-cyfrowego (ADC). \n\nADC przekszta\u0142ca sygna\u0142 analogowy na cyfrowy, co pozwala na zapisanie danych w postaci pliku numerycznego na pami\u0119ci karty. W ten spos\u00f3b uzyskujemy kolorow\u0105 lub monochromatyczn\u0105 reprezentacj\u0119 obrazu zarejestrowanego przez kamer\u0119 CCD. \n\nWarto zauwa\u017cy\u0107, \u017ce kamera CCD umo\u017cliwia rejestrowanie obrazu tylko w warunkach dobrze o\u015bwietlonych, poniewa\u017c im mniej \u015bwiat\u0142a pada na piksele, tym trudniejsze staje si\u0119 ich odczytanie."
@@ -558,7 +558,7 @@
     ],
     "#n": 41
   },
-  "## Plik. 42": {
+  "# Plik. 42": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania konwertera analogowo-cyfrowego. Zamie\u015b\u0107 niezb\u0119dne obliczenia.": "Konwerter analogowo-cyfrowy (ADC) s\u0142u\u017cy do przetworzenia sygna\u0142u analogowego (np. napi\u0119cia) na sygna\u0142 cyfrowy. W celu dokonania pomiaru, sygna\u0142 analogowy jest pr\u00f3bkowany, czyli pobierane s\u0105 pr\u00f3bki sygna\u0142u w okre\u015blonych momentach czasowych. Nast\u0119pnie sygna\u0142 ten jest kwantowany, czyli sygna\u0142 analogowy jest zaokr\u0105glany do najbli\u017cszej warto\u015bci z okre\u015blonej skali. W przypadku kwantyzacji r\u00f3wnomiernych, skala jest podzielona na r\u00f3wne przedzia\u0142y o szeroko\u015bci \u0394:\n\nVquant = \u0394 * round (Vinput / \u0394)\n\nGdzie:\nVinput \u2013 warto\u015b\u0107 sygna\u0142u wej\u015bciowego,\n\u0394 \u2013 szeroko\u015b\u0107 przedzia\u0142u kwantyzacji,\nVquant \u2013 warto\u015b\u0107 skwantowana sygna\u0142u.\n\nNast\u0119pnie warto\u015bci skwantowane s\u0105 kodowane w formacie binarnym. Ilo\u015b\u0107 bit\u00f3w wykorzystywanych do kodowania warto\u015bci (rozmiar s\u0142owa) wp\u0142ywa na dok\u0142adno\u015b\u0107 pomiaru. Im wi\u0119kszy rozmiar s\u0142owa, tym wi\u0119ksza dok\u0142adno\u015b\u0107, ale r\u00f3wnie\u017c wi\u0119ksze wymagania dla przetwarzania danych. \n\nKorzystaj\u0105c z konwertera ADC mo\u017cna w prosty spos\u00f3b zbada\u0107 zmiany sygna\u0142u analogowego i przekszta\u0142ci\u0107 je na komputerow\u0105 posta\u0107, co pozwala na ich dalsze przetwarzanie i analiz\u0119."
@@ -572,7 +572,7 @@
     ],
     "#n": 42
   },
-  "## Plik. 43": {
+  "# Plik. 43": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij spos\u00f3b dzia\u0142ania konwertera cyfrowo-analogowego. Zamie\u015b\u0107 niezb\u0119dne obliczenia.": "Konwerter cyfrowo-analogowy (DAC) to urz\u0105dzenie, kt\u00f3re przetwarza dane cyfrowe na sygna\u0142 analogowy, kt\u00f3ry mo\u017ce by\u0107 wykorzystany do sterowania urz\u0105dzeniami takimi jak g\u0142o\u015bniki, motory, pompy, itp. \n\nSpos\u00f3b dzia\u0142ania konwertera cyfrowo-analogowego polega na przetwarzaniu warto\u015bci cyfrowych na warto\u015bci analogowej napi\u0119cia lub pr\u0105du. Najprostszy rodzaj DAC-a to konwerter typu trybuie\u0144czego, w kt\u00f3rym ka\u017cdy bit sygna\u0142u cyfrowego jest konwertowany na oznaczon\u0105 warto\u015b\u0107 napi\u0119cia lub pr\u0105du. \n\nNa przyk\u0142ad, je\u015bli mamy 8-bitowy sygna\u0142 cyfrowy, kt\u00f3ry ma warto\u015b\u0107 10101101 (w systemie dziesi\u0119tnym 173), ka\u017cdy bit mo\u017ce by\u0107 konwertowany na napi\u0119cie lub pr\u0105d odpowiadaj\u0105cy 1/256 ca\u0142kowitej warto\u015bci wyj\u015bciowej. Ostatecznie, w pe\u0142ni skonwertowany sygna\u0142 wyj\u015bciowy b\u0119dzie r\u00f3wny:\n\nVout = (1/256) * (1*1 + 0*2 + 1*4 + 0*8 + 1*16 + 1*32 + 0*64 + 1*128)\n\nVout = (1/256) * (173)\n\nVout = 0.676 V\n\nWarto\u015b\u0107 napi\u0119cia lub pr\u0105du, kt\u00f3r\u0105 mo\u017cna uzyska\u0107 jako wynik konwersji, mo\u017ce by\u0107 kontrolowana przez u\u017cytkownika poprzez wyb\u00f3r odpowiedniego punktu odniesienia, kt\u00f3ry okre\u015bla zakres warto\u015bci analogowych. Dla przyk\u0142adu, je\u015bli chcemy uzyska\u0107 napi\u0119cie wyj\u015bciowe w zakresie 0-5 V, wtedy ka\u017cdej warto\u015bci analogowej odpowiada 19,53 mV. \n\nKonwerter cyfrowo-analogowy mo\u017ce by\u0107 r\u00f3wnie\u017c stosowany w wielu innych aplikacjach, np. sterowaniu silnikami, pilotowaniu wy\u015bwietlaczy LCD, konstrukcji uk\u0142ad\u00f3w chirurgicznych, wprowadzaniu zmian w sygnale d\u017awi\u0119kowym lub graficznym, itp."
@@ -586,7 +586,7 @@
     ],
     "#n": 43
   },
-  "## Plik. 44": {
+  "# Plik. 44": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij zastosowanie Supervisor-a w oprogramowaniu Webots. Poka\u017c jak i jakie instrukcje s\u0142u\u017c\u0105 do odczytywania": "i kontrolowania Supervisor-a w Webots.\n\nSupervisor w oprogramowaniu Webots jest g\u0142\u00f3wnym kontrolerem symulacji, kt\u00f3ry zarz\u0105dza \u015brodowiskiem symulacji oraz interakcjami pomi\u0119dzy r\u00f3\u017cnymi obiektami w symulacji. Supervisor umo\u017cliwia r\u00f3wnie\u017c komunikacj\u0119 z zewn\u0119trznymi programami, dzi\u0119ki czemu mo\u017cna zintegrowa\u0107 symulacj\u0119 z innymi systemami.\n\nInstrukcje do odczytywania i kontrolowania Supervisor-a w Webots zale\u017c\u0105 od j\u0119zyka programowania, w kt\u00f3rym piszemy kod kontrolera. Przyk\u0142adowo, w j\u0119zyku Python mo\u017cemy u\u017cy\u0107 nast\u0119puj\u0105cych instrukcji:\n\n1. Supervisor.getTime() - zwraca aktualny czas symulacji.\n2. Supervisor.setLabel(1, 'Hello world!') - umieszcza etykiet\u0119 \"Hello world!\" na pierwszym obiekcie w symulacji.\n3. node = Supervisor.getFromDef('ROBOT') - pobiera obiekt o nazwie \"ROBOT\".\n4. node.getField('translation').setSFVec3f([1, 0, 0]) - ustawia warto\u015b\u0107 pola \"translation\" obiektu na [1, 0, 0].\n\nPowy\u017csze instrukcje ilustruj\u0105 kilka sposob\u00f3w, w jakie mo\u017cna odczytywa\u0107 i kontrolowa\u0107 Supervisor-a w Webots. Mo\u017cna u\u017cy\u0107 ich do tworzenia kontroler\u00f3w robot\u00f3w, detekcji kolizji, zarz\u0105dzania \u015bwiat\u0142ami i wiele innych zada\u0144."
@@ -600,7 +600,7 @@
     ],
     "#n": 44
   },
-  "## Plik. 45": {
+  "# Plik. 45": {
     "q&a": [
       {
         "Zad. 1 Wyja\u015bnij poj\u0119cie przekszta\u0142ce\u0144 jednorodnych.": "Przekszta\u0142cenia jednorodne to takie przekszta\u0142cenia geometryczne, kt\u00f3re zachowuj\u0105 proporcjonalne relacje mi\u0119dzy wielko\u015bciami. Innymi s\u0142owy, je\u015bli dana figura zostanie przemno\u017cona przez pewn\u0105 sta\u0142\u0105, to wszystkie jej wymiary zostan\u0105 pomno\u017cone przez t\u0119 sam\u0105 sta\u0142\u0105. Przyk\u0142adowo, gdy mamy tr\u00f3jk\u0105t o podstawie 3 cm i wysoko\u015bci 4 cm, przemno\u017cenie go przez 2 da nam tr\u00f3jk\u0105t o podstawie 6 cm i wysoko\u015bci 8 cm. Przekszta\u0142cenia jednorodne s\u0105 przydatne w matematyce, fizyce i innych naukach, gdzie stosuje si\u0119 je do opisu skali i proporcji wielko\u015bci w r\u00f3\u017cnych kontekstach."

@@ -1,5 +1,6 @@
-## Plik. 1
-Zad. 1 Wyjaśnij przeznaczenie poszczególnych bitów rejestru STATUS.
+# Plik. 1
+**Zad. 1 Wyjaśnij przeznaczenie poszczególnych bitów rejestru STATUS.**
+
 Rejestr STATUS jest rejestrem stanu używanym w wielu mikrokontrolerach i mikroprocesorach. Zawiera on wiele bitów, z których każdy pełni określoną rolę:
 
 - bit C: przeniesienie - ustawiany wtedy, gdy poprzednia operacja matematyczna spowodowała przeniesienie (ang. carry)
@@ -11,7 +12,8 @@ Rejestr STATUS jest rejestrem stanu używanym w wielu mikrokontrolerach i mikrop
 
 Dzięki wykorzystaniu tych bitów, można np. w łatwy sposób sprawdzić, czy wynik ostatniej operacji matematycznej spełnia określone warunki, co może być przydatne w wielu sytuacjach.
 
-Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia
+**Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia**
+
 Tekstu na wyświetlaczu HD44780, a także jakie funkcje są dostępne dzięki temu oprogramowaniu.
 
 Wyświetlacz HD44780 to popularny rodzaj wyświetlacza alfanumerycznego opieranego na technologii LCD. Do obsługi takiego wyświetlacza potrzebne jest oprogramowanie kontrolera, który stoi za działaniem tego urządzenia. W programowaniu tego typu wyświetlaczy stosowane są instrukcje sterujące umożliwiające kontrolę nad wyświetlanym tekstem, kursorami oraz innymi elementami interfejsu. 
@@ -33,7 +35,8 @@ Dodatkowo, w oparciu o te instrukcje można zaimplementować szereg funkcji, tak
 
 Programowanie wyświetlacza HD44780 to proces stosunkowo prosty, jednak wymaga dobrej znajomości instrukcji kontrolera, aby móc tworzyć zaawansowane funkcje i interfejsy. Dzięki właściwemu programowaniu możliwe jest uzyskanie wygodnego i przejrzystego interfejsu użytkownika w różnego rodzaju urządzeniach elektronicznych, takich jak zegarki, liczniki, kontrolery i wiele innych.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany jest czujnik opisany równaniem różniczkowym:
 
 dy/dt = a*y + b*x
@@ -45,8 +48,9 @@ gdzie:
 
 Równanie to opisuje dynamikę czujnika, czyli sposób w jaki reaguje on na zmiany sygnału wejściowego x(t). Im większe wartości a i b, tym bardziej czuły jest czujnik na zmiany sygnału wejściowego. Równanie to może być stosowane do modelowania różnych typów czujników, takich jak termometry, barometry czy akcelerometry.
 
-## Plik. 2
-Zad. 1 Wyjaśnij sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A.
+# Plik. 2
+**Zad. 1 Wyjaśnij sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A.**
+
 Mikrokontroler PIC16f877A ma ograniczone możliwości adresacji pamięci w porównaniu do bardziej zaawansowanych mikrokontrolerów. Adresacja pamięci w tym mikrokontrolerze może odbywać się na kilka sposobów:
 
 1. Adresowanie bezpośrednie - Polega na bezpośrednim odwoływaniu się do adresu pamięci w instrukcji. Na przykład, instrukcja: "MOVWF 0x20" przeniesie wartość rejestru roboczego do adresu 0x20 w pamięci danych.
@@ -59,7 +63,8 @@ Mikrokontroler PIC16f877A ma ograniczone możliwości adresacji pamięci w poró
 
 5. Adresowanie za pomocą indeksowania - Umożliwia to dostęp do pamięci poprzez przypisanie do adresu pamięci wartości liczbowej lub zawartości rejestru. Na przykład, instrukcja "MOVF TBL, W, 0x1" przeniesie wartość z tablicy pamięci o adresie TBL do rejestru roboczego (W) i inkrementuje adres TBL o 1.
 
-Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania
+**Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania**
+
 Konwerter analogowo-cyfrowy to urządzenie, które zamienia sygnał analogowy (np. dźwięk, obraz, temperaturę) na sygnał cyfrowy, przeznaczony do przetwarzania i interpretacji przez komputer. 
 
 W procesie konwersji analogowo-cyfrowej najpierw sygnał jest próbkowany, co oznacza, że jest on pobierany przez konwerter w równych odstępach czasowych. Następnie, każda próbka jest kwantowana, co oznacza, że jej wartość jest zaokrąglana do najbliższej wartości na skali cyfrowej.
@@ -70,11 +75,13 @@ Aby korzystać z konwertera analogowo-cyfrowego, potrzebne są instrukcje, któr
 
 W niektórych przypadkach, szczególnie gdy chodzi o aplikacje specjalistyczne, może być konieczne dostosowanie konfiguracji konwertera analogowo-cyfrowego do indywidualnych potrzeb użytkownika. W takim przypadku potrzebne będzie programowanie w językach takich jak C, C++ lub Python.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany czujnik może być opisany równaniem różniczkowym, jeśli jego zachowanie jest opisane przez zmiany w czasie. Przykładowo, dany czujnik temperatury może być opisany równaniem różniczkowym związanym z prawem zmiany temperatury w czasie w danym punkcie. Równanie różniczkowe opisujące zachowanie czujnika może mieć różne postacie w zależności od rodzaju czujnika i jego specyfikacji. Ogólnie, równanie różniczkowe opisujące zachowanie czujnika może być wykorzystane do określenia jego dokładności, czułości i innych parametrów.
 
-## Plik. 3
-Zad. 1 Wyjaśnij sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A.
+# Plik. 3
+**Zad. 1 Wyjaśnij sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A.**
+
 W mikrokontrolerze PIC16f877A, pamięć danych może być adresowana na kilka sposobów:
 
 1. Adresowanie bezpośrednie - adresowane są bezpośrednio rejestry, które przechowują dane. W tym przypadku, adres rejestru wskazuje na konkretny rejestr w pamięci danych.
@@ -87,7 +94,8 @@ W mikrokontrolerze PIC16f877A, pamięć danych może być adresowana na kilka sp
 
 5. Adresowanie bezwzględne - adres pamięci jest podawany wprost, bezpośrednio w instrukcji. W tym przypadku, możliwe jest odwołanie się do dowolnego miejsca w pamięci danych.
 
-Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to
+**Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to**
+
 rezystancja źródła sygnału. Występuje tutaj także kondensator C1 o pojemności 100nF.
 
  Rysunek:
@@ -113,11 +121,13 @@ Z = Rs + Z1
 
 Na tej podstawie można wyznaczyć amplitudę i fazę sygnału na całkowitej impedancji Z.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany czujnik opisany jest równaniem różniczkowym, które opisuje jego zachowanie w czasie. Jest to równanie, które mówi, jak zmieniają się wartości mierzonej wielkości w zależności od czasu. Równanie to zazwyczaj jest zależne od wielu czynników, takich jak temperatura, wilgotność powietrza, ciśnienie atmosferyczne i inne, które mogą wpływać na wynik pomiaru. Często równanie to jest opisywane za pomocą równania różniczkowego pierwszego lub drugiego stopnia, które można rozwiązać numerycznie lub analitycznie, aby uzyskać wartości mierzonej wielkości w czasie.  Jednym z przykładów czujnika opisanego równaniem różniczkowym jest czujnik temperatury, którego działanie można opisać równaniem różniczkowym pierwszego stopnia.
 
-## Plik. 4
-Zad. 1 Przedstaw i opisz elementy pamięci programu mikrokontrolera PIC16f877A.
+# Plik. 4
+**Zad. 1 Przedstaw i opisz elementy pamięci programu mikrokontrolera PIC16f877A.**
+
 Mikrokontroler PIC16f877A ma następujące elementy pamięci:
 
 1. Pamięć programu (flash): jest to pamięć, w której znajdują się instrukcje programu. Może pomieścić do 14 336 słów (1 słowo = 14 bitów).
@@ -134,7 +144,8 @@ Mikrokontroler PIC16f877A ma następujące elementy pamięci:
 
 7. Pamięć wektorów przerwań: jest to pamięć, w której przechowywane są adresy funkcji obsługujących przerwania.
 
-Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym
+**Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym**
+
 krokiem i dwoma fazami aktywnymi.
 
 Silnik krokowy jest elektromechanicznym układem składającym się z jednej lub kilku faz, w których przepływa prąd zmieniający kierunek w określonych momentach, prowadząc do obracania się wału silnika. Sposób działania silnika krokowego zależy od trybu pracy, czyli liczby faz aktywnych.
@@ -145,7 +156,8 @@ W trybie z pełnym krokiem i dwoma fazami aktywnymi do silnika jest podawany imp
 
 W obu trybach pracy silnik krokowy wykonuje obrót o określoną wartość kąta, który zależy od liczby faz i kąta podzielonego na pełne kroki. Przy zwiększeniu liczby faz aktywnych następuje zwiększenie dokładności obrotu. Silnik krokowy jest często stosowany w urządzeniach precyzyjnych, takich jak roboty przemysłowe, drukarki, urządzenia medyczne, itp.
 
-Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie
+**Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie**
+
 nie następujące pomiary:
 
 | Wejście    | Wyjście   |
@@ -178,8 +190,9 @@ y = 0.2x + 0
 
 Jest to równanie prostej przechodzącej przez punkty (0,0) i (40,8), która reprezentuje przybliżoną liniową relację między wejściem i wyjściem czujnika.
 
-## Plik. 5
-Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A.
+# Plik. 5
+**Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A.**
+
 1. Pamięć programu (FLASH) - to pamięć, w której przechowywany jest program zarządzający pracą mikrokontrolera. Zawiera ona instrukcje do wykonania przez procesor.
 
 2. Pamięć danych SRAM - to pamięć, w której przechowywane są zmienne oraz wyniki pośrednie obliczeń.
@@ -196,7 +209,8 @@ Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A
 
 8. Procesor - to główny element mikrokontrolera, odpowiedzialny za przetwarzanie danych i wykonywanie instrukcji programu. W przypadku PIC16f877A jest to procesor RISC o taktowaniu do 20 MHz.
 
-Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.
+**Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.**
+
 Złącze p-n to połączenie dwóch warstw półprzewodników: p (z dodatnim nośnikiem ładunku) i n (z ujemnym nośnikiem ładunku) o przeciwnych ładunkach i różnych stężeniach domieszkujących. 
 
 Podczas tworzenia złącze p-n dochodzi do dyfuzji nośników ładunku, czyli przeniku elektronów z obszaru n do p (dziury) oraz dziur do obszaru n (elektrony). Ten proces prowadzi do zmniejszenia stężenia nośników ładunku z obu stron złącza.
@@ -207,8 +221,9 @@ Prąd płynący przez złącze jest zwykle bardzo niewielki, a przepływ nośnik
 
 W związku z tym, zjawiska zachodzące w złączu pn, to dyfuzja nośników ładunku i przepływ prądu w zależności od kierunku napięcia zasilającego.
 
-## Plik. 6
-Zad. 1 Opisz sposób działania stosu i instrukcje wykorzystywane do jego obsługi w mikrokontrolerach klasy PIC18fxx2 i
+# Plik. 6
+**Zad. 1 Opisz sposób działania stosu i instrukcje wykorzystywane do jego obsługi w mikrokontrolerach klasy PIC18fxx2 i**
+
 Stos to struktura danych, w której elementy są dodawane lub usuwane tylko z jednego końca. W mikrokontrolerach klasy PIC18fxx2 stos jest implementowany w pamięci RAM i służy do przechowywania adresów powrotu do wywołującej funkcji, wartości rejestrów i zmiennych lokalnych.
 
 Instrukcje wykorzystywane do obsługi stosu to:
@@ -245,7 +260,8 @@ FUNCTION:
 
 W powyższym przykładzie wartość 0x05 jest najpierw dodawana na stos za pomocą instrukcji PUSH, a następnie jest pobierana ze szczytu stosu za pomocą instrukcji POP i zapisywana do rejestru REG1. Podobnie, wartość 0x0A jest dodana na stos, pobrana ze szczytu stosu i zapisana do rejestru REG2. Następnie te dwie wartości są dodawane za pomocą instrukcji ADDWF i wynik jest zapisywany na stosie. Na koniec funkcja zwraca wartość i wraca do wywołującej funkcji za pomocą instrukcji RET.
 
-Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.
+**Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.**
+
 Ruchliwość manipulatora SCARA można obliczyć jako liczbę stopni swobody (DoF). Typowy manipulator SCARA ma 4 stopnie swobody, co oznacza, że ​​ma 4 niezależne ruchy lub kierunki, w których może poruszać narzędzie końcowe. Te 4 stopnie swobody odpowiadają ruchom:
 
 1. Przesunięcie w poziomie (ruch poziomy w płaszczyźnie roboczej)
@@ -255,7 +271,8 @@ Ruchliwość manipulatora SCARA można obliczyć jako liczbę stopni swobody (Do
 
 Warto jednak zaznaczyć, że w zależności od konstrukcji manipulatora, liczba stopni swobody może być różna.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie**
+
 Zadanie kinematyki polega na wyznaczeniu położenia końcowego manipulatora w zależności od kąta obrotu łącza. Zatem, aby rozwiązać to zadanie, należy przeprowadzić kilka kroków:
 
 1. Zdefiniuj układ współrzędnych – w tym przypadku można przyjąć układ kartezjański, w którym początek układu znajduje się w punkcie podstawy manipulatora, a oś X ukierunkowana jest wzdłuż łącza obrotowego.
@@ -279,14 +296,17 @@ x = 0.707; y = 0.707; z = 1.
 
 Oznacza to, że końcowy punkt manipulatora znajduje się w odległości pierwiastka kwadratowego z 2 od początku układu współrzędnych w kierunku X i Y oraz na wysokości 1 od płaszczyzny X-Y.
 
-## Plik. 7
-Zad. 1 Wyjaśnij znaczenie ﬂag konﬁguracji w mikrokontrolerze PIC16f877A
+# Plik. 7
+**Zad. 1 Wyjaśnij znaczenie ﬂag konﬁguracji w mikrokontrolerze PIC16f877A**
+
 Flagi konfiguracji w mikrokontrolerze PIC16f877A to specjalne bity, które umożliwiają ustawienie różnych trybów pracy mikrokontrolera. Flagi te kontrolują podstawowe funkcje takie jak włączanie i wyłączanie przerwań, tryby konwersji A/D, ustawianie prędkości zegara procesora, tryby programowania i wiele innych. Ustawienie odpowiednich flag konfiguracji jest ważnym etapem projektowania układów opartych na mikrokontrolerze, ponieważ ma to wpływ na wydajność i funkcjonalność całej aplikacji.
 
-Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.
+**Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.**
+
 Ruchliwość manipulatora ramieniowego zależy od liczby stopni swobody. Standardowy manipulator ramieniowy ma 6 stopni swobody, co oznacza, że może się poruszać w 6 różnych kierunkach. Jest to najbardziej popularny typ manipulatora w przemyśle, ponieważ zapewnia dużą precyzję i elastyczność w wykonywaniu różnych zadań.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na**
+
 wirniku silnika.
 
 Nie zostało podane warunków początkowych, dlatego ciężko jest dokładnie rozwiązać to zadanie, ale przyjmując pewne założenia możemy przedstawić przykładowe rozwiązanie.
@@ -323,11 +343,13 @@ v = 1 * 104,72 = 104,72 m/s
 
 Jest to dość duża prędkość, dlatego przed rozpoczęciem ruchu bardzo ważne jest zadbanie o bezpieczeństwo pracy manipulatora oraz otoczenia, w którym się znajduje.
 
-## Plik. 8
-Zad. 1 Czym jest histereza w układach wejściowo-wyjściowych.
+# Plik. 8
+**Zad. 1 Czym jest histereza w układach wejściowo-wyjściowych.**
+
 Histereza w układach wejściowo-wyjściowych to zjawisko, w którym wartość wyjściowa nie zależy tylko od wartości wejściowej w danym momencie, ale również od historii zmian wartości wejściowej. Innymi słowy, histereza występuje, gdy zmiana wartości wejściowej nie powoduje natychmiastowej i dokładnej zmiany wartości wyjściowej, ale na wpływają na nią zmiany wykonywane wcześniej. Jest to zjawisko powszechne w wielu układach mechanicznych, elektrycznych i sterujących. Przykładem histerezy może być sytuacja, w której dźwignia urządzenia pozostanie w pozycji otwartej, nawet gdy wartość wejściowa się zmieniła, a dopiero gdy ta wartość zostanie zmieniona o wiele większą ilość, dźwignia zacznie się poruszać.
 
-Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.
+**Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.**
+
 Najpierw obliczamy długość wektora [0.5, 0.4, 0.3]:
 
 sqrt(0.5^2 + 0.4^2 + 0.3^2) ≈ 0.745
@@ -370,7 +392,8 @@ Ostatecznie, podstawiając wszystkie wartości do wzoru, otrzymujemy:
 
 Nowy punkt to [1.438, 1.276, 0.865].
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-**
+
 czonego z końcówką, która porusza się translacyjnie wzdłuż osi łącza.
 
 Załóżmy, że:
@@ -403,11 +426,13 @@ Ostatecznie, zestawienie parametrów DH dla manipulatora opisanego powyżej wygl
 - R3: a=0, d=d, q=0, alpha=-pi/2
 - R4: a=0, d=0, q=0, alpha=0
 
-## Plik. 9
-Zad. 1 W jaki sposób zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów.
+# Plik. 9
+**Zad. 1 W jaki sposób zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów.**
+
 Zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów poprzez wykorzystanie specjalnych kryształów piezoelektrycznych, takich jak kwarc czy turmalin. Kryształ taki jest umieszczany w mikrofonie i poddawany wibracjom wywołanym przez dźwięki, które mają zostać zarejestrowane. Wibracje te wpływają na kryształ piezoelektryczny, który generuje na swoich końcach napięcie elektryczne proporcjonalne do siły tych wibracji. Napięcie to jest następnie wzmacniane i przetwarzane w sygnał dźwiękowy, który może być zapisany lub przesłany na dalsze urządzenia. Dzięki temu właśnie zjawisku piezoelektrycznemu możliwe jest nagrywanie dźwięków i głosów oraz ich przekazywanie za pomocą mikrofonów.
 
-Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia
+**Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia**
+
 Tekstu na wyświetlaczu HD44780 można programować za pomocą kontrolera mikroprocesora. Ten kontroler HD44780 jest stosowany w większości sterowników wyświetlaczy LCD. Wykorzystuje on interfejs równoległy do komunikacji z mikrokontrolerem i umożliwia sterowanie wyświetlaczem poprzez komunikację jednokierunkową.
 
 Aby wyświetlić tekst na wyświetlaczu HD44780, należy najpierw zainicjować urządzenie. Inicjalizacja składa się z napisania kilku instrukcji, które ustawiają parametry wyświetlacza, takie jak liczba wierszy, tryb kursu lub tryb adresowania. Instrukcje te są wysyłane z mikrokontrolera na kontroler urządzenia poprzez 8-bitową szynę danych i 3 przewody sterujące.
@@ -435,7 +460,8 @@ int main(void)
 
 W tym przykładzie "LCD_init()" jest funkcją inicjalizacyjną, a "LCD_puts()" wyświetla tekst na ekranie. Cały program jest nieskończoną pętlą kontrolną, która zapobiega zakończeniu działania programu.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i**
+
 posiadającego jeden przegub obrotowy na końcu łącza.
 
 Parametry DH można wyznaczyć według następujących kroków:
@@ -496,13 +522,15 @@ Ostatecznie, macierz transformacji dla tego manipulatora ma postać:
 
 0 0 0 1
 
-## Plik. 10
-Zad. 1 Wyjaśnij sposób działania termopary i łańcucha termicznego.
+# Plik. 10
+**Zad. 1 Wyjaśnij sposób działania termopary i łańcucha termicznego.**
+
 Termopary to urządzenia pomiarowe, które wykorzystują zjawisko Seebecka do pomiaru temperatury. Zjawisko to polega na powstawaniu siły elektromotorycznej w przewodniku, gdy różnica temperatur jest między jego dwoma końcami. W termoparze składającym się z dwóch różnych metali, powstające siły elektromotoryczne są proporcjonalne do różnicy temperatur między końcami. Ta różnica napięcia jest mierzona i przeliczana na temperaturę za pomocą tabel termostatycznych.
 
 Łańcuch termiczny to system lub proces transportu energii cieplnej z jednego punktu do drugiego, wykorzystujący różne elementy termiczne, takie jak termopary, termometry oporowe czy czujniki temperatury typu RTD. Proces ten wymaga przesyłania energii cieplnej z miejsca o wyższej temperaturze do miejsca o niższej temperaturze. W łańcuchu termicznym ważne jest wyznaczenie strumienia ciepła między źródłem a odbiornikiem, jak również prędkość przepływu ciepła przez poszczególne elementy termiczne. Wykorzystanie łańcucha termicznego jest niezwykle istotne w przemyśle, zwłaszcza w procesach produkcyjnych, gdzie kontrola temperatur jest kluczowa dla zachowania jakości produktów i procesów produkcyjnych.
 
-Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania
+**Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania**
+
 Konwerter analogowo-cyfrowy (ADC) to urządzenie, które przetwarza sygnał analogowy (np. napięcie) na sygnał cyfrowy (binarny). Istnieją różne sposoby działania, ale najczęściej stosowane to metoda aproksymacji oraz metoda sukcesywnego przybliżania.
 
 Metoda aproksymacji działa na zasadzie porównywania napięcia wejściowego z pewnym napięciem odniesienia i stopniowym zmniejszaniu przedziału, w którym może znajdować się wejściowe napięcie. Wynikowy sygnał cyfrowy odpowiada numerowi kroku, w którym napięcie zostało odnalezione.
@@ -521,7 +549,8 @@ Do wykonania konwersji analogowo-cyfrowej, musimy wykonać kilka instrukcji:
 
 W zależności od potrzeb, konwersja może być wykonywana jednorazowo lub w trybie ciągłym. W przypadku pracy w trybie ciągłym, konwersja jest wykonywana automatycznie dla kolejnych próbek sygnału.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 :
 
 $\frac{dx}{dt} = kx$
@@ -536,8 +565,9 @@ $k$ - stała proporcjonalności.
 
 Równanie to opisuje proces, w którym wartość mierzonej przez czujnik wielkości zmienia się proporcjonalnie do jej aktualnej wartości. Stała $k$ określa szybkość zmian wartości mierzonej przez czujnik. Im większa wartość $k$, tym szybciej wartość mierzona będzie się zmniejszać lub zwiększać.
 
-## Plik. 11
-Zad. 1 Wyjaśnij sposób działania kamery CCD.
+# Plik. 11
+**Zad. 1 Wyjaśnij sposób działania kamery CCD.**
+
 Kamera CCD (Charge-Coupled Device) składa się z matrycy setek tysięcy lub milionów pikseli, z których każdy rejestruje intensywność światła padającego na niego. Piksele te są złożone z pól półprzewodników, które przechowują ładunki elektryczne w sposób proporcjonalny do ilości światła padającego na nie.
 
 W momencie gdy światło pada na piksel, elektrony przenoszą się z pola półprzewodnikowego w kierunku elektrody zasilającej dzięki efektowi fotoelektrycznemu. Następnie, ładunki są przesuwane przez układ poziomych i pionowych przewodów, tak zwany układ sterowania odczytem (ang. readout register), do specjalnego układu analogowo-cyfrowego konwertera (ang. ADC - Analog-to-Digital Converter), który tłumaczy sygnał analogowy na cyfrowy.
@@ -548,12 +578,14 @@ W procesie odczytu każdego piksela, sygnał jest wzmacniany i przekształcany w
 
 Kamery CCD znajdują zastosowanie w wielu różnych dziedzinach, w tym w systemach telewizyjnych, przemysłowych, medycznych i naukowych. Dzięki ich wysokiej rozdzielczości i czułości na światło, kamery CCD są idealnym wyborem do wykonywania zdjęć i filmów o wysokiej jakości i ostrości.
 
-Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to
+**Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to**
+
 impedancja źródłowa.
 
 Nie jest jasne, jakie jest pytanie. Proszę podać pełne pytanie.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany jest czujnik opisany równaniem różniczkowym, które opisuje jego zachowanie w czasie:
 
 dy/dt = f(y, t)
@@ -564,8 +596,9 @@ Równanie to opisuje, jak sygnał pochodzący z czujnika (oznaczony jako y) zmie
 
 Rozwiązanie tego równania pozwala na określenie, jak sygnał pochodzący z czujnika będzie zmieniał się w czasie oraz jak reagować na jego zmiany. Rozwiązania tego typu równań są często stosowane w różnych dziedzinach, takich jak fizyka, inżynieria, biologia czy ekonomia, by opisywać i przewidywać zachowanie różnych procesów i zjawisk.
 
-## Plik. 12
-Zad. 1 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Zamieść niezbędne obliczenia.
+# Plik. 12
+**Zad. 1 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Zamieść niezbędne obliczenia.**
+
 Konwerter analogowo-cyfrowy (ADC) jest urządzeniem, które przekształca sygnał analogowy na postać cyfrową. Działanie ADC polega na próbkowaniu sygnału analogowego co określony czas oraz kwantowaniu – przyporządkowaniu wartości cyfrowej do amplitudy próbek. 
 
 Proces ten można przedstawić następująco:
@@ -592,7 +625,8 @@ R = (5 V - 0 V)/(2^12) = 0,00122 V
 
 Oznacza to, że każda jednostka zmiany sygnału odpowiada zmianie o około 0,024% maksymalnej wartości sygnału.
 
-Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym
+**Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym**
+
 krokiem i dwoma fazami aktywnymi.
 
 Silnik krokowy to urządzenie, które przekształca impulsy elektryczne dostarczane na jego cewki w ruch mechaniczny. W trybie z pełnym krokiem i jedną fazą aktywną do przeprowadzenia każdego pełnego kroku, potrzebna jest zmiana stanu jednej fazy. W kolejnych etapach, każda cewka zmienia swój stan, co powoduje ruch osi. W przypadku takiego trybu, silnik krokowy obraca się z mniejszą prędkością, ale z większą siłą.
@@ -601,7 +635,8 @@ Natomiast w trybie z pełnym krokiem i dwoma fazami aktywnymi, każda kolejna ce
 
 W obu trybach, kontroler silnika krokowego musi ustawić kolejność aktywacji faz, aby zapewnić odpowiedni kierunek ruchu i odpowiednią ilość kroków odpowiednio do wymagań aplikacji. Częstotliwość sygnałów elektrycznych dostarczanych do cewek, decyduje o prędkości obrotowej silnika.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany czujnik może być opisany równaniem różniczkowym w postaci:
 
 y'(t) = f(x(t), y(t), t)
@@ -612,8 +647,9 @@ W zależności od konkretnego czujnika, funkcja f może mieć różną postać i
 
 Równanie różniczkowe opisujące czujnik jest ważne, ponieważ umożliwia predykcję jego zachowania w czasie oraz pozwala na opracowanie odpowiedniej strategii kalibracji i ustawienia.
 
-## Plik. 13
-Zad. 1 Wyjaśnij sposób działania konwertera cyfrowo-analogowego. Zamieść niezbędne obliczenia.
+# Plik. 13
+**Zad. 1 Wyjaśnij sposób działania konwertera cyfrowo-analogowego. Zamieść niezbędne obliczenia.**
+
 Konwerter cyfrowo-analogowy (DAC) jest urządzeniem, które przyjmuje cyfrowy sygnał wejściowy i przekształca go na analogowy sygnał wyjściowy. Proces ten polega na przydzieleniu wartości sygnału cyfrowego do odpowiednich poziomów napięcia na wyjściu konwertera.
 
 DAC zwykle składa się z trzech głównych komponentów: rejestru przesuwnego, przetwornika wagowego i wzmacniacza.
@@ -631,7 +667,8 @@ Obliczenia dotyczące działania konwertera cyfrowo-analogowego obejmują dobran
 
 Następnie, w celu uzyskania wartości sygnału analogowego dla konkretnej wartości cyfrowej, ta wartość zostaje pomnożona przez wartość napięcia dla każdego bitu wagowego i dodana do siebie, aby uzyskać sumaryczną wartość napięcia dla całego sygnału analogowego.
 
-Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.
+**Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.**
+
 Złącze półprzewodnikowe typu P-N składa się z dwóch warstw półprzewodników z różnymi rodzajami przewodnictwa. Warstwa typu P ma nadmiar dziurek, które są nośnikami ładunków dodatnich, natomiast warstwa typu N ma nadmiar elektronów, które są nośnikami ładunków ujemnych.
 
 W złączu P-N zachodzi zjawisko wyścielania, czyli migracja nośników ładunku na granicy pomiędzy dwoma różnymi typami półprzewodników. W wyniku tego procesu następuje nierównomierne rozłożenie ładunków po obu stronach złącza. Na tej granicy powstaje pole elektryczne, które prowadzi do zatrzymania dalniejszej migracji nośników.
@@ -642,7 +679,8 @@ Kolejnym zjawiskiem zachodzącym w złączu P-N jest dioda prostownicza, gdzie p
 
 Ogólnie rzecz biorąc, w złączu P-N zachodzą bardzo interesujące zjawiska, które umożliwiają wykorzystanie półprzewodników w wielu dziedzinach, takich jak elektronika, przemysł, energetyka i wiele innych.
 
-Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie
+**Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie**
+
 następujące pomiary:
 
 | Wejście [V] | Wyjście [mA] |
@@ -690,8 +728,9 @@ $$y = 8.56x + 6.67$$
 
 Możemy teraz użyć tego równania, aby przewidzieć wartości wyjścia dla różnych wartości wejścia, które nie były objęte pomiarami eksperymentalnymi. Jednak należy pamiętać, że przybliżona charakterystyka liniowa może nie być dokładna w całym zakresie działania czujnika.
 
-## Plik. 14
-Zad. 1 Wyjaśnij zastosowanie Supervisor-a w oprogramowaniu Webots. Pokaż jak i jakie instrukcje służą do odczytywania
+# Plik. 14
+**Zad. 1 Wyjaśnij zastosowanie Supervisor-a w oprogramowaniu Webots. Pokaż jak i jakie instrukcje służą do odczytywania**
+
 i modyfikowania parametrów symulacji za pomocą Supervisor-a.
 
 Supervisor w Webots to proces, który zarządza symulacją robotów i środowiska. Jego głównym zadaniem jest kontrolowanie symulacji, w tym modyfikowanie parametrów, odczytywanie informacji o robotach i zmiana zachowania obiektów symulacji. Supervisor korzysta z języka Python, co umożliwia użytkownikom łatwe programowanie interakcji między robotami i środowiskiem symulacyjnym. 
@@ -724,7 +763,8 @@ Instrukcja ta pobiera pozycję robota (współrzędne x, y, z) i przypisuje ją 
 
 Zastosowanie Supervisor-a w Webots jest szczególnie przydatne w przypadku chęci personalizowania parametrów symulacji i dodawania nowych funkcjonalności do robotów. Umożliwia to użytkownikom tworzenie bardziej złożonych programów, które wykorzystują dane z symulacji do tworzenia bardziej interaktywnej i realistycznej wirtualnej rzeczywistości.
 
-Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.
+**Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.**
+
 Ruchliwość manipulatora SCARA można obliczyć z użyciem równania:
 
 R = 6 - n - m 
@@ -740,8 +780,9 @@ R = 6 - 3 - 1 = 2
 
 Oznacza to, że manipulator SCARA może poruszać się w dwóch niezależnych kierunkach w trójwymiarowej przestrzeni roboczej.
 
-## Plik. 15
-Zad. 1 Wyjaśnij pojęcie przekształceń jednorodnych.
+# Plik. 15
+**Zad. 1 Wyjaśnij pojęcie przekształceń jednorodnych.**
+
 Przekształcenia jednorodne to takie działania matematyczne, które zachowują proporcjonalność między zmiennymi. Oznacza to, że jeśli mnożymy wartości zmiennych przez pewną stałą, to wynik przekształcenia również zostanie pomnożony przez tę samą stałą. 
 
 Formalnie, przekształcenie f nazywamy jednorodnym stopnia k, jeśli dla dowolnego x i dowolnej stałej c zachodzi:
@@ -754,12 +795,14 @@ sqrt(c * x) = sqrt(c) * sqrt(x)
 
 Innym przykładem są przekształcenia afiniczne, czyli przesunięcia, obroty i skalowania figur geometrycznych. Skalowanie jest przykładem przekształcenia jednorodnego stopnia 2, ponieważ podwojenie długości krawędzi figury skutkuje jej czterokrotnym powiększeniem powierzchni.
 
-Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.
+**Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.**
+
 Ruchliwość manipulatora ramieniowego zależy od liczby stopni swobody (DOF - degrees of freedom), czyli liczby niezależnych kierunków, w których może się poruszać. Typowy manipulator ramieniowy posiada 6 stopni swobody, co oznacza, że może poruszać się w 6 niezależnych kierunkach. 
 
 Ruchliwość ta jest zwykle wykorzystywana do określenia zdolności manipulatora do wykonywania skomplikowanych ruchów i precyzyjnej kontroli pozycji narzędzia. Im większa jest liczba stopni swobody, tym bardziej zaawansowane zadania manipulator może wykonywać. Jednocześnie większa liczba stopni swobody oznacza zwykle większą złożoność mechanizmu i większe koszty budowy i utrzymania.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie**
+
 Zadanie:
 
 Rozważmy manipulator złożony z jednego łącza obrotowego zamontowanego na bazie. Kąt obrotu łącza wynosi 30 stopni na sekundę. Jakie jest prędkości liniowe i kątowe końca manipulatora znajdującego się w odległości 0.5m od osi obrotu?
@@ -786,8 +829,9 @@ Odpowiedź:
 
 Prędkość liniowa końca manipulatora wynosi 0.262 m/s, a prędkość kątowa końca manipulatora wynosi 0.524 rad/s.
 
-## Plik. 16
-Zad. 1 Wyjaśnij przeznaczenie poszczególnych bitów rejestru STATUS.
+# Plik. 16
+**Zad. 1 Wyjaśnij przeznaczenie poszczególnych bitów rejestru STATUS.**
+
 Rejestr STATUS jest rejstrem wewnętrznym procesora, który zawiera informacje o stanie procesora oraz wynikach ostatnio wykonanych operacji.
 
 Poszczególne bity rejestru STATUS pełnią następujące funkcje:
@@ -803,7 +847,8 @@ Poszczególne bity rejestru STATUS pełnią następujące funkcje:
 
 Każdy z bitów rejestru STATUS ma swoje unikalne przeznaczenie, które zależy od trybu pracy procesora i wykonywanych operacji. Na podstawie stanu rejestrów można kontrolować przebieg programu i podejmować dalsze decyzje w zależności od wyników operacji.
 
-Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.
+**Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.**
+
 W pierwszej kolejności należy przekształcić wektor [0.5,0.4,0.3] na wektor jednostkowy, dzieląc go przez jego długość:
 
 ||[0.5,0.4,0.3]|| = sqrt(0.5^2 + 0.4^2 + 0.3^2) = 0.744
@@ -826,7 +871,8 @@ Ostatecznie, wykonując mnożenie macierzowe punktu [1,1,1] przez uzyskaną powy
 
 [0.868,0.650,1.286]
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na**
+
 podstawie obrotowej. Zakładając, że pozioma podstawa obrotowa porusza się z prędkością stałą, a łącze porusza się wzdłuż osi pryzmatu z prędkością proporcjonalną do kąta obrotu podstawy.
 
 Rozwiązanie:
@@ -889,8 +935,9 @@ a(t) = 0
 
 Oznacza to, że przyspieszenie końca łącza jest zerowe, czyli ruch jest jednostajny z prędkością v = k * ω.
 
-## Plik. 17
-Zad. 1 Wyjaśnij sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A.
+# Plik. 17
+**Zad. 1 Wyjaśnij sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A.**
+
 Mikrokontroler PIC16f877A ma 13-bitową przestrzeń adresową, co oznacza, że ​​może obsługiwać do 8KB pamięci. Sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A obejmują:
 
 1. Bezpośrednia adresacja - używa bezpośredniego adresu 8-bitowego, który wskazuje na konkretny bajt pamięci. Na przykład, instrukcja "MOVLW 0x0A" ładuje wartość 0x0A do rejestru W, a instrukcja "MOVWF 0x20" zapisuje wartość w rejestrze W do adresu 0x20 w pamięci.
@@ -905,7 +952,8 @@ Mikrokontroler PIC16f877A ma 13-bitową przestrzeń adresową, co oznacza, że �
 
 6. Rozszerzona adresacja - używa 21-bitowego adresu do dostępu do większej pamięci. Ta forma adresacji jest dostępna tylko w pewnych trybach pracy i niektórych układach, a nie w standardowym trybie pracy PIC16f877A.
 
-Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia
+**Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia**
+
 Tekst na wyświetlaczu HD44780 można programować za pomocą mikrokontrolera lub innego urządzenia. Istnieje kilka metod programowania HD44780, ale poniżej przedstawiono najpopularniejszą.
 
 Chcąc programować wyświetlacz HD44780, najpierw należy skonfigurować porty mikrokontrolera, które będą bezpośrednio połączone z wyświetlaczem. Następnie należy dokładnie zapoznać się z instrukcjami obsługi LCD.
@@ -936,7 +984,8 @@ Najważniejszymi instrukcjami dla programowania wyświetlacza HD44780 są:
 
 Z uwagi na złożoność procesu programowania, zaleca się korzystać z gotowych bibliotek do obsługi wyświetlacza HD44780. Dostępne są biblioteki dla różnych mikrokontrolerów i języków programowania.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-**
+
 czonego z jednym łączem przegubowym.
 
 Aby wyznaczyć parametry DH (Denavit-Hartenberg) dla tego manipulatora, należy przeprowadzić następujące kroki:
@@ -974,8 +1023,9 @@ W przypadku tego manipulatora, parametry DH dla obu łącz wynoszą:
 
 gdzie q_1 i q_2 oznaczają kąt obrotu łącz pierwszego i drugiego odpowiednio.
 
-## Plik. 18
-Zad. 1 Wyjaśnij sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A.
+# Plik. 18
+**Zad. 1 Wyjaśnij sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A.**
+
 Mikrokontroler PIC16f877A używa dwóch sposobów adresacji pamięci danych: bezpośredniej i pośredniej.
 
 Adresowanie bezpośrednie polega na bezpośrednim odwołaniu do konkretnego adresu pamięci, w którym znajduje się dane. Adres ten może zostać zdefiniowany w kodzie programu lub pobrany z rejestru. W przypadku PIC16f877A, zakres adresowania bezpośredniego wynosi od 0x00 do 0xFF i odnosi się do rejestrów wewnętrznych, pamięci RAM oraz pamięci EEPROM.
@@ -988,7 +1038,8 @@ Rejestr FSR (File Select Register) umożliwia wybór jednego z banków rejestró
 
 Rejestr PCLATH (Program Counter Latch High) służy do przechowywania części wysokiej adresu pamięci programu. W przypadku adresowania pośredniego w pamięci programu, wartość z rejestrów FSR i WREG dodawana jest do wartości PCLATH, aby utworzyć pełny adres.
 
-Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania
+**Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania**
+
 Konwerter analogowo-cyfrowy (ADC) jest urządzeniem, które przekształca sygnał analogowy na sygnał cyfrowy. Sposób działania konwertera polega na porównywaniu sygnału wejściowego z sygnałem referencyjnym i przekształceniu otrzymanej różnicy na sygnał cyfrowy.
 
 W procesie przekształcania sygnału analogowego na cyfrowy, istotne są trzy etapy:
@@ -1011,7 +1062,8 @@ Aby uruchomić konwerter analogowo-cyfrowy, należy wykonać kilka instrukcji:
 
 Konwertery analogowo-cyfrowe są powszechnie stosowane w systemach pomiarowych, przetwarzaniu sygnałów, regulacji i kontroli procesów przemysłowych oraz w elektronice użytkowej (np. w kamerach cyfrowych, smartfonach, czy tabletach).
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i**
+
 dwóch osi obrotowych:
 
 1. Długość łącza pryzmatycznego: d1
@@ -1027,8 +1079,9 @@ Wyznaczanie parametrów DH polega na przypisaniu układu współrzędnych do ka�
 
 Definiowanie parametrów DH powinno poprawić wałki obracające się wokół osi oraz przemieszczenia po osiach robota. Dzięki temu będzie możliwe zaprojektowanie trajektorii ruchu robota, które pozwolą na czyszczenie von Neumanna czy programowanie podobnych zadań.
 
-## Plik. 19
-Zad. 1 Przedstaw i opisz elementy pamięci programu mikrokontrolera PIC16f877A.
+# Plik. 19
+**Zad. 1 Przedstaw i opisz elementy pamięci programu mikrokontrolera PIC16f877A.**
+
 Mikrokontroler PIC16f877A posiada następujące elementy pamięci:
 
 1. Pamięć flash - służy do przechowywania programu użytkownika, który jest zapisywany czytelnym kodem asemblera i przechowywany w pamięci flash. Ta pamięć jest nieulotna i pozwala na programowanie mikrokontrolera.
@@ -1043,18 +1096,21 @@ Mikrokontroler PIC16f877A posiada następujące elementy pamięci:
 
 W sumie PIC16f877A oferuje aż 14-bitowe adresowanie, przy jednoczesnym braku stronicowania, co daje dość duży zakres zastosowań i łatwość programowania.
 
-Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to
+**Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to**
+
 rezystancja obciążenia.
 
 Nie ma rysunku dołączonego do pytania, więc nie możemy dokładnie ocenić, jak wygląda ten układ. Podstawowe informacje, które podano, to impedancja układu zasilania (R1=50Ω) i rezystancja obciążenia (Rs=300Ω). Mogą one być stosowane do obliczenia wartości prądu i napięcia w układzie, ale konkretny wynik zależy od rodzaju układu i innych elementów składowych.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 y(t) = a * u(t) - b * y(t-1)
 
 gdzie y(t) oznacza wartość wyjściową czujnika w chwili t, u(t) to sygnał wejściowy, a i b to stałe współczynniki charakteryzujące właściwości czujnika. Równanie to opisuje dynamiczne zachowanie czujnika, gdzie jego wyjście zależy nie tylko od sygnału wejściowego w danej chwili, ale także od wyjścia z poprzedniej chwili.
 
-## Plik. 20
-Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A.
+# Plik. 20
+**Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A.**
+
 Podstawowe elementy pamięci mikrokontrolera PIC16f877A to:
 
 1. Flash - pamięć programu, która przechowuje kod programu. Jest nieulotna i może zostać zaktualizowana przez programowanie.
@@ -1071,7 +1127,8 @@ Podstawowe elementy pamięci mikrokontrolera PIC16f877A to:
 
 7. We/wy porty - służą do komunikacji z urządzeniami zewnętrznymi, takimi jak czujniki, przetworniki i wyświetlacze.
 
-Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym
+**Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym**
+
 krokiem i dwoma fazami aktywnymi.
 
 Silnik krokowy to akcyjni element elektryczny, który przekształca sygnały elektryczne na ruch mechaniczny. Silnik krokowy składa się z rdzenia magnetycznego i cewek elektromagnetycznych zamocowanych na jego obwodach. Każda cewka jest podłączona do zewnętrznego układu sterującego, który dostarcza sygnał sterujący.
@@ -1082,7 +1139,8 @@ W trybie z pełnym krokiem i dwoma fazami aktywnymi na każdą z cewek jest poda
 
 W obu przypadkach ruch silnika jest kontrolowany za pomocą sygnałów sterujących i umożliwia precyzyjne wykonywanie ruchów o ustalonej wielkości kroku. Silniki krokowe wykorzystywane są w urządzeniach mechanicznych, takich jak drukarki, skanery, maszyny do obróbki metali, a także w robotyce i automatyce przemysłowej.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany czujnik można opisać za pomocą równania różniczkowego postaci:
 
 \begin{equation}
@@ -1109,8 +1167,9 @@ gdzie:
 
 Równanie to mówi nam, że wartość wyjściowa czujnika zależy od różnicy temperatury między jego wnętrzem a otoczeniem oraz od współczynnika proporcjonalności.
 
-## Plik. 21
-Zad. 1 Opisz sposób działania stosu i instrukcje wykorzystywane do jego obsługi w mikrokontrolerach klasy PIC18fxx2 i
+# Plik. 21
+**Zad. 1 Opisz sposób działania stosu i instrukcje wykorzystywane do jego obsługi w mikrokontrolerach klasy PIC18fxx2 i**
+
 Stos w mikrokontrolerach klasy PIC18Fxx2 jest obsługiwany przez dwa rejestry: SP i WREG.
 
 SP (Stack Pointer) przechowuje adres w pamięci, gdzie znajduje się ostatni zapisany na stosie element. Początkowo SP ustawiany jest na najwyższy adres w pamięci zaalokowanym na stos. Przy dodawaniu nowego elementu na stos SP jest dekrementowany, a przy zdejmowaniu elementu ze stosu SP jest inkrementowany.
@@ -1131,7 +1190,8 @@ Dodatkowo, w mikrokontrolerach tej klasy stos wykorzystywany jest również do p
 
 Dzięki stosowi można łatwo przekazywać argumenty i zmienna lokalne między różnymi częściami programu, a także zapisywać i odczytywać adresy powrotu do i z procedur. Stos ma również zastosowanie w obsłudze przerwań, gdzie pozwala na zachowanie kontekstu programu przed jego wykonaniem.
 
-Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.
+**Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.**
+
 Złącze P-N to złącze pomiędzy półprzewodnikami typu P (ang. positive) i N (ang. negative) o różnych typach (typ P zawiera domieszkę akceptorową, a typ N zawiera domieszkę donorową).
 
 Zjawiska zachodzące w złączu P-N to:
@@ -1146,7 +1206,8 @@ Zjawiska zachodzące w złączu P-N to:
 
 5. Zjawisko rekombinacji: Przy dostatecznie dużym zasilaniu, elektrony i dziury w złączu P-N mogą rekombinować ze sobą, co powoduje generowanie ciepła i zmniejszenie wydajności złącza.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dla uproszczenia załóżmy, że dany jest czujnik temperatury, oznaczmy jego wyjście przez T(t) [C]. Równanie różniczkowe opisujące jego zachowanie może wyglądać następująco:
 
 dT/dt = q(T, t)
@@ -1155,8 +1216,9 @@ gdzie q(T, t) jest funkcją czasu i temperatury, opisującą sposób, w jaki czu
 
 Rozwiązanie tego równania differentyjnego pozwala określić, jak temperatura na wyjściu czujnika zmienia się w czasie, przy różnych stanach początkowych i warunkach zewnętrznych (np. zmieniająca się temperatura otoczenia). Można też na jego podstawie wyprowadzić parametry charakteryzujące działanie czujnika, takie jak czas reakcji, czułość czy dokładność pomiaru.
 
-## Plik. 22
-Zad. 1 Wyjaśnij znaczenie ﬂag konﬁguracji w mikrokontrolerze PIC16f877A
+# Plik. 22
+**Zad. 1 Wyjaśnij znaczenie ﬂag konﬁguracji w mikrokontrolerze PIC16f877A**
+
 Flagi konfiguracji w mikrokontrolerze PIC16f877A służą do ustawiania trybu pracy mikrokontrolera oraz konfiguracji jego peryferiów. Flagi te są przechowywane w specjalnej komórce pamięci o nazwie rejestru konfiguracji. Konfiguracja ta może być ustawiana przez programistę lub automatycznie przez mikrokontroler w zależności od potrzeb.
 
 Przykładowe ustawienia, które można dokonać za pomocą flag konfiguracyjnych to:
@@ -1167,7 +1229,8 @@ Przykładowe ustawienia, które można dokonać za pomocą flag konfiguracyjnych
 
 Flagi konfiguracyjne umożliwiają dostosowanie mikrokontrolera do konkretnych wymagań aplikacji. Prawidłowa konfiguracja pozwala na optymalne wykorzystanie zasobów mikrokontrolera oraz zapewnia jego stabilną i bezpieczną pracę.
 
-Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.
+**Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.**
+
 Aby obliczyć ruchliwość manipulatora SCARA, należy użyć wzoru:
 
 ruchliwość = liczba stopni swobody - liczba ograniczeń
@@ -1190,7 +1253,8 @@ ruchliwość = 4 - 2 = 2
 
 Manipulator SCARA ma ruchliwość równą 2.
 
-Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie
+**Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie**
+
 Liniowa charakterystyka wejściowo-wyjściowa czujnika to zależność pomiędzy wartością zmierzoną przez czujnik a wartością wyjścia elektrońskiego. Aby wyznaczyć liniową charakterystykę, należy zbadać pomiar dla różnych wartości wejściowych i wyjściowych.
 
 Na przykład, jeśli zmierzono wartości napięcia wejściowego i odpowiadające wartości napięcia wyjściowego czujnika, można przedstawić te wartości na wykresie rozproszenia. Następnie, aby uzyskać charakterystykę liniową, wykonuje się regresję liniową dla punktów i rysuje się prostą, która najlepiej odzwierciedla zależność między wejściem a wyjściem czujnika.
@@ -1212,22 +1276,26 @@ Regresja liniowa:
 
 Prosta ta będzie przybliżoną charakterystyką liniową czujnika.
 
-## Plik. 23
-Zad. 1 Czym jest histereza w układach wejściowo-wyjściowych.
+# Plik. 23
+**Zad. 1 Czym jest histereza w układach wejściowo-wyjściowych.**
+
 Histereza to stan, w którym wartość wyjściowa układu zależy nie tylko od wartości bieżącej wartości wejściowej, ale także od poprzednich wartości wejściowych. Innymi słowy, układ może reagować na zmiany wartości wejściowej w sposób opóźniony lub skokowy w przypadku, gdy wartość wejściowa wypada poza pewne ustalone granice. W przypadku układów wejściowo-wyjściowych, histereza jest często wykorzystywana w celu uniknięcia falowania wyjściowego lub generowania sygnałów o praktycznym zastosowaniu. Histereza może również wpłynąć na stabilność i dokładność pomiarów w przypadku urządzeń pomiarowych lub regulacyjnych.
 
-Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.
+**Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.**
+
 Nie jest możliwe podanie jednoznacznej wartości ruchliwości manipulatora ramieniowego, ponieważ ruchliwość zależy od wielu czynników, takich jak liczba stopni swobody, długość ramion, kąty ograniczeń ruchu, a także jakość i precyzja silników oraz innych elementów sterujących. Ruchliwość może również różnić się w zależności od trybu pracy robotów (np. szybkie przemieszczanie, precyzyjne pozycjonowanie itp.). Ogólnie rzecz biorąc, manipulatory ramieniowe charakteryzują się wysoką ruchliwością, co umożliwia im dużą elastyczność i wszechstronność w wykonywaniu różnych zadań.
 
-## Plik. 24
-Zad. 1 W jaki sposób zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów.
+# Plik. 24
+**Zad. 1 W jaki sposób zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów.**
+
 Mikrofony są urządzeniami, które wykorzystują zjawisko piezoelektryczne do przekształcenia fal dźwiękowych na sygnał elektryczny. Elementem piezoelektrycznym w mikrofonie jest ceramiczny kryształ. Kiedy fale dźwiękowe docierają do mikrofonu, kryształ ulega odkształceniu, co prowadzi do powstania ładunków elektrycznych na jego powierzchniach. 
 
 Te ładunki elektryczne są następnie pobierane przez elektrody mikrofonu, które przetwarzają je na sygnał elektryczny, który może być zarejestrowany przez urządzenia nagrywające. W ten sposób, kryształ piezoelektryczny w mikrofonie służy jako czujnik ruchu, przetwarzając drgania powietrza na sygnał elektryczny, który może być wykorzystany do nagrywania dźwięku. 
 
 Dzięki prostocie i niezawodności, mikrofony piezoelektryczne są powszechnie stosowane w różnych zastosowaniach, od nagrywania muzyki i głosów, aż po kontroli hałasu i detekcji wibracji w przemyśle.
 
-Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.
+**Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.**
+
 Obrotem punktu [1, 1, 1] o $30^\circ$ wokół wektora [0.5, 0.4, 0.3] nazywamy przekształcenie, które polega na znalezieniu punktu [x, y, z], który powstaje przez obrócenie punktu [1, 1, 1] o kąt $30^\circ$ wokół wektora [0.5, 0.4, 0.3], czyli:
 
 [x, y, z] = R([1, 1, 1], [0.5, 0.4, 0.3], $30^\circ$)
@@ -1276,7 +1344,8 @@ sin($30^\circ$)[-0.1, -0.2, 0.1]
 
 Ostatecznie, punkt [1, 1, 1] obrócony o $30^\circ$ wokół wektora [0.5, 0.4, 0.3] ma współrzędne [0.78, 0.56, 1.28].
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie**
+
 Zadanie kinematyki dla manipulatora z jednym łączem obrotowym zamontowanym na bazie można rozwiązać przy użyciu podstawowych równań kinematyki.
 
 Niech l będzie długością łącza manipulatora. Niech kąt obrotu łącza w stosunku do bazy będzie oznaczony jako θ.
@@ -1294,15 +1363,17 @@ gdzie atan2(y, x) to funkcja arcus tangens, która zwraca kąt między osią x a
 
 Rozwiązanie kinematyki dla manipulatora z jednym łączem obrotowym zamontowanym na bazie jest stosunkowo proste, ponieważ manipulator może wykonywać ruch tylko w jednej płaszczyźnie. Jednak w bardziej skomplikowanych manipulatorach z kilkoma łączami i stopniami swobody rozwiązanie kinematyki staje się znacznie bardziej złożone.
 
-## Plik. 25
-Zad. 1 Wyjaśnij sposób działania termopary i łańcucha termicznego.
+# Plik. 25
+**Zad. 1 Wyjaśnij sposób działania termopary i łańcucha termicznego.**
+
 Termopary są urządzeniami termometrycznymi składającymi się z dwóch przylegających do siebie przewodów różnego materiału. Kiedy miejsca łączenia tych przewodów są poddane różnicom temperatur, to generuje to siłę elektromotoryczną (SEM). Wynikające z tego napięcie jest proporcjonalne do różnicy temperatur pomiędzy punktami połączenia przewodów.
 
 Łańcuch termiczny natomiast to system, w którym przenoszenie ciepła zachodzi sekwencyjnie. Składa się on z elementów, które są połączone w serii lub równolegle, przy czym przepływ ciepła zachodzi od elementów o wyższej temperaturze do niższej. W łańcuchu termicznym mamy do czynienia z różnymi elementami, takimi jak materiały izolacyjne, przewody elektryczne lub pomiary ciepła oraz urządzenia (np. piece lub chłodnice), które zapewniają transfer energii cieplnej. Pomiędzy elementami mogą występować opory cieplne, które wpływają na przenikanie ciepła w łańcuchu termicznym.
 
 W obu przypadkach kluczowym elementem jest przenoszenie energii, jednak w przypadku termopary energia jest przekazywana w postaci energii elektrycznej, a w łańcuchu termicznym przenoszona jest energia cieplna.
 
-Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia
+**Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia**
+
 tekstu na wyświetlaczu HD44780.
 
 HD44780 to popularny sterownik wyświetlacza alfanumerycznego, który jest często stosowany w różnego rodzaju urządzeniach elektronicznych, takich jak zegarki, termometry, czy komputery. Aby sterować wyświetlaczem HD44780, konieczne jest napisanie odpowiedniego programu w języku programowania, takim jak C czy C++. 
@@ -1315,7 +1386,8 @@ Aby wyświetlić tekst na wyświetlaczu, należy wysłać kolejne bajty z kodem 
 
 Komendy te są niezbędne do wyświetlenia tekstu na wyświetlaczu HD44780, ale istnieją również inne instrukcje, takie jak ustawienie trybu pracy wyświetlacza (domyślnie tekst), ustawienie jasności wyświetlacza, czy ustawienie kierunku przesuwania tekstu. Te dodatkowe instrukcje są pomocne przy tworzeniu bardziej zaawansowanych aplikacji z wykorzystaniem wyświetlacza HD44780.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na**
+
 osobnej podstawie.
 
 Załóżmy, że manipulator znajduje się w pozycji wyjściowej, czyli składa się z jednego łącza, które jest równoległe do podstawy. Chcemy, aby manipulator przeszedł z pozycji wyjściowej do punktu o współrzędnych (x,y,z).
@@ -1332,8 +1404,9 @@ theta = arctan(y/sqrt(x^2 + z^2))
 
 Gotowe! Teraz możemy obrócić łącze o wyliczony kąt, aby przenieść manipulator do wybranego punktu.
 
-## Plik. 26
-Zad. 1 Wyjaśnij sposób działania kamery CCD.
+# Plik. 26
+**Zad. 1 Wyjaśnij sposób działania kamery CCD.**
+
 Kamera CCD (Charge-Coupled Device) działa w oparciu o zjawisko fotoelektryczne, które polega na tym, że foton (cząstka światła) uderzając w materię wybija z niej elektron. 
 
 W kamerze CCD znajduje się płytka krzemowa pokryta małymi pikselami, na których padają fotony. Piksele te tworzą macierz, która składa się z tysięcy wertykalnych i horyzontalnych rzędów pikseli. Każdy piksel zawiera warstwę półprzewodnika, która reaguje na fotony i wybija z niej elektrony. 
@@ -1344,7 +1417,8 @@ Kiedy elektrony przemieszczają się przez układ CCD, są one przetwarzane na s
 
 W wyniku działania kamery CCD obraz jest generowany bardzo szybko – generowanie jednego klatki trwa zaledwie ułamki sekundy – co czyni ją idealną do zastosowań wideo i fotograficznych.
 
-Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania
+**Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania**
+
 Konwerter analogowo-cyfrowy (ADC) to urządzenie, które przekształca sygnały analogowe na sygnały cyfrowe. Zadaniem konwertera jest próbkowanie i kwantyzacja sygnału analogowego. 
 
 Proces próbkowania polega na pobieraniu wartości sygnału w określonych momentach czasowych, co pozwala na utworzenie ciągłego sygnału próbkowanego. Następnie sygnał jest poddawany kwantyzacji, co oznacza, że wartości sygnału są zamieniane na konkretne wartości cyfrowe. 
@@ -1357,7 +1431,8 @@ Aby wykonać konwersję, konwerter ADC wymaga sygnału analogowego do przekszta�
 
 Instrukcje potrzebne do wykonania konwersji to przede wszystkim ustawienie parametrów konwertera, takich jak rozdzielczość i czas próbkowania, a następnie uruchomienie konwersji za pomocą odpowiedniej funkcji lub instrukcji. Po zakończeniu konwersji należy odczytać wynik konwersji z wewnętrznego rejestru konwertera ADC.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-**
+
 czonego z elementem końcowym za pomocą przegubu obrotowego.
 
 Aby wyznaczyć parametry DH, musimy najpierw zdefiniować 4 ramiona łączące przeguby, wraz z układem ich osi:
@@ -1472,8 +1547,9 @@ Gotowe parametry DH to:
 - $\theta_2$: kąt obrotu przegubu
 - $\alpha_1 = \alpha_2 = 0$, ponieważ oba przeguby są obrotowe.
 
-## Plik. 27
-Zad. 1 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Zamieść niezbędne obliczenia.
+# Plik. 27
+**Zad. 1 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Zamieść niezbędne obliczenia.**
+
 Konwerter analogowo-cyfrowy (ADC) to urządzenie elektroniczne, które konwertuje sygnał analogowy na sygnał cyfrowy. Sposób jego działania opiera się na próbkowaniu i kwantowaniu sygnału.
 
 Próbkowanie polega na pobieraniu próbek sygnału wejściowego w regularnych odstępach czasowych. Odstęp między próbkami określany jest przez częstotliwość próbkowania, wyrażoną w hertzach (Hz). Im wyższa częstotliwość próbkowania, tym większa dokładność i wierność rekonstrukcji sygnału.
@@ -1495,7 +1571,8 @@ gdzie:
 
 Wartość Vout wyrażona jest binarnie i opisuje wartość sygnału w danym czasie. Cały proces odbywa się bardzo szybko, w zależności od częstotliwości próbkowania, umożliwiając szybką i precyzyjną cyfrową analizę sygnału analogowego.
 
-Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to
+**Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to**
+
 impedancja źródła sygnału.
 
 ![układ](https://i.imgur.com/WTriNof.png)
@@ -1510,7 +1587,8 @@ Z = 350Ω
 
 Impedancja zastępcza układu wynosi 350Ω.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i**
+
 z jednym przegubem obrotowym łączącym to łącze z narzędziem końcowym.
 
 Parametry DH dla takiego manipulatora to:
@@ -1548,8 +1626,9 @@ T0_4 = T0_1 * T1_2 * T2_3 * T3_4
 
 gdzie T0_1, T1_2, T2_3 i T3_4 to macierze transformacji homogenicznej między kolejnymi połączeniami w manipulatorze, a T0_4 to macierz transformacji homogenicznej z bazy do narzędzia końcowego.
 
-## Plik. 28
-Zad. 1 Wyjaśnij sposób działania konwertera cyfrowo-analogowego. Zamieść niezbędne obliczenia.
+# Plik. 28
+**Zad. 1 Wyjaśnij sposób działania konwertera cyfrowo-analogowego. Zamieść niezbędne obliczenia.**
+
 Konwerter cyfrowo-analogowy (DAC) to układ elektroniczny, który przetwarza sygnał cyfrowy na sygnał analogowy. DAC konwertuje ciągły sygnał binarny na odpowiadający mu sygnał napięciowy lub prądowy, który może być odczytywany przez dalsze urządzenia.
 
 Proces przetwarzania sygnału cyfrowego na analogowy w DAC polega na podstawieniu wartości liczby binarnej do wzoru na wartość napięcia lub prądu. Wzór ten może być różny w zależności od typu DAC, jednak w większości przypadków wykorzystuje się wzór liniowy:
@@ -1570,7 +1649,8 @@ W takim przypadku wartość napięcia analogowego wyjściowego będzie się zmie
 
 W skrócie, DAC konwertuje wartości cyfrowe na odpowiadające im wartości analogowe według określonego wzoru.
 
-Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym
+**Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym**
+
 krokiem i dwiema fazami aktywnymi.
 
 Silnik krokowy to rodzaj silnika elektrycznego, który obraca się o stały, określony kąt za każdym razem, gdy do niego podajemy impuls elektryczny. Silnik krokowy może działać w różnych trybach, w tym trybie z pełnym krokiem i jedną fazą aktywną oraz w trybie z pełnym krokiem i dwiema fazami aktywnymi. 
@@ -1579,7 +1659,8 @@ W trybie z pełnym krokiem i jedną fazą aktywną, silnik krokowy jest zasilany
 
 W trybie z pełnym krokiem i dwiema fazami aktywnymi, silnik krokowy jest zasilany dwoma sygnałami elektrycznymi, które zmieniają się na przemian, aktywując kolejno dwie fazy silnika krokowego. Po podaniu pierwszego sygnału, silnik obraca się o połowę kroku (ang. half step) w jednym kierunku, natomiast po podaniu drugiego sygnału silnik obraca się o kolejną połowę kroku w przeciwnym kierunku. Ten tryb zapewnia większą precyzję i bardziej płynny ruch, ale wymaga zastosowania bardziej skomplikowanego algorytmu sterowania, co może zwiększyć koszty i złożoność projektu.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 $$\frac{d}{dt}y(t) = f(u(t),y(t))$$
 gdzie:
 - $y(t)$ - wartość mierzonej wielkości w czasie $t$
@@ -1593,8 +1674,9 @@ Czujnik może mieć różne typy reakcji na zmiany $u(t)$, na przykład:
 
 Czujniki opisane równaniem różniczkowym są często stosowane w systemach regulacji i automatyce, gdzie ich reakcja na sygnały zewnętrzne jest kluczowa dla utrzymania stabilnego działania systemu.
 
-## Plik. 29
-Zad. 1 Wyjaśnij zastosowanie Supervisor-a w oprogramowaniu Webots. Pokaż jak i jakie instrukcje służą do odczytywania
+# Plik. 29
+**Zad. 1 Wyjaśnij zastosowanie Supervisor-a w oprogramowaniu Webots. Pokaż jak i jakie instrukcje służą do odczytywania**
+
 i modyfikowania parametrów robota.
 
 Supervisor w oprogramowaniu Webots to narzędzie, które umożliwia użytkownikowi kontrolowanie symulacji i interakcję z robotami. Dzięki temu narzędziu użytkownik może modyfikować ustawienia symulacji i parametry robota w czasie jej trwania.
@@ -1635,7 +1717,8 @@ rightMotor.setVelocity(10)
 
 W powyższym kodzie pobierane są kanały prędkości silników lewego i prawego koła, a następnie ustawiana jest prędkość obrotowa obu kół na poziomie 10 rad/s.
 
-Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.
+**Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.**
+
 Złącze P-N to połączenie dwóch typów półprzewodników: półprzewodnika typu P, w którym dominują nośniki dziur, oraz półprzewodnika typu N, w którym dominują nośniki elektronowe. W wyniku połączenia tych dwóch półprzewodników powstaje złącze, w którym dochodzi do zjawisk elektrycznych.
 
 Główne zjawiska zachodzące w złączu P-N to:
@@ -1648,7 +1731,8 @@ Główne zjawiska zachodzące w złączu P-N to:
 
 4. Zjawisko przebicia - jeśli przyłożymy do złącza zewnętrzne napięcie zbyt duże, to dochodzi do przebicia złącza, co oznacza, że prąd zaczyna płynąć bez kontroli przez złącze. W przypadku przebicia złącza może dojść do uszkodzenia układu elektronicznego.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 :
 
 $\frac{dy}{dt}=-ky$
@@ -1663,11 +1747,13 @@ gdzie $y_0$ to początkowa wartość czujnika.
 
 Przykładowo, jeśli $y_0=10$ i $k=0,1$, to po upływie jednej minuty wartość czujnika spadnie do około 6,7. Po dziesięciu minutach będzie ona już tylko około 0,004.
 
-## Plik. 30
-Zad. 1 Wyjaśnij pojęcie przekształceń jednorodnych.
+# Plik. 30
+**Zad. 1 Wyjaśnij pojęcie przekształceń jednorodnych.**
+
 Przekształcenia jednorodne to takie przekształcenia geometryczne, które zachowują proporcje i proporcjonalność między elementami. Innymi słowy, jeśli przekształcenie jednorodne zmienia długość jednej linii, to zmienia ono również długość pozostałych linii w proporcjonalny sposób. Przykładem przekształcenia jednorodnego jest homotetia, czyli przekształcenie polegające na zmianie skali każdego punktu względem pewnego punktu, tak aby zachować proporcje. Innymi przykładami są przesunięcie, obrót i odbicie lustrzane. Przekształcenia jednorodne są ważne w matematyce, a także w fizyce, gdzie opisują zachowanie się obiektów w różnych skalach.
 
-Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.
+**Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.**
+
 Ruchliwość manipulatora SCARA można obliczyć za pomocą równania:
 
 ruchliwość = liczba stopni swobody - liczba ograniczeń
@@ -1678,7 +1764,8 @@ Ostatecznie, ruchliwość manipulatora SCARA wynosi 4 - 2 = 2.
 
 Jest to spowodowane ograniczeniem przesuwu wzdłuż osi Z (pionowej) i obracającym ruchu ramienia manipulatora wokół osi X (poziomej).
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany jest czujnik opisany równaniem różniczkowym:
 
 dy/dt + 2y = 5u
@@ -1689,8 +1776,9 @@ Równanie to opisuje reakcję czujnika na zmiany wartości mierzonej wielkości.
 
 Równanie to można rozwiązać, aby uzyskać funkcję opisującą wyjście czujnika w czasie. W praktyce, czujnik taki może być wykorzystywany np. do pomiaru temperatury, wilgotności lub ciśnienia.
 
-## Plik. 31
-Zad. 1 Wyjaśnij przeznaczenie poszczególnych bitów rejestru STATUS.
+# Plik. 31
+**Zad. 1 Wyjaśnij przeznaczenie poszczególnych bitów rejestru STATUS.**
+
 Rejestr STATUS jest rejestrem flagowym, który informuje o różnych warunkach w trakcie działania procesora. Poszczególne bity mają następujące przeznaczenie:
 
 - Bit 0 (C) - carry flag, informuje o wystąpieniu przeniesienia lub pożyczki podczas operacji arytmetycznych.
@@ -1702,18 +1790,21 @@ Rejestr STATUS jest rejestrem flagowym, który informuje o różnych warunkach w
 - Bit 6 (I) - interrupt flag, informuje o zezwoleniu (I = 1)/zablokowaniu (I = 0) na obsługę przerwań.
 - Bit 7 (N) - negative flag, informuje o wyniku operacji o ujemnej wartości.
 
-Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.
+**Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.**
+
 Ruchliwość manipulatora ramieniowego zależy od liczby stopni swobody, czyli liczby niezależnych ruchów, jakie może wykonywać. 
 
 Typowy manipulator ramieniowy ma 6 stopni swobody, co oznacza, że może wykonywać sześć niezależnych ruchów, takich jak obrót wokół osi, przesunięcie wzdłuż osi, ruch w góre i w dół, itp.
 
 Dlatego ruchliwość typowego manipulatora ramieniowego wynosi 6.
 
-Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie
+**Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie**
+
 niepewności pomiarowej. Bez innych danych nie jest możliwe wyznaczenie charakterystyki wejściowo-wyjściowej czujnika. Potrzebne są przynajmniej wartości mierzonych wielkości oraz ich związki ze sobą, aby móc dokonać analizy i wyznaczyć charakterystykę.
 
-## Plik. 32
-Zad. 1 Wyjaśnij sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A.
+# Plik. 32
+**Zad. 1 Wyjaśnij sposoby adresacji pamięci programu w mikrokontrolerze PIC16f877A.**
+
 W mikrokontrolerze PIC16f877A dostępne są różne sposoby adresacji pamięci, w tym:
 
 1. Adresowanie bezpośrednie – odwołanie do konkretnego adresu pamięci, np. MOVF 0x20, W oznacza przesłanie zawartości rejestru na pozycji pamięci 0x20 do rejestru W.
@@ -1728,7 +1819,8 @@ W mikrokontrolerze PIC16f877A dostępne są różne sposoby adresacji pamięci, 
 
 6. Adresowanie przez rejestr indirekcyjny – odwołanie do adresu pamięci wskazywanego przez zawartość rejestru, np. MOVF INDF, W oznacza przesłanie zawartości adresu pamięci wskazywanego przez rejestr INDF do rejestru W.
 
-Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.
+**Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.**
+
 W celu wykonania obrót punktu o kąt 30◦ wokół wektora [0.5,0.4,0.3] możemy skorzystać z formuł Rodriguesa:
 
 r' = r cos(θ) + (k x r) sin(θ) + k(k · r)(1 - cos(θ))
@@ -1748,8 +1840,9 @@ r' = [1.212,0.775,1.259]
 
 Odpowiedź: obrócony punkt ma współrzędne [1.212,0.775,1.259].
 
-## Plik. 33
-Zad. 1 Wyjaśnij sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A.
+# Plik. 33
+**Zad. 1 Wyjaśnij sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A.**
+
 Mikrokontroler PIC16f877A ma architekturę von Neumanna, co oznacza, że zarówno dane, jak i instrukcje przechowywane są w jednej pamięci. W związku z tym adresowanie pamięci danych odbywa się za pomocą tych samych adresów, co adresowanie instrukcji.
 
 Sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A to:
@@ -1764,7 +1857,8 @@ Sposoby adresacji pamięci danych w mikrokontrolerze PIC16f877A to:
 
 5. Adresowanie pośrednie z przesunięciem - połączenie adresowania pośredniego z przesunięciem. Polega na określeniu adresu pamięci przez zsumowanie wartości przechowywanej w rejestrze wskaźnikowym i wartości przesunięcia przechowywanej w jednym z rejestrów wewnętrznych. Przykładem instrukcji z tym sposobem adresacji jest MOVF INDF, 0x01, w której INDF to rejestr wskaźnikowy, a 0x01 to wartość przesunięcia.
 
-Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia
+**Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia**
+
 Tekstu na wyświetlaczu HD44780 można programować za pomocą mikrokontrolera lub mikroprocesora. Do połączenia z wyświetlaczem wystarczy zwykle kilka przewodów przy użyciu interfejsu szeregowego, takiego jak interfejs I2C lub SPI.
 
 Każdy wyświetlacz HD44780 jest podzielony na 80 pikseli składających się z 5x8 punktów. Są one niezależne, ponieważ mają własne kontrolery, więc można wyświetlić różne znaki lub komunikaty na różnych pozycjach na ekranie.
@@ -1777,7 +1871,8 @@ Najważniejsze instrukcje programowania wyświetlacza HD44780 to:
 
 Można również programować dowolne znaki lub symbole, co stwarza więcej możliwości i elastyczności w tworzeniu tekstu na wyświetlaczu.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie**
+
 Zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie można rozwiązać korzystając z równania kinematyki prostoliniowej oraz równania kinematyki obrotowej.
 
 Równanie kinematyki prostoliniowej opisuje ruch punktu na prostej linii i zapisuje się w postaci:
@@ -1834,8 +1929,9 @@ gdzie:
 
 Podsumowując, zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie można rozwiązać korzystając z równania kinematyki prostoliniowej oraz równania kinematyki obrotowej. Oblicza się prędkość kątową łącza obrotowego oraz drogę przebytą przez koniec ramienia manipulatora.
 
-## Plik. 34
-Zad. 1 Przedstaw i opisz elementy pamięci programu mikrokontrolera PIC16f877A.
+# Plik. 34
+**Zad. 1 Przedstaw i opisz elementy pamięci programu mikrokontrolera PIC16f877A.**
+
 Mikrokontroler PIC16f877A posiada następujące elementy pamięci:
 
 1. Pamięć programu - składa się z 14-bitowych słów programowych, które są przechowywane w pamięci Flash o pojemności 14KB. W tej pamięci przechowywany jest kod programu, który steruje działaniem mikrokontrolera.
@@ -1850,7 +1946,8 @@ Mikrokontroler PIC16f877A posiada następujące elementy pamięci:
  
 Wszystkie te elementy pamięci są istotne dla działania mikrokontrolera i muszą być odpowiednio zaplanowane i zarządzane przez programistę. Dzięki wysokiej pojemności pamięci oraz możliwości tworzenia funkcjonalności bootloadera programista ma duże możliwości implementacji różnych funkcjonalności.
 
-Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania
+**Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania**
+
 Konwerter analogowo-cyfrowy (ADC) przekształca sygnał analogowy na cyfrowy. Sygnał analogowy jest sygnałem ciągłym, a sygnał cyfrowy jest reprezentowany jako ciąg zer i jedynek. ADC składa się z dwóch głównych bloków: samplera i kwantyzatora.
 
 Sampler pobiera próbkę sygnału analogowego co określoną jednostkę czasu. Częstotliwość próbkowania jest określona przez instrukcję programu. Im wyższa częstotliwość próbkowania, tym dokładniejszy sygnał cyfrowy.
@@ -1859,7 +1956,8 @@ Kwantyzator przekształca sygnał analogowy na sygnał cyfrowy. Pomiar jest tuta
 
 Aby korzystać z konwertera analogowo-cyfrowego, niezbędne jest wykonanie kilku instrukcji w kodzie programu. W pierwszej kolejności należy ustawić właściwy tryb konwersji (np. single-ended lub różnicowa). Następnie należy ustawić odpowiednie parametry, takie jak częstotliwość próbkowania, rozdzielczość, zakres wejściowy i wzmocnienie. W końcu należy rozpocząć konwersję i odczytać wynik.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na**
+
 podstawie obrotowej.
 
 Zadanie: Dany jest manipulator złożony z jednego łącza pryzmatycznego zamontowanego na podstawie obrotowej. Długość łącza wynosi 0,5 m, a kąt obrotu podstawy wynosi 30 stopni. Oblicz położenie końca manipulatora i prędkość końca manipulatora.
@@ -1910,8 +2008,9 @@ v = 0.5236 * 0.5 = 0.262 m/s
 
 Wynik: prędkość końca manipulatora wynosi 0.262 m/s.
 
-## Plik. 35
-Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A.
+# Plik. 35
+**Zad. 1 Przedstaw i opisz podstawowe elementy pamięci mikrokontrolera PIC16f877A.**
+
 Podstawowe elementy pamięci mikrokontrolera PIC16f877A to:
 
 1. Program Memory (Pamięć programu): Jest to pamięć nieulotna, w której przechowywany jest kod programu. PIC16f877A ma 14-bitową przestrzeń adresową programu, co oznacza, że można z niej korzystać z 8192 różnych adresów. Pamięć programu może zawierać zarówno program użytkownika, jak i firmware urządzenia.
@@ -1925,7 +2024,8 @@ Podstawowe elementy pamięci mikrokontrolera PIC16f877A to:
 
 4. Stack Memory (Pamięć stosu): Jest to obszar w pamięci danych, który służy do przechowywania informacji o wykonywanych funkcjach i procedurach. W momencie wywołania funkcji, adres powrotu i zmienne są zapisywane na stosie, aby później można było odtworzyć stan przed wywołaniem funkcji.
 
-Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to
+**Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to**
+
 impedancja obciążenia.
 
 <center><img src="https://images.ctfassets.net/al7g91w3yd3h/6Q1WbkvYH5waFwztXtNWng/249b1a578f905d307b2c9a29de6974ba/circuit.png" alt="układ"></center>
@@ -1950,7 +2050,8 @@ I = 0.034A = 34mA
 
 Odpowiedź: Natężenie prądu przechodzącego przez obwód wynosi 34mA.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-**
+
 czonego z chwytakiem. 
 
 W manipulatorze złożonym z jednego łącza obrotowego zamontowanego na bazie i połączonego z chwytakiem, parametry DH wyglądają następująco:
@@ -1965,8 +2066,9 @@ W manipulatorze złożonym z jednego łącza obrotowego zamontowanego na bazie i
 
 Znając te parametry, można określić macierze transformacji DH dla każdego ogniwa manipulatora i obliczyć pozycję i orientację końcówki.
 
-## Plik. 36
-Zad. 1 Opisz sposób działania stosu i instrukcje wykorzystywane do jego obsługi w mikrokontrolerach klasy PIC18fxx2 i
+# Plik. 36
+**Zad. 1 Opisz sposób działania stosu i instrukcje wykorzystywane do jego obsługi w mikrokontrolerach klasy PIC18fxx2 i**
+
 Stos to struktura danych LIFO (Last-In-First-Out), która pozwala na przechowywanie danych w sposób uporządkowany. W mikrokontrolerach klasy PIC18fxx2 stos jest obsługiwany za pomocą rejestrów STKPTR oraz STKPTRH, które przechowują informacje o aktualnym stanie stosu.
 
 Aby dodać dane na stos, należy użyć instrukcji PUSH lub LCALL, które umieszczają wartości na szczycie stosu. Natomiast, aby pobrać dane ze stosu, stosujemy instrukcję POP lub RETLW, która pobiera wartość ze szczycie stosu i usuwa ją z kolejki.
@@ -1975,7 +2077,8 @@ Do obsługi stosu w mikrokontrolerach klasy PIC18fxx2 wykorzystuje się równie�
 
 Podsumowując, stos w mikrokontrolerach klasy PIC18fxx2 to ważny element struktury danych, której obsługa odbywa się za pomocą odpowiednich instrukcji i rejestrów. Dzięki temu możliwe jest przechowywanie i pobieranie danych w sposób uporządkowany i szybki.
 
-Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym
+**Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym**
+
 krokiem i dwoma fazami aktywnymi.
 
 Silnik krokowy to rodzaj silnika elektrycznego, który obraca się zgodnie z impulsami elektrycznymi. Silnik krokowy wykonuje ruchy obrotowe dzięki zmiennym polom magnetycznym w jego wnętrzu.
@@ -1988,7 +2091,8 @@ Tryb z pełnym krokiem i dwoma fazami aktywnymi
 
 W trybie z pełnym krokiem i dwoma fazami aktywnymi, dwie fazy silnika krokowego są aktywne jednocześnie. Ta metoda pozwala na jeszcze bardziej precyzyjne sterowanie ruchem silnika, co sprawia, że jest to najlepsza metoda do zastosowań wymagających bardziej płynnego i precyzyjnego ruchu. W sposób podobny do trybu z pełnym krokiem i jedną fazą aktywną, silnik obraca się z pełnymi krokami, ale ruch jest jeszcze bardziej dokładny, ponieważ dwa pola magnetyczne są aktywne jednocześnie. Krok silnika krokowego wynosi wtedy połowę kroku w trybie z pełnym krokiem i jedną fazą aktywną i pozostaje dokładny i precyzyjny.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i**
+
 zakończonego końcówką chwytającą za pomocą jednego przegubu obrotowego.
 
 Aby wyznaczyć parametry DH dla takiego manipulatora, należy przejść przez poniższe kroki:
@@ -2025,11 +2129,13 @@ sin θ₁ cos θ₁ 0 0
 0 0 1 0
 0 0 0 1
 
-## Plik. 37
-Zad. 1 Wyjaśnij znaczenie ﬂag konﬁguracji w mikrokontrolerze PIC16f877A
+# Plik. 37
+**Zad. 1 Wyjaśnij znaczenie ﬂag konﬁguracji w mikrokontrolerze PIC16f877A**
+
 Flagi konfiguracji w mikrokontrolerze PIC16f877A to specjalne bity ustawień, które pozwalają na programowanie podstawowych funkcji mikrokontrolera. Są to bity, które odpowiadają za tryb pracy mikrokontrolera, rodzaj zegara, ustawienia pinów, ustawienia przerwań, itp. Flagi konfiguracji umożliwiają ustawienie parametrów mikrokontrolera, co jest konieczne dla każdej aplikacji, która ma być wykonana na tym mikrokontrolerze. Warto zauważyć, że flagi konfiguracji są bardzo ważne w mikrokontrolerach, ponieważ ustawienie niepoprawnego trybu pracy, zegara itp. może prowadzić do poważnych problemów z działaniem całego systemu.
 
-Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.
+**Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.**
+
 Złącze P-N to połączenie półprzewodnika typu P (domieszkowany pierwiastkami trzeciej grupy, takimi jak bor) z półprzewodnikiem typu N (domieszkowany pierwiastkami piątej grupy, takimi jak fosfor). Zjawiska zachodzące w złączu P-N obejmują:
 
 1. Zjawisko Dyfuzji: podczas dzień zmiany koncentracji wielkość
@@ -2044,7 +2150,8 @@ Złącze P-N to połączenie półprzewodnika typu P (domieszkowany pierwiastkam
 
 Wskutek tych zjawisk w złączu P-N następuje przepływ prądu i tworzenie warstwy zaporowej, która pozwala na kontrolowanie przepływu prądu w układzie elektronicznym.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 dP/dt = k*(P-Po)
 
 gdzie:
@@ -2057,11 +2164,13 @@ k - stała proporcjonalności
 
 Równanie to opisuje zachowanie czujnika w czasie - dynamikę jego działania. Zmiana wartości zmierzonej przez czujnik przez czas jest opisana lewostronną pochodną tej wartości względem czasu. Stały człon k*(P-Po) określa, jaki jest aktualny wpływ odchylenia wartości zmierzonej od wartości docelowej na zmianę P w czasie. Im większe jest to odchylenie, tym większa jest siła, która zmienia P w kierunku Po. Stałą k należy dobrać odpowiednio do zastosowania czujnika i wymagań dotyczących jego dokładności i responsywności.
 
-## Plik. 38
-Zad. 1 Czym jest histereza w układach wejściowo-wyjściowych.
+# Plik. 38
+**Zad. 1 Czym jest histereza w układach wejściowo-wyjściowych.**
+
 Histereza w układach wejściowo-wyjściowych oznacza zjawisko, w którym wartość wyjścia zależy nie tylko od wartości wejścia, ale także od historii zmian wartości wejścia. Innymi słowy, wartość wyjścia zależy od tego, czy zmiana wartości wejścia nastąpiła wzwyż czy w dół oraz od tego, jak dawno ta zmiana nastąpiła. Przykładami układów, w których występuje histereza, są przekaźniki elektromagnetyczne, narzędzia pomiarowe i elementy sterujące, takie jak regulatory temperatury czy czujniki wibracji. Histereza może wprowadzać błędy w pomiarach i utrudniać kontrolowanie wyjścia układu, co wymaga dostosowania parametrów regulatorów do konkretnych warunków pracy.
 
-Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.
+**Zad. 2 Oblicz, jaka jest ruchliwość manipulatora SCARA.**
+
 Ruchliwość manipulatora SCARA zależy od jego konstrukcji oraz liczby stopni swobody. 
 
 Standardowy manipulator SCARA ma cztery stopnie swobody, co oznacza, że może poruszać się w czterech różnych kierunkach. Konkretnie, może wykonywać ruchy liniowe wzdłuż dwóch osi poziomych (x i y) oraz ruchy obrotowe wokół dwóch osi pionowych (z i kątowa rotacja nad z). 
@@ -2083,7 +2192,8 @@ R = 6 - 4 - 1 = 1
 
 Oznacza to, że manipulator SCARA może wykonywać tylko jeden niezależny ruch w dowolnym punkcie przestrzeni roboczej.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Dany jest czujnik opisany równaniem różniczkowym, które opisuje zależność między sygnałem wyjściowym czujnika a wartością mierzonej wielkości. Równanie to można zapisać w postaci:
 
 y(t) = f(x(t))
@@ -2096,27 +2206,32 @@ gdzie:
 
 Przykładowo, jeśli czujnik jest termometryczny, to sygnał wyjściowy będzie zależał od temperatury mierzonej przez ten czujnik. Funkcja f opisuje wtedy charakterystykę konkretnego czujnika termometrycznego i pozwala na przeliczenie wartości temperatury na sygnał elektryczny, który może być przetworzony przez urządzenia pomiarowe.
 
-## Plik. 39
-Zad. 1 W jaki sposób zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów.
+# Plik. 39
+**Zad. 1 W jaki sposób zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów.**
+
 Zjawisko piezoelektryczne jest wykorzystywane do budowy mikrofonów elektrodynamcznych. Mikrofony te zawierają błonę piezoelektryczną, która ulega deformacji w wyniku fali dźwiękowej. Ta deformacja generuje napięcie elektryczne, które jest wzmacniane przez układy elektroniczne w mikrofonie i przekształcane na sygnał dźwiękowy. 
 
 Błona piezoelektryczna w mikrofonie składa się z kryształów lub ceramicznego materiału piezoelektrycznego, który jest połączony z metalowymi elektrodami. Gdy fala dźwiękowa uderza w błonę, powoduje jej deformację, co zmienia polaryzację kryształów piezoelektrycznych i generuje napięcie elektryczne na metalowych elektrodach. 
 
 Napięcie to jest następnie przetwarzane przez układy elektroniczne w mikrofonie, takie jak wzmacniacze sygnału, filtry i układy redukcji szumów. W końcu, sygnał jest składowany w postaci cyfrowej lub analogowej. Mikrofony elektrodynamczne są szeroko stosowane w różnych zastosowaniach, takich jak nagrywanie wokalu, instrumentów muzycznych, emisji głosu w systemach bezprzewodowych oraz w pomiarach akustycznych i wibracyjnych.
 
-Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.
+**Zad. 2 Oblicz, jaka jest ruchliwość (typowego) manipulatora ramieniowego.**
+
 Nie jest możliwe jednoznaczne określenie ruchliwości typowego manipulatora ramieniowego, ponieważ ruchliwość zależy od wielu czynników, takich jak liczba stopni swobody, długość ramion, prędkość i siła napędów oraz styl pracy manipulatora. Jednakże, typowe manipulatory ramieniowe mają zwykle od 4 do 6 stopni swobody, co oznacza, że mogą wykonywać ruchy w 4-6 kierunkach lub płaszczyznach. Ostatecznie, ruchliwość manipulatora ramieniowego zależy od konkretnej konstrukcji urządzenia i jej przeznaczenia.
 
-Zad. 3 Dany jest czujnik opisany równaniem różniczkowym
+**Zad. 3 Dany jest czujnik opisany równaniem różniczkowym**
+
 Nie jestem w stanie podać równania różniczkowego opisującego dany czujnik bez dodatkowych informacji na temat jego charakterystyki i działania. Proszę o podanie bardziej szczegółowego opisu czujnika lub jego nazwy.
 
-## Plik. 40
-Zad. 1 Wyjaśnij sposób działania termopary i łańcucha termicznego.
+# Plik. 40
+**Zad. 1 Wyjaśnij sposób działania termopary i łańcucha termicznego.**
+
 Termopara to urządzenie pomiarowe służące do pomiaru temperatury. Składa się ona z dwóch różnych metalowych przewodów połączonych ze sobą w jednym końcu, a w drugim końcu przetwarzający sygnał elektryczny. Kiedy temperatura końca pomiarowego ulega zmianie, to powoduje to produkcję różnicy potencjałów pomiędzy metalowymi przewodami. Ta różnica potencjałów jest proporcjonalna do różnicy temperatur pomiędzy końcami metalowych przewodów, co umożliwia pomiar temperatury.
 
 Lancuch termiczny natomiast to zestaw elementów połączonych ze sobą termicznie, mających za zadanie przekazywanie ciepła z jednego punktu na inny. Składa się z termopary (odpowiednio skonfigurowanej, tj. w zależności od zastosowania), przewodów połączeniowych i źródła ciepła. Pomiar temperatury w takim systemie można przeprowadzić w różnych punktach w zależności od ułożenia termopary i przewodów. Podczas tego procesu zachodzą różne procesy termodynamiczne, np. przewodzenie, konwekcja czy promieniowanie, które decydują o przenoszeniu energii cieplnej pomiędzy poszczególnymi elementami łańcucha termicznego.
 
-Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.
+**Zad. 2 Wykonaj obrót punktu [1,1,1]o30◦dookoła wektora [0.5,0.4,0.3]. Zamieść odpowiednie obliczenia.**
+
 Aby wykonać obrót punktu o 30° wokół wektora, należy najpierw obliczyć macierz obrotu dla tego kąta i wektora, a następnie pomnożyć ją przez współrzędne punktu.
 
 Macierz obrotu dla kąta 30° i wektora [0.5,0.4,0.3] można obliczyć według następującego wzoru:
@@ -2139,7 +2254,8 @@ Po pomnożeniu otrzymujemy:
 
 Współrzędne punktu po obróceniu wynoszą [1.1917, 1.0585, 0.8567].
 
-Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie
+**Zad. 3 Wyznacz (przybliżoną) liniową charakterystykę wejściowo-wyjściową czujnika, dla którego zebrano doświadczalnie**
+
 dane przedstawione w poniższej tabeli:
 
 | Wejście [V] | Wyjście [mA] |
@@ -2162,8 +2278,9 @@ gdzie y oznacza wyjście [mA], a x wejście [V].
 
 Jest to prosty wzór funkcji liniowej, która w uproszczony sposób opisuje zachowanie badanego czujnika. Oczywiście, warto pamiętać, że w każdym przypadku dobór najlepszego modelu opisu zależności między danymi zależy od charakteru badanego procesu oraz od jakości zebranych danych.
 
-## Plik. 41
-Zad. 1 Wyjaśnij sposób działania kamery CCD.
+# Plik. 41
+**Zad. 1 Wyjaśnij sposób działania kamery CCD.**
+
 Kamera CCD (przetwornik ładunkowy) składa się z matrycy mikroskopijnych pikseli, które rejestrują światło padające na nie. Piksele są naładowane elektrycznie, a gdy światło pada na piksel, fotoelektrony są wybijane z tej naładowanej warstwy. 
 
 Gdy fotoelektrony zostają uwolnione, są one przyciągane przez napięcie elektryczne i gromadzone na specjalnych pojemnikach nazywanych także "studniami ładunkowymi". Kiedy matryca pikseli zostaje oświetlona, studnie ładunkowe wypełniają się różnymi ilościami ładunków, reprezentującymi różne poziomy jasności piksela.
@@ -2174,7 +2291,8 @@ ADC przekształca sygnał analogowy na cyfrowy, co pozwala na zapisanie danych w
 
 Warto zauważyć, że kamera CCD umożliwia rejestrowanie obrazu tylko w warunkach dobrze oświetlonych, ponieważ im mniej światła pada na piksele, tym trudniejsze staje się ich odczytanie.
 
-Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia
+**Zad. 2 Wyjaśnij sposób oprogramowywania wyświetlacza HD44780. Wyjaśnij jakie instrukcje są niezbędne do wyświetlenia**
+
 Tekstu na wyświetlaczu HD44780 można programować za pomocą mikrokontrolera, takiego jak Arduino lub Raspberry Pi. Aby zacząć, należy podłączyć wyświetlacz do płytki rozwojowej zgodnie z instrukcją producenta.
 
 Następnie należy wysyłać instrukcje do wyświetlacza poprzez połączenie danych i sterowania. W przypadku wyświetlacza HD44780 są to 8 lub 4 linie danych oraz 3 linie sterujące: RS (Register Select), E (Enable) i R/W (Read/Write).
@@ -2206,8 +2324,9 @@ RS=1,E=1,D7-D4='H',E=0,E=1,D7-D4='e',E=0,E=1,D7-D4='l',E=0,E=1,D7-D4='l',E=0,E=1
 
 Wysyłając te instrukcje w odpowiedniej kolejności i z odpowiednimi parametrami, można wyświetlić dowolny tekst na wyświetlaczu HD44780.
 
-## Plik. 42
-Zad. 1 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Zamieść niezbędne obliczenia.
+# Plik. 42
+**Zad. 1 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Zamieść niezbędne obliczenia.**
+
 Konwerter analogowo-cyfrowy (ADC) służy do przetworzenia sygnału analogowego (np. napięcia) na sygnał cyfrowy. W celu dokonania pomiaru, sygnał analogowy jest próbkowany, czyli pobierane są próbki sygnału w określonych momentach czasowych. Następnie sygnał ten jest kwantowany, czyli sygnał analogowy jest zaokrąglany do najbliższej wartości z określonej skali. W przypadku kwantyzacji równomiernych, skala jest podzielona na równe przedziały o szerokości Δ:
 
 Vquant = Δ * round (Vinput / Δ)
@@ -2221,14 +2340,16 @@ Następnie wartości skwantowane są kodowane w formacie binarnym. Ilość bitó
 
 Korzystając z konwertera ADC można w prosty sposób zbadać zmiany sygnału analogowego i przekształcić je na komputerową postać, co pozwala na ich dalsze przetwarzanie i analizę.
 
-Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania
+**Zad. 2 Wyjaśnij sposób działania konwertera analogowo-cyfrowego. Wyjaśnij jakie instrukcje są niezbędne do wykonania**
+
 Konwerter analogowo-cyfrowy (ADC) jest urządzeniem elektronicznym, który przetwarza sygnał analogowy na sygnał cyfrowy. Sygnał analogowy jest w postaci ciągłej zmienności sygnału, natomiast sygnał cyfrowy jest w postaci ciągu impulsów. Konwerter analogowo-cyfrowy składa się z kilku bloków: wzmacniacza, komparatora, licznika oraz rejestru przesuwnego.
 
 Wzmacniacz wzmacnia sygnał analogowy do odpowiedniego poziomu, aby móc go porównać z ustaloną wartością progową przez komparator. Komparator porównuje sygnał analogowy z wartością progową i generuje impuls cyfrowy o wartości 0 lub 1. Licznik zlicza pulsacje cyfrowe, aż do momentu, gdy generowany jest impuls wystarczająco silny, aby licznik zmienił swoją wartość. Ostatecznie, wartość zapisana w liczniku jest przesuwana do rejestru przesuwnego, z którego można ją odczytać w postaci kodu binarnego.
 
 Aby wykonać konwersję analogowo-cyfrową, należy ustawić wartość napięcia wejściowego oraz dokładność konwersji. Następnie należy przekazać sygnał wejściowy do wzmacniacza i ustawić wartość progową w komparatorze. Po wykonaniu konwersji, wartość cyfrowa jest przenoszona do rejestru przesuwnego, aby umożliwić jego odczytanie.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie**
+
 Nie zostały podane żadne wartości, więc nie można rozwiązać tego zadania, ale można przedstawić ogólną metodę rozwiązania:
 
 1. Określ układ współrzędnych, w którym będziesz opisywał ruch manipulatora (np. układ kartezjański czy biegunowy).
@@ -2240,8 +2361,9 @@ Nie zostały podane żadne wartości, więc nie można rozwiązać tego zadania,
 7. Sprawdź, czy wartości prędkości i przyspieszeń są zgodne z możliwościami mechanicznymi manipulatora (np. czy przyspieszenie nie przekracza dopuszczalnych wartości).
 8. Można przedstawić ruch manipulatora w postaci wykresów zależności kąta, prędkości i przyspieszenia od czasu.
 
-## Plik. 43
-Zad. 1 Wyjaśnij sposób działania konwertera cyfrowo-analogowego. Zamieść niezbędne obliczenia.
+# Plik. 43
+**Zad. 1 Wyjaśnij sposób działania konwertera cyfrowo-analogowego. Zamieść niezbędne obliczenia.**
+
 Konwerter cyfrowo-analogowy (DAC) to urządzenie, które przetwarza dane cyfrowe na sygnał analogowy, który może być wykorzystany do sterowania urządzeniami takimi jak głośniki, motory, pompy, itp. 
 
 Sposób działania konwertera cyfrowo-analogowego polega na przetwarzaniu wartości cyfrowych na wartości analogowej napięcia lub prądu. Najprostszy rodzaj DAC-a to konwerter typu trybuieńczego, w którym każdy bit sygnału cyfrowego jest konwertowany na oznaczoną wartość napięcia lub prądu. 
@@ -2258,7 +2380,8 @@ Wartość napięcia lub prądu, którą można uzyskać jako wynik konwersji, mo
 
 Konwerter cyfrowo-analogowy może być również stosowany w wielu innych aplikacjach, np. sterowaniu silnikami, pilotowaniu wyświetlaczy LCD, konstrukcji układów chirurgicznych, wprowadzaniu zmian w sygnale dźwiękowym lub graficznym, itp.
 
-Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to
+**Zad. 2 Układ jest przedstawiony jak na rysunku, gdzie R1= 50Ω to impedancja układu zasilania, a Rs= 300Ω to**
+
 impedancja obciążenia. 
 
 ![UKŁAD](https://i.imgur.com/SgCOvls.png)
@@ -2275,7 +2398,8 @@ I = V / Rs = 8 / 300 = 0,0267 A = 26,7 mA
 
 Odpowiedź: Prąd płynący przez obciążenie wynosi 26,7 mA.
 
-Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na
+**Zad. 3 Rozwiąż proste zadanie kinematyki dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na**
+
 podstawie obrotowej.
 
 Nie podano dokładnego sformułowania zadania, dlatego poniżej przedstawione zostaną ogólne zasady ruchu manipulatora złożonego z jednego łącza pryzmatycznego.
@@ -2300,8 +2424,9 @@ Interpolacja spline’ów polega na interpolowaniu między punktami z użyciem k
 
 Wszystkie te metody pozwalają na zaplanowanie ruchu manipulatora złożonego z jednego łącza pryzmatycznego. Jednakże, w celu wykonania zadania, konieczne jest określenie celu ruchu oraz trajektorii, którą manipulator powinien przebyć, co zależy od konkretnego zadania.
 
-## Plik. 44
-Zad. 1 Wyjaśnij zastosowanie Supervisor-a w oprogramowaniu Webots. Pokaż jak i jakie instrukcje służą do odczytywania
+# Plik. 44
+**Zad. 1 Wyjaśnij zastosowanie Supervisor-a w oprogramowaniu Webots. Pokaż jak i jakie instrukcje służą do odczytywania**
+
 i kontrolowania Supervisor-a w Webots.
 
 Supervisor w oprogramowaniu Webots jest głównym kontrolerem symulacji, który zarządza środowiskiem symulacji oraz interakcjami pomiędzy różnymi obiektami w symulacji. Supervisor umożliwia również komunikację z zewnętrznymi programami, dzięki czemu można zintegrować symulację z innymi systemami.
@@ -2315,7 +2440,8 @@ Instrukcje do odczytywania i kontrolowania Supervisor-a w Webots zależą od ję
 
 Powyższe instrukcje ilustrują kilka sposobów, w jakie można odczytywać i kontrolować Supervisor-a w Webots. Można użyć ich do tworzenia kontrolerów robotów, detekcji kolizji, zarządzania światłami i wiele innych zadań.
 
-Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym
+**Zad. 2 Wyjaśnij sposób działania silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną, oraz w trybie z pełnym**
+
 krokiem i dwoma fazami aktywnymi.
 
 Silnika krokowego w trybie z pełnym krokiem i jedną fazą aktywną:
@@ -2350,7 +2476,8 @@ Czwarty krok: Zasilenie cewki D powoduje obrót wału silnika o kolejne 45 stopn
 
 Kolejne kroki są realizowane przez ciągłe zasilanie dwóch kolejnych cewek w cyklu AB-BC-CD-DA.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza obrotowego zamontowanego na bazie i połą-**
+
 czonego z jednym przegubem obrotowym w końcu.
 
 Parametry DH dla manipulatora:
@@ -2386,11 +2513,13 @@ Parametry DH:
 
 Gdzie l1 to długość łącza, a θ to kąt obrotu drugiego przegubu.
 
-## Plik. 45
-Zad. 1 Wyjaśnij pojęcie przekształceń jednorodnych.
+# Plik. 45
+**Zad. 1 Wyjaśnij pojęcie przekształceń jednorodnych.**
+
 Przekształcenia jednorodne to takie przekształcenia geometryczne, które zachowują proporcjonalne relacje między wielkościami. Innymi słowy, jeśli dana figura zostanie przemnożona przez pewną stałą, to wszystkie jej wymiary zostaną pomnożone przez tę samą stałą. Przykładowo, gdy mamy trójkąt o podstawie 3 cm i wysokości 4 cm, przemnożenie go przez 2 da nam trójkąt o podstawie 6 cm i wysokości 8 cm. Przekształcenia jednorodne są przydatne w matematyce, fizyce i innych naukach, gdzie stosuje się je do opisu skali i proporcji wielkości w różnych kontekstach.
 
-Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.
+**Zad. 2 Wyjaśnij zjawiska zachodzące w złączu P-N.**
+
 Złącze P-N jest złączem pomiędzy dwoma półprzewodnikami o różnych typach przewodnictwa: z jednej strony półprzewodnikiem typu P (zdominowanym przez domieszkę akceptorową), a z drugiej strony półprzewodnikiem typu N (z domieszką donorową). 
 
 Podczas łączenia tych dwóch półprzewodników dochodzi do migracji nośników ładunku z jednego do drugiego materiału. Elektrony z półprzewodnika N migrują do półprzewodnika P, gdzie reagują z wolnymi "dziurami" (brakującymi elektronami) uwięzionanymi w domieszce akceptorowej. W wyniku reakcji elektronów i dziur powstają powiązania kowalencyjne między atomami półprzewodnika, co skutkuje utworzeniem obszaru o zubożonej domieszce (region zaporowy).
@@ -2401,7 +2530,8 @@ Pod wpływem polaryzacji zewnętrznej, np. przy podłączeniu zewnętrznej bater
 
 Zjawiska zachodzące w złączu P-N mają wiele zastosowań w elektronice i są podstawą funkcjonowania wielu elementów, takich jak diody, tranzystory czy fotodiody.
 
-Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i
+**Zad. 3 Wyznacz parametry DH dla manipulatora złożonego z jednego łącza pryzmatycznego zamontowanego na bazie i**
+
 ze stawem obrotowym na końcu łącza.
 
 Parametry DH definiują zależności geometryczne i kinematyczne pomiędzy kolejnymi ogniskami manipulatora. Aby wyznaczyć parametry DH dla takiego manipulatora, należy:
