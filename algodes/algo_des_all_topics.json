@@ -1,0 +1,65 @@
+{
+    "definicje": {
+        "automat skończony": [
+            "akceptacja ciągu",
+            "rozpoznanie języka"
+        ],
+        "maszyna touringa": [
+            "akceptacja i odrzucenie ciągu",
+            "język rozpoznawalny przez MT",
+            "język rozstrzygalny przez MT",
+            "wielotasmowa MT",
+            "niedeterministyczna MT",
+            "alfabet",
+            "tekst",
+            "język",
+            "Łańcuch Markowa"
+        ],
+        "złożoność czasowa": [
+            "złożoność czasowa",
+            "notacja asymptotyczna",
+            "duże O",
+            "omega",
+            "teta",
+            "małe o",
+            "małe omega w",
+            "złożoność czasowa NMT",
+            "klasa złożoności TIME",
+            "Klasa złożoności NTIME",
+            "Funkcja obliczalna w czasie wielomianowym",
+            "Redukowalność w czasie wielomianowym",
+            "Problem NP-zupełny",
+            "Problem NP-trudny",
+            "Model obliczeniowy RAM",
+            "Konfiguracja",
+            "Program",
+            "Krok"
+        ],
+        "Grafy": [
+            "graf skierowany",
+            "graf nieskierowany",
+            "scieżka Hamiltona",
+            "weryfikaor"
+        ]
+    },
+    "algorytmy": [
+        "sotowanie przez wstawianie",
+        "sortowanie bąbelkowe",
+        "sortowanie przez scalanie",
+        "sortowanie przez kopcowanie",
+        "sortowanie szybkie",
+        "sortowanie przez zliczanie",
+        "sortowanie kubełkowe",
+        "sortowanie pozycyjne",
+        "algorytm euklidesa",
+        "algorytm r-euklidesa",
+        "algorytm RSA",
+        "algorytm Pseudoświadek",
+        "algorytm Świadek",
+        "FFT",
+        "DFT",
+        "IDFT",
+        "algorytm Kruskala",
+        "algorytm Prima"
+    ]
+}
