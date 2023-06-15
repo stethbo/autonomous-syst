@@ -1,0 +1,112 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/obstacles/protos/OilBarrel.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.10324203646058024 0.9695765789715438 0.2219512095423446 0.8946644228357674
+  position -4.651869051294001 -0.9912798110221517 4.927523385478637
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+}
+WoodenBox {
+  translation 0.51 0.27 0.05
+  rotation 0 1 0 0
+  name "wooden box(8)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation 0.51 0.73 0.05
+  rotation 0 1 0 0
+  name "wooden box(11)"
+  size 0.1 0.3 0.1
+  mass 0.1
+}
+WoodenBox {
+  translation 0.51 -0.23 0.05
+  rotation 0 1 0 0
+  name "wooden box(9)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation 0.51 -0.68 0.05
+  rotation 0 1 0 0
+  name "wooden box(10)"
+  size 0.1 0.3 0.1
+  mass 0.1
+}
+WoodenBox {
+  translation 0.17 -0.47 0.05
+  rotation 0 1 0 0
+  name "wooden box(4)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation -0.6 0 0.05
+  rotation 0 1 0 0
+  name "wooden box(1)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation -0.2 -0.7 0.05
+  rotation 0 1 0 0
+  name "wooden box(2)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation -0.2 -0.25 0.05
+  rotation 0 1 0 0
+  name "wooden box(3)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation -0.2 0.25 0.05
+  rotation 0 1 0 0
+  name "wooden box(5)"
+  size 0.1 0.3 0.1
+  mass 200
+}
+WoodenBox {
+  translation 0.17 0 0.05
+  rotation 0 1 0 0
+  name "wooden box(6)"
+  size 0.1 0.3 0.1
+  mass 20
+}
+WoodenBox {
+  translation 0.17 0.45 0.05
+  rotation 0 1 0 0
+  name "wooden box(7)"
+  size 0.1 0.3 0.1
+  mass 0.1
+}
+E-puck {
+  translation -1 0 0
+  rotation 0 1 0 0
+  controller "move_ball_forward"
+}
+OilBarrel {
+  translation -0.94 0 0.01
+  height 0.025
+  radius 0.02
+  physics Physics {
+    mass 0.019
+  }
+}

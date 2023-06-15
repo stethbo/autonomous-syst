@@ -73,16 +73,16 @@ def avoid_obstacle_right() -> None:
     # get the object
     go_backward(steps=11)
     turn_left(steps=5)
-    go_forward(steps=21)
+    go_forward(steps=22)
     turn_right(steps=18)
     # push it away the obstacle
     go_forward(steps=60)
     # get the object
     turn_right(steps=5)
-    go_forward(steps=10)
+    go_forward(steps=13)
     turn_left(steps=17)
     # keep pushing forward in the original direction
-    go_forward(steps=12, v=0.2)
+    go_forward(steps=24, v=0.8)
 
 
 def avoid_obstacle_left() -> None:
@@ -92,21 +92,23 @@ def avoid_obstacle_left() -> None:
     # get the object
     go_backward(steps=11)
     turn_right(steps=5)
-    go_forward(steps=21)
+    go_forward(steps=22)
     turn_left(steps=18)
     # push it away the obstacle
     go_forward(steps=60)
     # get the object
     turn_left(steps=5)
-    go_forward(steps=10)
+    go_forward(steps=13)
     turn_right(steps=17)
     # keep pushing forward in the original direction
-    go_forward(steps=8, v=0.2)
+    go_forward(steps=24, v=0.8)
 
 
+# initial few steps
+go_forward(24, v=0.8)
 # feedback loop: step simulation until receiving an exit event
 while robot.step(TIME_STEP) != -1:
-    go_forward(2, v=0.9)
+    go_forward(1, v=0.8)
     acc_values = accelerometer.getValues()
     if acc_values[0] > 0.08:
         if random.randint(0, 2) >= 1:
